@@ -45,10 +45,61 @@
 \titleformat{\part}[display]
 {\normalfont\LARGE\bfseries\centering}{}{0pt}{}
 
+% === DEFINICJA ZIELONEGO ==================== %
+\definecolor{Gurin}{rgb}{0, 0.35, 0}
+
+% === MAKRODEFINICJA POPRAWNEJ I ZŁEJ ODPOWIEDZI ==================== %
+\newcommand{\Tak}[1] {
+	\color{Gurin}{#1}
+}
+\newcommand{\Nie}[1] {
+	\color{Red}{#1}
+}
+
+% === MAKRODEFINICJA PYTANIA I ODPOWIEDZI =========================== %
+% ** Pierwszy argument to treść pytania
+% ** Kolejne argumenty to treści odpowiedzi
+\newcommand{\question}[9] {
+	\textbf{#1}
+	\begin{enumerate}[a.]
+		\ifnum\pdfstrcmp{#2}{Tak}=0
+			\Tak{\item #3}
+		\else
+			\Nie{\item #3}
+		\fi
+		\color{black}
+		\ifnum\pdfstrcmp{#4}{Tak}=0
+			\Tak{\item #5}
+		\else
+			\Nie{\item #5}
+		\fi
+		\color{black}
+		\ifnum\pdfstrcmp{#6}{Tak}=0
+			\Tak{\item #7}
+		\else
+			\Nie{\item #7}
+		\fi
+		\color{black}
+		\ifnum\pdfstrcmp{#8}{Tak}=0
+			\Tak{\item #9}
+		\else
+			\Nie{\item #9}
+		\fi
+	\end{enumerate}
+}
 \begin{document}
 \bibliographystyle{plain}
 
+% ************************************************************
+% *** WZÓR PYTANIA DO SKOPIOWANIA
 
+%\item \question{}%
+%{Tak}{}%
+%{Nie}{}%
+%{}{}%
+%{}{}
+
+% ************************************************************
 
 \begin{titlepage}
 \title{\huge Dedykowane Systemy Operacyjne - zbiór pytań}
@@ -57,6 +108,53 @@
 \end{titlepage}
 
 % === PYTANIA ===
+\part{Windows}
+	\section{Usługi katalogowe (Active Directory)}
+	\begin{enumerate}
+		\item \question{Wykonanie kwerendy do wyszukiwania wyłączonych kont użytkowników jest możliwe za pomocą:}%
+		{Nie}{polecenia ds-query}%
+		{Tak}{polecenia dsquery}%
+		{Tak}{konsoli Active Directory Users and Computers}%
+		{Nie}{polecenia ds-get}
+		\item \question{Role FSMO można:}%
+		{Tak}{Przejmować}%
+		{Nie}{Filtrować}%
+		{Nie}{Nadpisywać}%
+		{Tak}{Transferować}
+		\item \question{W jednostkach organizacyjnych (Organization Unit) można utworzyć:}%
+		{Tak}{Użytkownika}%
+		{Tak}{Grupę}%
+		{Tak}{Komputer}%
+		{Tak}{Drukarkę}
+		\item \question{Za pomocą jakiego polecenia można dodać obiekt określonego typu (korzystając z wiersza poleceń) w Active Directory}%
+		{Nie}{dscreate user}%
+		{Tak}{dsadd user}%
+		{Tak}{dsadd computer}%
+		{Nie}{dscreate computer}
+	\end{enumerate}
+	
+	\section{Obiekty Zasad Grup (GPO)}
+	
+	\section{Windows Instalacja zdalna}
+	
+	\section{Windows RAID}
+	
+	\section{Interpreter poleceń PowerShell}
+	
+	\section{Windows API}
+	
+\part{Linux}
+	\section{Usługi graficzne Xwindow}
+	
+	\section{Linux ACL}
+	
+	\section{Linux RAID}
+	
+	\section{Linux LAMP}
+	
+	\section{Wielosystemowość}
+	
+	\section{Linux Kernel}
 
 
 \end{document}
