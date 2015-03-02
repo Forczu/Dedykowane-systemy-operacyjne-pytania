@@ -138,6 +138,7 @@
 		{Tak}{Drzewo posiada zawsze przynajmniej jedną domenę - domenę najwyższego poziomu (ang. root) - korzeń drzewa}%
 		{Nie}{Drzewo domen - domeny potomne mogą, ale nie muszą zawierać nazwy bezpośredniej domeny nadrzędnej}%
 		{Nie}{Las jest zestawem przynajmniej dwóch lub więcej drzew, które formują zwartą, ciągłą przestrzeń nazw.}
+		\newpage
 		\item \question{Do czego służy polecenie dsget?}%
 		{Nie}{Wyświetla różne właściwości grupy, włącznie z członkami grupy w katalogu}%
 		{Nie}{Wyświetla właściwości komputera w katalogu.}%
@@ -168,6 +169,7 @@
 		{Tak}{Zaufanie typu external pozwala większej liczby domen na korzystanie ze swoich zasobów niż typ forest.}%
 		{Tak}{Zaufanie typu forest pozwala na korzystanie z zasobów tylko w obrębie drzew połączonych tego typu zaufaniem, zaś external nie musi (...)}%
 		{Nie}{Zaufanie typu external jest dwukierunkowe, typu forest tylko jednokierunkowe.}
+		\newpage
 		\item \question{Polecenie dsquery:}%
 		{Nie}{Zgodnie z określonymi kryteriami wykonuje kwerendę dotyczącą drzewa usługi DNS.}%
 		{Nie}{Jest równoważne poleceniu dsget.}%
@@ -188,36 +190,71 @@
 		{Tak}{Liście i kontenery zorganizowane są w domeny.}%
 		{Nie}{Domeny zorganizowane w drzewo reprezentowane są w rożnych przestrzeniach adresowych DNS.}%
 		{Nie}{Domena może istnieć samodzielnie, nie musi istnieć w jakimś drzewie i jakimś lesie}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
-		\item \question{}%
-		{Tak}{}%
-		{Nie}{}%
-		{}{}%
-		{}{}
+		\item \question{Polecenie dsadd może posłużyć do:}%
+		{Nie}{Modyfikowania obiektów wewnątrz AD.}%
+		{Tak}{Dodawania grup do AD.}%
+		{Tak}{Dodawania użytkowników do AD.}%
+		{Nie}{Wyszukiwania informacji o obiektach AD.}
+		\item \question{Za pomoca konsoli Active Directory Users and Computers wykonano polecenie "dsadd Ala -pwd makota". Wskaż poprawne odpowiedzi.}%
+		{Nie}{Jeżeli użytkownik "Ala" nie istnieje w systemie wykonanie polecenia nie powiedzie się.}%
+		{Tak}{Powodzenie operacji jest zależne od poziomu uprawnień wykonującego go użytkownika.}%
+		{Tak}{W przypadku powodzenia operacji zostanie utworzony nowy użytkownik o nazwie "Ala" i haśle "makota".}%
+		{Nie}{W przypadku powodzenia operacji hasło istniejącego użytkownika "Ala" zostanie zmienione na "makota".}
+		\item \question{Za pomoca polecenia dsadd można:}%
+		{Tak}{Utworzyć grupę zabezpieczeń.}%
+		{Tak}{Utworzyć jednostkę organizacyjną.}%
+		{Tak}{Utworzyć konto użytkownika.}%
+		{Tak}{Utworzyć grupę dystrybucyjną.}
+		\item \question{Czym jest Active Directory?}%
+		{Nie}{Narzędzie certyfikujące w Windows Server 2003.}%
+		{Tak}{Usługą w systemie Windows, która udostępnia środki pozwalające zarządzać tożsamościami i relacjami.}%
+		{Tak}{Jest to zbiór funkcji, która upraszczają zarządzanie użytkownikami i komputerem.}%
+		{Nie}{Nakładka na system Linux pozwalająca zarządzać komputerem.}
+		\item \question{Poznane w czasach laboratorium narzędzia pozwalające na zarządzanie Active Directory to:}%
+		{Nie}{netsh}%
+		{Tak}{dsget}%
+		{Tak}{dsadd}%
+		{Tak}{Przystawka Active Directory Users and Computers}
+		\item \question{Ile kontrolerów może działać dla domeny w usłudze Active Directory?}%
+		{Tak}{więcej niż 2}%
+		{Tak}{2}%
+		{Tak}{1}%
+		{Nie}{domena może nie posiadać komputera}
+		\item \question{Które z typów relacji zaufania są dwukierunkowe?}%
+		{Tak}{Lasu (forest)}%
+		{Tak}{Zewnętrzne (external)}%
+		{Tak}{Obszaru (realm)}%
+		{Tak}{Skrótu (shortcut)}
+		\item \question{Aby uruchomić na serwerze usługę Active Directory należy:}%
+		{Nie}{Utworzyć użytkownika do zarządzania usługą.}%
+		{Tak}{Zainstalować serwer DNS.}%
+		{Tak}{Dodać rolę Active Directory Domain Services.}%
+		{Nie}{Zainstalować serwer DHCP.}
+		\item \question{Co to jest jednostka organizacyjna (Organization Unit, OU)?}%
+		{Nie}{Pojedynczy komputer wchodzący w skład domeny Active Directory.}%
+		{Nie}{Serwer pracujący pod kontrolą systemu Windows 2008 Server.}%
+		{Tak}{Kontener wykorzystywany do grupowania obiektów wewnątrz domeny w logiczne grupy, na których wykonywane są zadania administracyjne (...)}%
+		{Nie}{Serwer służący do zarządzania protokołem ldap}
+		\item \question{Jakie obiekty mogą być modyfikowane za pomocą usługi Active Directory Sites and Services?}%
+		{Tak}{Łącza lokacji i lokacje.}%
+		{Nie}{Tylko serwery i lokacje.}%
+		{Nie}{Serwery, lokacje, replikacje.}%
+		{Tak}{Serwery, podsieci, ustawienia usługi katalogowej (NTDS)}
+		\item \question{Wskaż zdania prawdziwe:}%
+		{Nie}{Usługa Active Directory dostępna jest w systemach Windows od wersji Vista.}%
+		{Tak}{Za pomocą polecenia dsadd user możliwe jest dodanie użytkownika do Active Directory.}%
+		{Tak}{Za pomocą polecenia dsadd group możliwe jest dodanie grupy do Active Directory.}%
+		{Tak}{Szablon konta użytkownika to konto zawierające wzorcowy zestaw najczęściej wykorzystywanych właściwości, odpowiednich dla danej grupy użytkowników.}
+		\item \question{Które polecenie umożliwia usuwanie obiektów określonego typu?}%
+		{Nie}{dsmod}%
+		{Nie}{csvde}%
+		{Nie}{dsadd}%
+		{Tak}{dsrm}
+		\item \question{W Windows Server 2008 - Active Directory administrator edytując właściwości obiektu klasy Użytkownik, w zakładce Konto ma możliwość:}%
+		{Nie}{Wyznaczenia daty i godziny, w której konto Użytkownika zostanie usunięte z systemu.}%
+		{Tak}{Zablokowania Użytkownikowi możliwości samodzielnej zmiany hasła.}%
+		{Tak}{Ustalenia godzin w których Użytkownik będzie mógł lub nie będzie mógł zalogować się do systemu.}%
+		{Tak}{Określenia do jakich komputerów znajdujących się w domenie Użytkownik ma prawo do zalogowania się.}
 		
 		
 		
