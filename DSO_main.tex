@@ -151,7 +151,7 @@
 		{Nie}{Pliki}
 		\item \question{Wskaż zdania prawdziwe dotyczące usługi Active Directory:}%
 		{Tak}{Struktura Active Directory ma strukturę drzewiastą.}%
-		{Tak}{Liśćmi drzewa mogą być użytkownicy, grupy i komputery}%
+		{Tak}{Liśćmi drzewa mogą być użytkownicy, grupy i }%
 		{Nie}{Nie ma możliwości nadania określonemu użytkownikowi praw do zarządzania użytkownikami w jednostce organizacyjnej bez nadawania (...)}%
 		{Tak}{Możliwe jest kopiowanie użytkowników.}
 		\item \question{Program dsget.exe:}%
@@ -255,7 +255,46 @@
 		{Tak}{Zablokowania Użytkownikowi możliwości samodzielnej zmiany hasła.}%
 		{Tak}{Ustalenia godzin w których Użytkownik będzie mógł lub nie będzie mógł zalogować się do systemu.}%
 		{Tak}{Określenia do jakich komputerów znajdujących się w domenie Użytkownik ma prawo do zalogowania się.}
-		
+		\item \question{Za pomocą polecenia dsadd w systemie Windows można:}%
+		{Nie}{Zmodyfikować konto użytkownika}%
+		{Tak}{Utworzyć jednostkę organizacyjną}%
+		{Tak}{Utworzyć konto użytkownika}%
+		{Nie}{Przenieść jednostkę organizacyjną z jednej domeny do drugiej}
+		\item \question{Wskaż najważniejsze funkcje Active directory:}%
+		{Tak}{Obsługa LDAP}%
+		{Tak}{Obsługa DNS}%
+		{Tak}{Obsługa zabezpieczeń}%
+		{Tak}{Zgodność z TCP/IP}
+		\item \question{W jednostce organizacyjnej można umieszczać:}%
+		{Tak}{Komputery}%
+		{Tak}{Użytkowników}%
+		{Tak}{Inne jednostki organizacyjne}%
+		{Nie}{Obiekty z innych domen niż domena jednostki organizacyjnej}
+		\item \question{Wskaż poprawne stwierdzenia na temat uprawnień w Active Directory:}%
+		{Nie}{Uprawnienia nie mogą być dziedziczone}%
+		{Tak}{Istnieje możliwość nadania uprawnień administratora na danym komputerze bez posiadania uprawnień administratora w domenie}%
+		{Nie}{Aby skopiować użytkownika, jego konto musi być uprzednio wyłączone}%
+		{Tak}{Użytkownik może należeć do wielu grup}
+		\item \question{Jakie protokoły są wykorzystywane przez Active Directory?}%
+		{Nie}{SSH}%
+		{Tak}{LDAP}%
+		{Tak}{Kerberos}%
+		{Tak}{DNS}
+		\item \question{Do czego służy polecenie dsadd?}%
+		{Nie}{Dodaje możliwość zdalnego dostępu do elementu serwisu Active Directory}%
+		{Nie}{Dodaje atrybut do elementu serwisu Active Directory}%
+		{Nie}{Dodaje połączenie do zarządzania elementem serwisu Active Directory}%
+		{Tak}{Dodanie określony typ elementu do serwisu Active Directory}
+		\item \question{Wskaż prawdziwe zdania dotyczące jednostek organizacyjnych (Organizational Units):}%
+		{Tak}{Mogą tworzyć strukturę hierarchiczną}%
+		{Nie}{Grupują wyłącznie użytkowników}%
+		{Tak}{Mogą być wykorzystane do delegowania uprawnień administracyjnych}%
+		{Nie}{Nie mogą być w sobie zagnieżdżane}
+		\item \question{Za pomocą konsoli Active Directory Users and Computers wykonano polecenie: „dsmod group Alfa -addmbr Beta”. Wskaż wszystkie poprawne odpowiedzi.:}%
+		{Nie}{W przypadku powodzenia operacji do grupy Beta zostanie dodany obiekt Alfa.}%
+		{Tak}{W przypadku powodzenia operacji do grupy Alfa zostanie dodany obiekt Beta.}%
+		{Tak}{Powodzenie operacji jest zależne od poziomu uprawnień wykonującego go użytkownika.}%
+		{Tak}{Obiekt o nazwie Beta może reprezentować użytkownika.}
 		
 		
 	\end{enumerate}
