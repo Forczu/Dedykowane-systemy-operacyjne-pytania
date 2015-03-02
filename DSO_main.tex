@@ -58,7 +58,9 @@
 
 % === MAKRODEFINICJA PYTANIA I ODPOWIEDZI =========================== %
 % ** Pierwszy argument to treść pytania
-% ** Kolejne argumenty to treści odpowiedzi
+% ** Kolejne argumenty to:
+% * parzyste - Tak lub Nie
+% * nieparzyste - Treści odpowiedzi
 \newcommand{\question}[9] {
 	\textbf{#1}
 	\begin{enumerate}[a.]
@@ -131,6 +133,94 @@
 		{Tak}{dsadd user}%
 		{Tak}{dsadd computer}%
 		{Nie}{dscreate computer}
+		\item \question{Wybierz prawidłowe odpowiedzi dotyczące struktury Active Directory:}%
+		{Tak}{Jeśli domeny wchodzące w skład lasu mają nieciągłe nazwy DNS, tworzą kilka odrębnych drzew w obrębie lasu}%
+		{Tak}{Drzewo posiada zawsze przynajmniej jedną domenę - domenę najwyższego poziomu (ang. root) - korzeń drzewa}%
+		{Nie}{Drzewo domen - domeny potomne mogą, ale nie muszą zawierać nazwy bezpośredniej domeny nadrzędnej}%
+		{Nie}{Las jest zestawem przynajmniej dwóch lub więcej drzew, które formują zwartą, ciągłą przestrzeń nazw.}
+		\item \question{Do czego służy polecenie dsget?}%
+		{Nie}{Wyświetla różne właściwości grupy, włącznie z członkami grupy w katalogu}%
+		{Nie}{Wyświetla właściwości komputera w katalogu.}%
+		{Tak}{Umożliwia dodawanie użytkowników, grup, komputerów, kontaktów i jednostek organizacyjnych do usługi Active Directory.}%
+		{Nie}{Umożliwia tworzenie, modyfikowanie i usuwanie obiektów katalogu.}
+		\item \question{Jakie obiekty można dodawać za pomocą polecenia dsadd?}%
+		{Tak}{Grupy}%
+		{Tak}{Użytkowników}%
+		{Tak}{Jednostki organizacyjne}%
+		{Nie}{Pliki}
+		\item \question{Wskaż zdania prawdziwe dotyczące usługi Active Directory:}%
+		{Tak}{Struktura Active Directory ma strukturę drzewiastą.}%
+		{Tak}{Liśćmi drzewa mogą być użytkownicy, grupy i komputery}%
+		{Nie}{Nie ma możliwości nadania określonemu użytkownikowi praw do zarządzania użytkownikami w jednostce organizacyjnej bez nadawania (...)}%
+		{Tak}{Możliwe jest kopiowanie użytkowników.}
+		\item \question{Program dsget.exe:}%
+		{Tak}{wymaga praw administratora do działania}%
+		{Nie}{może być uruchomione w graficznym interfejsie użytkownika za pomocą odpowiedniej opcji linii poleceń.}%
+		{Tak}{ma tekstowy interfejs użytkownika.}%
+		{Nie}{umożliwia tworzenie jednostek organizacyjnych.}
+		\item \question{Jakie możliwości daje użycie polecenia dsadd (jako polecenie dla Active Directory)? }%
+		{Nie}{Nie może dodawać obiektu typu Computer do katalogu}%
+		{Tak}{Nie może dodać obiektu typu Doman Service do katalogu.}%
+		{Tak}{Może dodawać obiekt typu Computer do katalogu.}%
+		{Nie}{Może dodać obiekt typu Domain Service do katalogu.}
+		\item \question{Różnica pomiędzy zaufaniem do domen forest i external polega na:}%
+		{Nie}{Zaufanie typu forest pozwala na korzystanie z zasobów tylko w obrębie danego drzewa, zaś external we wszystkich drzewach.}%
+		{Tak}{Zaufanie typu external pozwala większej liczby domen na korzystanie ze swoich zasobów niż typ forest.}%
+		{Tak}{Zaufanie typu forest pozwala na korzystanie z zasobów tylko w obrębie drzew połączonych tego typu zaufaniem, zaś external nie musi (...)}%
+		{Nie}{Zaufanie typu external jest dwukierunkowe, typu forest tylko jednokierunkowe.}
+		\item \question{Polecenie dsquery:}%
+		{Nie}{Zgodnie z określonymi kryteriami wykonuje kwerendę dotyczącą drzewa usługi DNS.}%
+		{Nie}{Jest równoważne poleceniu dsget.}%
+		{Nie}{Wykonuje kwerendę na dowolnej bazie danych.}%
+		{Tak}{Zgodnie z określonymi kryteriami wykonuje kwerendę dotyczącą usługi Active Directory.}
+		\item \question{Dodać grupę można za pomocą:}%
+		{Tak}{Konsoli "Active directory users and computers".}%
+		{Nie}{Polecenia Addgroup.}%
+		{Tak}{Polecenia dsadd group.}%
+		{Nie}{Polecenia adadd group.}
+		\item \question{Jakie występują typy zaufania w Active Directory:}%
+		{Tak}{Lasu (forest)}%
+		{Nie}{Wewnętrzne (internal)}%
+		{Tak}{Zewnętrzne (external)}%
+		{Nie}{Płatka śniegu (snowflake)}
+		\item \question{Struktura Active Directory:}%
+		{Tak}{Podstawową jednostką jest tzw. liść, który położony jest w kontenerze w Active Directory nazywanym jednostką centralną.}%
+		{Tak}{Liście i kontenery zorganizowane są w domeny.}%
+		{Nie}{Domeny zorganizowane w drzewo reprezentowane są w rożnych przestrzeniach adresowych DNS.}%
+		{Nie}{Domena może istnieć samodzielnie, nie musi istnieć w jakimś drzewie i jakimś lesie}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		
+		
+		
 	\end{enumerate}
 	
 	\section{Obiekty Zasad Grup (GPO)}
