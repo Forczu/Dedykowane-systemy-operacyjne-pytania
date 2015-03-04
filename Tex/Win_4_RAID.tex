@@ -1,1 +1,149 @@
+%\item \question{}%
+%{Tak}{}%
+%{Nie}{}%
+%{}{}%
+%{}{}
+
+% !TeX spellcheck = pl_PL
+% ***************************************************************************
+% --- Źródło było dość dziwne, sprawdzić potem jeszcze raz wszystkie pytania
+% *************************************************************************** 
+\newpage
 \section{Windows RAID}
+	\begin{enumerate}
+		\item \question{Na komputerze posiadającym 5 dysków ma zostać zainstalowany system operacyjny Windows 2008 Server, który powinien zapewnić pracę z minimalnym prawdopodobieństwem utraty danych oraz łatwą administracją dyskami. Jaką konfigurację powinien wybrać administrator zakładając, że nie może użyć macierzy sprzętowych?}%
+		{Nie}{wszystkie dyski spięte w mirror}%
+		{Tak}{2 dyski spięte w mirror, pozostałe 3 dyski spięte w RAID5}%
+		{Nie}{wszystkie 5 dysków spiętych w RAID5}%
+		{Nie}{dyski spięte w spanned volume, 2 dyski spięte w mirror}
+		\item \question{Maksymalna ilość dysków, które mogą ulec awarii bez utraty danych wynosi:}%
+		{Nie}{1, dla 2 dysków pracujących w RAID 0}%
+		{Tak}{1, dla 3 dysków pracujących w RAID 5}%
+		{Tak}{1, dla 2 dysków pracujących w RAID 1}%
+		{Nie}{2, dla 3 dysków pracujących w RAID 5}
+		\item \question{RAID:}%
+		{Tak}{jest stosowane w celu zwiększenia niezawodności}%
+		{Nie}{wymaga minimum 3 dysków fizycznych do pracy}%
+		{Tak}{jest stosowane w celu zwiększenia wydajności transmisji danych}%
+		{Tak}{jest stosowane w celu powiększenia przestrzeni dostępnej jako jedna całość}
+		\item \question{Mirrored volume w systemie Windows 2008 ma następujące właściwości:}%
+		{Tak}{może chronić wolumen bootowalnego systemu operacyjnego Windows 2008}%
+		{Nie}{do założenia wymaga 2 identycznych partycji na dyskach typu „basic disk”}%
+		{Tak}{można go utworzyć na 2 dyskach}%
+		{Nie}{wymaga zakupienia specjalnego kontrolera dysków}
+		\item \question{Które z poniższych zdań na temat macierzy RAID5 są prawdziwe?}%
+		{Tak}{RAID5 działa poprawnie do awarii więcej niż jednego dysku}%
+		{Nie}{Macierz RAID5 wymaga minimum 4 dysków}%
+		{Nie}{W n-dyskowej macierzy bity parzystości są na n-1 dyskach}%
+		{Tak}{Macierz złożona z n jednakowych dysków ma objętość n-1 dysków}
+		\item \question{Aby wykorzystać programowy RAID5 w systemie Windows 2008 Serwer należy posiadać komputer z zainstalowanymi}%
+		{Nie}{trzema dyskami}%
+		{Nie}{trzema dyskami oraz kontrolerem umożliwiającym systemowi Windows 2008 Server utworzenie programowej macierzy RAID5}
+		{Tak}{czterema dyskami}%
+		{Tak}{pięcioma dyskami}%
+		\newpage
+		\item \question{Dla których wolumenów prawdopodobieństwo utraty danych jest większe niż dla wolumenu prostego (simple volume):}%
+		{Tak}{spanned volume}%
+		{Tak}{striped volume}%
+		{Nie}{RAID5}%
+		{Nie}{mirrored volume}
+		\item \question{Na ilu dyskach można założyć wolumen paskowany używając systemu operacyjnego Windows 2008?}%
+		{Nie}{na 1}%
+		{Tak}{na 2}%
+		{Tak}{na 3}%
+		{Tak}{na 4}
+		\item \question{Zaznacz poprawne stwierdzenia dotyczące dysków podstawowych i dynamicznych w systemach Windows:}%
+		{Nie}{Dyski podstawowe posiadają te same możliwości i funkcje co dyski dynamiczne jednak ich konfiguracja jest nieco trudniejsza}%
+		{Nie}{Dyski dynamiczne dostępne są tylko w systemach windows z rodziny serwer}%
+		{Tak}{Dyski podstawowe pozwalają na tworzenie podstawowych partycji, rozszerzonych partycji oraz dysków logicznych}%
+		{Tak}{W niektórych wersjach systemu windows istnieje możliwość scalenia kilku oddzielnych dynamicznych dysków w jeden wolumen dynamiczny}
+		\item \question{Na komputerze posiadającym 6 dysków zostanie zainstalowany system operacyjny Windows 2008 Server. Która konfiguracja pozwoli na pracę z najlepszym wykorzystaniem przestrzeni na dyskach zakładając, że nie można użyć macierzy sprzętowych?}%
+		{Nie}{2 dyski spięte w mirror, 3 dyski spięte w RAID5}%
+		{Tak}{2 dyski spięte w mirror, pozostałe 4 dyski spięte w wolumen paskowany}%
+		{Nie}{wszystkie 6 dysków spiętych w RAID5}%
+		{Nie}{utworzone 3 mirrory po 2 dyski każdy}
+		\item \question{Na ilu dyskach można założyć wolumen paskowany używając systemu operacyjnego Windows 7?}%
+		{Nie}{na 1}%
+		{Tak}{na 2}%
+		{Tak}{na 3}%
+		{Tak}{na 5}
+		\item \question{Na komputerze posiadającym 3 dyski zostanie zainstalowany system operacyjny Windows 2008 Server. Która konfiguracja pozwoli na pracę z najlepszym wykorzystaniem przestrzeni na dyskach zakładając, że nie można użyć macierzy sprzętowych?}%
+		{Tak}{2 dyski spięte w mirror, jeden dysk bez zabezpieczeń}%
+		{Nie}{3 dyski spięte w spanned volume}%
+		{Nie}{wszystkie 3 dyski spięte w RAID5}%
+		{Nie}{wszystkie dyski spięte w mirror}
+		\item \question{Które konfiguracje RAID zwiększają wydajność (gdzie wzrost wydajności należy zrozumieć jako wzrost prędkości odczytu i zapisu)?}%
+		{Tak}{RAID 0}%
+		{Tak}{RAID 0+1}%
+		{Tak}{RAID 1+0}%
+		{Nie}{RAID 1}
+		\item \question{W systemie Windows 7 na 5 dyskach za pomocą systemu operacyjnego został założony RAID5. Po pewnym czasie podczas pracy systemu 1 dysk uległ uszkodzeniu.}%
+		{Nie}{odzyskiwanie danych będzie możliwe tylko z ostatniej archiwizacji}%
+		{Nie}{jeśli uszkodzony dysk zostanie wymieniony na nowy to po ponownym uruchomieniu systemu dane zostaną automatycznie odzyskane}%
+		{Nie}{danych nie będzie można odzyskać}%
+		{Tak}{w systemie Windows 7 nie można użyć RAID5}
+		{\small \emph{Uzasadnienie:} W systemie Windows 7 nie można założyć RAID5, gdyż taki poziom RAID jest dostępny dopiero w systemach serwerowych.}
+		\item \question{Konfiguracja RAID 0:}%
+		{Tak}{Pojemność wszystkich połączonych dysków jest równa N*pojemność\_najmniejszego\_dysku, gdzie N to liczba połączonych dysków.}%
+		{Tak}{Nie dostarcza żadnego zabezpieczenia danych.}%
+		{Tak}{Znajduje idealne zastosowanie gdzie wydajność jest ważniejsza od bezpieczeństaw danych.}%
+		{Nie}{Pojemność wszystkich połączonych dysków jest równa pojemności najmniejszego z nich.}
+		\item \question{Jakie są dostępne typy dysków dynamicznych w systemie Windows 2003?}%
+		{Tak}{Mirror}%
+		{Tak}{Spanned Volume}%
+		{Tak}{Stripped Volume}%
+		{Tak}{Simple Volume}
+		\item \question{W konfiguracji RAID 1:}%
+		{Tak}{Dane zapisywane są na obu dyskach równocześnie.}%
+		{Nie}{Dane są zapisywane na kolejnych dyskach bit po bicie, tak jak w przypadku RAID 2.}%
+		{Tak}{Efektywna pojemność wynosi 50\% pojemności dysków.}%
+		{Nie}{Wykorzystuje paskowanie dysków.}
+		\item \question{Które z poniższych zdań opisują macierz RAID 1 (mirroring)?}%
+		{Nie}{RAID 1 oferuje możliwość strippingu danych.}%
+		{Nie}{Całkowita pojemność danych macierzy jest równa pojemności największego dysku.}%
+		{Nie}{Pojemność macierzy jest równa pojemności najmniejszego dysku pomnożonego przez liczbę dysków.}%
+		{Tak}{Odporność na awarię $ N-1 $ dysków w $ N $-dyskowej macierzy.}
+		\newpage
+		\item \question{W przypadku którego typu konfiguracji dysków istnieje możliwość odzyskania danych jeśli jeden z dysków macierzy ulegnie awarii?}%
+		{Nie}{konfiguracja typu stripped volume}%
+		{Tak}{konfiguracja typu RAID 5}%
+		{Tak}{konfiguracja typu mirror}%
+		{Nie}{konfiguracja typu spanned volume}
+		\item \question{Mirrored volume w systemie Windows 2008 ma następujące właściwości:}%
+		{Tak}{może chronić wolumen z bootowalnym systemem operacyjnym Windows 2008.}%
+		{Nie}{może obejmować więcej niż 2 dyski.}%
+		{Nie}{całkowicie likwiduje ryzyko utraty danych.}%
+		{Tak}{nie można go założyć na dyskach typu "basic disk".}
+		\item \question{Który z typów RAID zapewni bezpieczeństwo przy awarii jednego dysku?}%
+		{Tak}{RAID 0+1}%
+		{Nie}{RAID 0}%
+		{Tak}{RAID 1}%
+		{Tak}{RAID 5}
+		\item \question{Wskaż poprawną odpowiedź:}%
+		{Tak}{Przestrzeń macierzy w RAID0 jest zależna od rozmiaru najmniejszego z użytych dysków.}%
+		{Nie}{RAID0+1 i RAID1+0 udostępniają 100\% sumy pojemności wszystkich użytych dysków.}%
+		{Nie}{RAID4 to macierz, której dane na dyskach są paskowane.}%
+		{Tak}{Awaria dwóch dysków w RAID6 nie powoduje utraty danych.}
+		\item \question{Programowy RAID5 w systemie Windows 2008 Server:}%
+		{Nie}{można utworzyć już na 2 dyskach.}%
+		{Tak}{można utworzyć na 4 dyskach.}%
+		{Tak}{Zwiększa odporność systemu na awarie dysków.}%
+		{Nie}{można założyć na dyskach typu "dynamic" lub basic.}
+		\item \question{Jakie właściwości ma programowy RAID5 w systemie operacyjnym Windows 2008?}%
+		{Tak}{można go założyć na 5 dyskach.}%
+		{Nie}{umożliwia lepsze wykorzystanie przestrzeni na dyskach niż wolumen paskowany.}%
+		{Nie}{zapewnia bezawaryjną pracę systemu.}%
+		{Nie}{pozwala uniknąć fragmentacji systemu plików.}
+		\item \question{Zaznacz zdania prawdziwe:}%
+		{Nie}{RAID występuje wyłącznie sprzętowy.}%
+		{Nie}{RAID występuje wyłącznie programowy.}%
+		{Tak}{RAID występuje zarówno programowy jak i sprzętowy.}%
+		{Nie}{Nie ma żadnej możliwości uruchomienia RAID w domowym komputerze PC.}
+		\item \question{Które z podanych zdań są prawdziwe?}%
+		{Tak}{RAID programowy pozwala na bezpośredni start systemu z macierzy dyskowej.}%
+		{Nie}{RAID sprzętowy posiada wyższą wydajność od RAID programowego, gdyż przeliczaniem sum kontrolnych zajmuje się dedykowany kontroler.}%
+		{Nie}{RAID programowy posiada większą kompatybilność z mniej popularnymi systemami operacyjnymi, gdyż wszystkie systemy operacyjne obsługują technologię RAID.}%
+		{Tak}{RAID sprzętowy pozwala na bezpośredni start systemu z macierzy dyskowej.}
+		
+		
+	\end{enumerate}

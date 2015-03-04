@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  4 MAR 2015 18:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  4 MAR 2015 20:59
 entering extended mode
 **DSO_main.tex
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.tex"
@@ -1124,8 +1124,15 @@ LaTeX Font Info:    External font `plex10' loaded for size
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_1_AD.tex" [2] [3] [4] [5]
 [6]) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_2_GPO.tex" [7])
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_3_IZ.tex" [8] [9] [10])
-("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_4_RAID.tex")
-("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_5_PowerShell.tex")
+("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_4_RAID.tex" [11] [12] [13]
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 105.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 105.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 105.
+
+[14]) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_5_PowerShell.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_6_API.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_1_Xwindow.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_2_ACL.tex")
@@ -1134,7 +1141,7 @@ LaTeX Font Info:    External font `plex10' loaded for size
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_5_Wielosystemowosc.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_6_Kernel.tex")
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
- [11] [12]
+ [15] [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
 
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.aux")
@@ -1145,21 +1152,26 @@ Package rerunfilecheck Info: File `DSO_main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 19234 strings out of 493921
- 315253 string characters out of 3147285
- 379424 words of memory out of 3000000
- 21992 multiletter control sequences out of 15000+200000
- 10826 words of font info for 31 fonts, out of 3000000 for 9000
+ 19391 strings out of 493921
+ 316564 string characters out of 3147285
+ 380424 words of memory out of 3000000
+ 22006 multiletter control sequences out of 15000+200000
+ 14810 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  68i,7n,98p,10440b,527s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb>
-Output written on DSO_main.pdf (12 pages, 123282 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/pl/plrm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/pl/plr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
+lsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti9.pfb>
+Output written on DSO_main.pdf (16 pages, 172321 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 312 named destinations out of 1000 (max. 500000)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 446 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
