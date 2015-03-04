@@ -57,7 +57,7 @@
 		
 		\item \question{W jaki sposób można wyznaczyć efektywne ustawienia dla obiektów GPO?}%
 		{Nie}{Za pomocą polecenia gpoeffective}%
-		{Nie}{Za pomocaą Group Policy Preferences}%
+		{Nie}{Za pomocą Group Policy Preferences}%
 		{Tak}{Za pomocą Group Policy Results Wizards}%
 		{Tak}{Za pomocą polecenia gpresult}
 		
@@ -108,5 +108,95 @@
 		{Nie}{Wystąpu konflikt i zostanie zgłoszony błąd}%
 		{Nie}{Poczas uruchamiania tego komputera losowo wybierana będzie wartość, która będzie się do niego stosować}%
 		{Nie}{Zastosowane zostanie ustawienie ustalone na poziomie \textbf{domeny}}
+		
+		\item \question{Konsola Group Policy Managment}%
+		{Tak}{Umożliwia raportowanie ustawień GPO}%
+		{Tak}{Pozwala na łączenie jednostek organizacyjnych z GPO}%
+		{Nie}{Jest domyślnie zainstalowana w każdej wersji Windowsa 7}%
+		{Tak}{Pozwala zmienić ustawienia dziedziczenia GPO}%
+		
+		\item \question{Zasady grup (GPO) przypisane danemu komputerowi:}%
+		{Nie}{Dotyczą tylko administratoeów danego komputera.}%
+		{Tak}{Obowiązują wszystkich użytkowników komputera}%
+		{Nie}{Nie istnieją. Zasady grup mogą zostać przypisane jedynie użytkownikowi.}%
+		{Tak}{Są stosowane podczas uruchamiania komputera}
+		
+		\item \question{Z jakich części składają się obiekty zasad grup (Group Policy Object)?}%
+		{Nie}{Ustawienia systemu}%
+		{Tak}{Ustawienia komputera}%
+		{Tak}{Ustawienia użytkownika}%
+		{Nie}{Ustawienie domyślne}
+		
+		\item \question{Poniższy skrypt vbs wykonany po zalogowaniu użytkownika: Set objNetowrk = Wscript.CreateObject("Wscript.Network") objNetwork.NapNetworkDrive "S.:"\ LondonPublic"}%
+		{Nie}{Udostępni dysk S jako \\London\ LondonPublic}%
+		{Tak}{Podmontuje zdalny zasób sieciowy}%
+		{Tak}{Umożliwi dostęp do zdalnego zasobu sieciowego jako dysk S}%
+		{Nie}{Utworzy nowy zasób sieciowy \\London\ LondonPublic}
+		
+		\item \question{Aby sprawdzić wynikowe ustawienia GPO należy skorzystać z polecenia:}%
+		{Nie}{gpoutcome}%
+		{Nie}{gpsummary}%
+		{Nie}{gpupdate}%
+		{Tak}{gpresult}
+		
+		\item \question{Jakie narzędzia służą do konfigurowania Group Policy:}%
+		{Nie}{Narzędzi dsmod}%
+		{Nie}{Konsola Active Directory Users and Computers}%
+		{Nie}{Polecenie dsquery}%
+		{Tak}{Konsola Group Policy Managment}
+		
+		\item \question{Czy dane GPO może być przypidane kilku różnym jednostkom organizacyjnym?}%
+		{Tak}{Tak, może być przypisane, jeżeli te jednostki organizacyjne są zawarte w jednej domenie dla której jest przypisane GPO}%
+		{Nie}{Nie, nie może być przypisane, jeżeli jednostki te są zawarte w jednej domenie dla której jest przypisane GPO.}%
+		{Nie}{Nie, dane GPO zawsze jest przypisane tylko jednej jednostce organizacyjnej}%
+		{Nie}{Dane GPO może być zawsze przypisane kilku różnym jednostkom organizacyjnym. W każdej sytuacji.}
+		
+		\item \question{Opcja "Zablokuj dziedziczenie zasad"}%
+		{Tak}{blokuje obiekty zasad grupy, które są stosowane wyżej w hierarchii domen i jednostek organizacyjnych usługi Active Directory.}%
+		{Nie}{może blokować obiekty zasad grupy, dla których włączono opcję "Nie zastępuj"}%
+		{Tak}{Może być ustawiona w jednostkach organizacyjnych}%
+		{Nie}{Może być ustawiona w poszczególnych obiektach zasad grupy}
+		
+		\item \question{Obiekt GPO może zostać przypisany bezpośrednio do:}%
+		{Tak}{Domeny}%
+		{Tak}{Jednostki organizacyjnej}%
+		{Nie}{Konkretnego komputera}%
+		{Nie}{Konkretnego użytkownika}
+		
+		\item \question{Wskaż poprawne zdania dotyczące dziedziczenia zasad grup w Windows Server 2008}%
+		{Tak}{Jawne określenie ustawienia zasad grupy w kontenerze podrzędnym zastępuje ustawienie odziedziczone z kontenera nadrzędnego}%
+		{Nie}{Ustawienia zasad, które są wyłączone, są dziedziczone jako wyłączone}%
+		{Nie}{Po zaznaczenia pola wyboru "Nie zastępuj" (wymuszanie dziedziczenia) kontenery podrzędne są zmuszane do dziedziczenia zasad, chyba że zasady te wchdzą w konflikt z zasadami kontenerów podrzędnych}%
+		{Nie}{Nieskonfigurowane ustawienia zasad w jednostce nadrzędnej może być dziedziczone przez jednostkę podrzędną}
+		
+		\item \question{Które z podanych funkcji może pełnić narzędzie Group Policy Results w kontekście zasad grup?}%
+		{Tak}{Wyświetlanie informacji o efektywnych ustawieniach dla obiektów jednostki organizacyjnej.}%
+		{Nie}{Eksportowanie ustawień, aby umożliwić ich ponowne wdrożenie w dowolnym momencie}%
+		{Nie}{Rejestrowanie prób ominięcia lokalnych zabezpieczeń}%
+		{Tak}{Generowanie raportów w wpływie zasad grupy na konkretnego użytkownika lub komputer}
+		
+		\item \question{Ustawienia Group Policy są aplikowane w sytuacji, gdy:}%
+		{Tak}{Przy nawiązaniu połączenia VPN}%
+		{Tak}{Użytkownik się loguje}%
+		{Tak}{Co zadany czas}%
+		{Tak}{Komputer jest uruchamiany}
+		
+		\item \question{Opcja "Zablokuj dziedziczenie zasad" w AD Users and Computers}%
+		{Tak}{nie blokuje dziedziczenia w obiektach zasad grupy, dla których ustawiono wymuszenie dziedziczenia}
+		{Tak}{może być ustawiona tylko w domenach i jednostkach organizacyjnych}%
+		{Nie}{może być ustawiona w domenach, jednostkach organizacyjnych oraz w poszczególnych obiektach zasad grupy}%
+		{Nie}{może być ustawiona tylko w poszczególnych obiektach zasad grupy}
+		
+		\item \question{Za pomocą GPO można uzyskać:}%
+		{Tak}{Przekierowanie folderu domowego "My Documents"}%
+		{Tak}{Ograniczenie uprawnień dla wszystkich użytkowników, którzy są zalogowani na danym komputerze}%
+		{Tak}{Ograniczenie uprawnień dla jednostki organizacyjnej}%
+		{Tak}{Ograniczenie uprawnień polegające na zabronieniu dostępu do panelu sterowania}%	
+		
+		\item \question{Jak są dziedziczone uprawnienia wynikające z GPO?}%
+		{Nie}{Nie są dziedziczone. Każdemu obiektowi należy nadać uprawnienia osobno.}%
+		{Tak}{Są dziedziczone przez całą strukturę - jeśli dany obiekt ma rodzica, to jako domyślne przejmuje jego uprawnienia.}%
+		{Nie}{Domyślnie nie są dziedziczone, aby aktywować dziedziczenie należy dla OU ustawić opcję "Allow Privileges Inherintance"}%
+		{Nie}{Dzieci dziedziczą jedynie najmniej restrykcyjne uprawnienia swoich rodziców}
 		
 	\end{enumerate}
