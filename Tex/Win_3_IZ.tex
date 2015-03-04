@@ -1,1 +1,82 @@
+%\item \question{}%
+%{Tak}{}%
+%{Nie}{}%
+%{}{}%
+%{}{}
+
+% !TeX spellcheck = pl_PL
+\newpage
 \section{Windows Instalacja zdalna}
+	\begin{enumerate}
+		\item \question{Windows Deployment Services (WDS):}%
+		{Nie}{Pozwala na przygotowanie obrazów dysków do zautomatyzowania lokalnej instalacji systemu Windows.}%
+		{Tak}{Pozwala na instalację systemu Windows przez sieć.}%
+		{Nie}{Możliwe jest instalowanie przez sieć wyłącznie systemów serwerowych np. Windows Server 2008.}%
+		{Nie}{Możliwa jest zdalna instalacja (przez sieć) systemu Linux wykorzystując system Windows Server.}
+		\item \question{Windows Deployment Services wtkorzystuje obrazy z rozszerzeniem:}%
+		{Nie}{BIN}%
+		{Nie}{MDF}%
+		{Tak}{WIM}%
+		{Nie}{ISO}
+		\item \question{Format obrazów instalacyjnych wykorzystywany przez Windows Deployment Services to:}%
+		{Nie}{VHD}%
+		{Nie}{ISO}%
+		{Nie}{IMG}%
+		{Tak}{WIM}
+		\item \question{Windows Deployment Services to:}%
+		{Nie}{Tworzenie instalatorów dla programów na platformę .NET}%
+		{Nie}{Instalację systemu Windows poprzez nośnik USB.}%
+		{Tak}{Usługa pozwalająca na instalację systemu Windows przez sieć.}%
+		{Nie}{Instalację i konfigurację aplikacji internetowej na serwerze IS.}
+		\item \question{Windows Deployment Services (WDS) to technologia serwerowa, która pozwala na:}%
+		{Nie}{Zdalne logowanie do systemu.}%
+		{Tak}{Sieciową instalację systemu operacyjnego.}%
+		{Tak}{Instalację systemu operacyjnego bez płyty instalacyjnej typu CD lub DVD.}%
+		{Nie}{Lokalne monitorowanie systemu operacyjnego chroniąc przed złośliwym oprogramowaniem.}
+		\item \question{Aby możliwa była zdalna istalacja, to maszyna kliencka może uruchamiać się z:}%
+		{Nie}{dysku twardego}%
+		{Tak}{karty sieciowej}%
+		{Nie}{napędu CD / DVD}%
+		{Nie}{nie ma to znaczenia}
+		\item \question{Jakie elementy są wymagane do poprawnej pracy WDS?}%
+		{Nie}{Windows Server w wersji 2008 lub wyższej.}%
+		{Tak}{Usługa Windows Deployment Services zainstalowana na serwerze udostępniającym obrazy do instalacji.}%
+		{Nie}{Sprzęt sieciowy obsługujący protokół WDS (router, switch, karta sieciowa)}%
+		{Tak}{Kontroler domeny, serwer DNS, serwer DHCP}
+		\item \question{Które z poniższych zdań na temat wymagań instalacji zdalnej jest prawdziwe?}%
+		{Tak}{Serwer WDS musi być członkiem domeny Active Directory.}%
+		{Tak}{W sieci musi znajdować się serwer DNS.}%
+		{Tak}{W sieci musi znajdować się serwer DHCP.}%
+		{Nie}{Serwery DHCP i DNS muszą być niezależne od serwera WDS.}
+		\item \question{Wykorzystując zdalną instalację systemu Windows:}%
+		{Tak}{Jeden serwer umożliwia instalację wielu wersji systemu (użytkownik może sam wybrać).}%
+		{Nie}{Jeden serwer pozwala na instalację tylko jednej wersji systemu (np. Ultimate)}%
+		{Tak}{Pliki z obrazem systemu muszą być dostępne na serwerze.}%
+		{Nie}{Do komputera na którym instalowany jest system trzeba włożyć płytę z obrazem systemu (ale konfiguracja instalowanego systemu jest (...))}
+		\item \question{Jakie warunki muszą być spełnione by można było pomyślnie zainstalować usługę WDS?}%
+		{Nie}{Sieć musi być połączona z Internetem.}%
+		{Tak}{Komputer musi być członkiem domeny Active Directory.}%
+		{Tak}{W sieci musi znajdować się serwer DNS.}%
+		{Tak}{W sieci musi znajdować się serwer DHCP.}
+		\item \question{Aby możliwe było wykorzystanie Windows Deployment Services konieczny jest:}%
+		{Tak}{Serwer DHCP wskazujący lokalizację pliku uruchomieniowego.}%
+		{Nie}{Serwer FTP z którego będą pobierane pliki instalacyjne.}%
+		{Nie}{Obraz instalacyjny z systemem Windows 7 w edycji co najmniej Professional.}%
+		{Tak}{Obraz środowiska Windows PE.}
+		\item \question{Mechanizm WDS umożliwia:}%
+		{Nie}{Zdalną instalację systemów z obrazów płyt .iso}%
+		{Tak}{Zdalną instalację systemów Windows.}%
+		{Nie}{Zdalne zarządzanie zainstalowanymi systemami Windows.}%
+		{Tak}{Zdalną instalację systemów z obrazów płyt .wim}
+		\item \question{Wskaż poprawne zdania dotyczące WDS:}%
+		{Tak}{Proces instalacji systemu na komputerze klienckim rozpoczyna się od przesłania po sieci obrazu bardzo uproszczonego systemu operacyjnego (...) głównego instalatora.}%
+		{Nie}{Serwer w momencie instalowania usługi WDS automatycznie instaluje obrazy płyt używane do instalacji systemu po sieci.}%
+		{Tak}{Aby zainstalować na komputerze klienckim system Windows, używając mechanizmu WDS, należy ustawić w BIOSie bootowanie rozpoczynające (...) sieciowej.}%
+		{Nie}{Używając WDS możemy instalować po sieci każdy system z rodziny Microsoft Windows i Linux.}
+		%\item \question{}%
+		%{Tak}{}%
+		%{Nie}{}%
+		%{}{}%
+		%{}{}
+		
+	\end{enumerate}
