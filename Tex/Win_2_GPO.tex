@@ -49,5 +49,64 @@
 		{Tak}{Group Policy Object Editor z Active Directory Users and Computers}%
 		{Nie}{narzędzie gpomod}
 		
+		\item \question{GPO jest to: Wskaż wszystkie poprawne odpowiedzi.}%
+		{Tak}{Zbiór ustawień, który określa jak będzie się zachowywał i wyglądał system, dla zdefiniowanych grup użytkowników.}%
+		{Nie}{Narzędzie administracyjne, służące do zarządzania zasadami grup.}%
+		{Nie}{Obiekt, mogący istnieć tylko lokalnie zawierający zasady działania systemu dla grup użytkowników.}%
+		{Nie}{Zbiór obiektów zawierający ustawienia dotyczące zasad działania systemu, po jednym obiekcie na każdego użytkownika.}
+		
+		\item \question{W jaki sposób można wyznaczyć efektywne ustawienia dla obiektów GPO?}%
+		{Nie}{Za pomocą polecenia gpoeffective}%
+		{Nie}{Za pomocaą Group Policy Preferences}%
+		{Tak}{Za pomocą Group Policy Results Wizards}%
+		{Tak}{Za pomocą polecenia gpresult}
+		
+		\item \question{Program "GPRESULT" służy do:}%
+		{Nie}{Zmiany zasad GPO}%
+		{Nie}{Zmiany efektywnych ustawień GPO}%
+		{Nie}{Usuwania zasad GPO}%
+		{Tak}{Przeglądania efektywnych ustawień GPO}
+		
+		\item \question{Które z podanych funkcji może pełnić narzędzie Group Policy Results w kontekście zasad grup?}%
+		{Tak}{Generowanie raportów o wpływie zasad grupy na konkretnego użytkownika lub komputer.}%
+		{Nie}{Rejestrowanie prób ominięcia lokalnych zabezpieczeń}%
+		{Tak}{Wyświetlanie informacji o efektywnych ustawieniach dla obiektów jednostki organizacyjnej.}%
+		{Nie}{Eksportowanie ustawień, aby umożliwić ich ponowne wdrożenie w dowolnym momencie.}
+		
+		\item \question{Które narzędzia służą do tworzenia i zarządzania GPO?}%
+		{Nie}{Narzędzia gpmod}%
+		{Tak}{Konsola Group Policy Management}%
+		{Tak}{Group Policy Object Editor z Active Directory Users and Computers}%
+		{Nie}{Narzędzie gpadd}
+		
+		\item \question{Diagnozujesz problem z ustawieniami Zasad Grupy w dużej domenie. chcesz się dowiedzieć, jakie ustawienia są stosowane dla danego komputera.}%
+		{Nie}{Przeglądasz ustawienia zasad grupy w konsoli Active Directory Users and Computers}%
+		{Tak}{Korzystasz z narzędzia gpresult}%
+		{Tak}{Korzystasz z  "Group Policy Result" w konsoli Group Policy Management}%
+		{Nie}{Nie jest możliwe uzyskanie takich informacji}
+		
+		\item \question{Jakimi narzędziami możesz konfigurować GPO?}%
+		{Tak}{Group Policy Management Console}%
+		{Tak}{Active Directory Sites and Services}%
+		{Nie}{Remote Desktop Assistance}%
+		{Tak}{Edytor obiektów zasad grup}
+		
+		\item \question{Jaki będzie wynik polecenia gpresult /user user1 w Windows Serwer 2008?}%
+		{Nie}{Wyświetlenie rezultatu wykonania polecenia gpupdate dla użytkownika user1}%
+		{Nie}{Nie ma takiego polecenia}%
+		{Nie}{Wyświetlenie ustawień zmiennych globalnych użytkownika user1}%
+		{Tak}{Wyświetlenie zasad grup dla użytkownika user1}
+		
+		\item \question{Wskaż prawdziwe zdania dotyczące Group Policy Objects}%
+		{Nie}{Dany obiekt GPO można przypisać tylko do jednej jednostki organizacyjnej}%
+		{Tak}{Zasady zawarte w GPO przypisanym do domeny są domyślnie dziedziczone przez jednostki organizacyjne tej domeny}%
+		{Tak}{Do jednej jednostki organizacyjnej można przypisać wiele różnych obiektów GPO}%
+		{Tak}{Zasady obiektów GPO przypisanych jednostkom podrzędnym domyślnie nadpisują zasady odziedziczone z GPO jednostek nadrzędnych}
+		
+		\item \question{Co się stanie, jeśli pewne ustawienia obiektu zasad grup ustawimy na poziomie domeny na pewną wartość, a na poziomie komputera ustawimy na przeciwną?}%
+		{Tak}{Zastosowane zostanie ustawienie na poziomie \textbf{komputera}}%
+		{Nie}{Wystąpu konflikt i zostanie zgłoszony błąd}%
+		{Nie}{Poczas uruchamiania tego komputera losowo wybierana będzie wartość, która będzie się do niego stosować}%
+		{Nie}{Zastosowane zostanie ustawienie ustalone na poziomie \textbf{domeny}}
 		
 	\end{enumerate}
