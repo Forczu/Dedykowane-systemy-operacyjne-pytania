@@ -109,47 +109,271 @@
 \maketitle
 \end{titlepage}
 
-% =============== PYTANIA ==================================== %
-% ======== WINDOWS =========================================== %
+% === PYTANIA ===
 \part{Windows}
-	
-	% --- AD - Active Directory ------------ %
-	\input{./Tex/Win_1_AD.tex}
-	
-	% --- GPO - Obieky Zasad Grup ---------- %
-	\input{./Tex/Win_2_GPO.tex}
+	\section{Usługi katalogowe (Active Directory)}
+	\begin{enumerate}
+		\item \question{Wykonanie kwerendy do wyszukiwania wyłączonych kont użytkowników jest możliwe za pomocą:}%
+		{Nie}{polecenia ds-query}%
+		{Tak}{polecenia dsquery}%
+		{Tak}{konsoli Active Directory Users and Computers}%
+		{Nie}{polecenia ds-get}
+		\item \question{Role FSMO można:}%
+		{Tak}{Przejmować}%
+		{Nie}{Filtrować}%
+		{Nie}{Nadpisywać}%
+		{Tak}{Transferować}
+		\item \question{W jednostkach organizacyjnych (Organization Unit) można utworzyć:}%
+		{Tak}{Użytkownika}%
+		{Tak}{Grupę}%
+		{Tak}{Komputer}%
+		{Tak}{Drukarkę}
+		\item \question{Za pomocą jakiego polecenia można dodać obiekt określonego typu (korzystając z wiersza poleceń) w Active Directory}%
+		{Nie}{dscreate user}%
+		{Tak}{dsadd user}%
+		{Tak}{dsadd computer}%
+		{Nie}{dscreate computer}
+		\item \question{Wybierz prawidłowe odpowiedzi dotyczące struktury Active Directory:}%
+		{Tak}{Jeśli domeny wchodzące w skład lasu mają nieciągłe nazwy DNS, tworzą kilka odrębnych drzew w obrębie lasu}%
+		{Tak}{Drzewo posiada zawsze przynajmniej jedną domenę - domenę najwyższego poziomu (ang. root) - korzeń drzewa}%
+		{Nie}{Drzewo domen - domeny potomne mogą, ale nie muszą zawierać nazwy bezpośredniej domeny nadrzędnej}%
+		{Nie}{Las jest zestawem przynajmniej dwóch lub więcej drzew, które formują zwartą, ciągłą przestrzeń nazw.}
+		\newpage
+		\item \question{Do czego służy polecenie dsget?}%
+		{Nie}{Wyświetla różne właściwości grupy, włącznie z członkami grupy w katalogu}%
+		{Nie}{Wyświetla właściwości komputera w katalogu.}%
+		{Tak}{Umożliwia dodawanie użytkowników, grup, komputerów, kontaktów i jednostek organizacyjnych do usługi Active Directory.}%
+		{Nie}{Umożliwia tworzenie, modyfikowanie i usuwanie obiektów katalogu.}
+		\item \question{Jakie obiekty można dodawać za pomocą polecenia dsadd?}%
+		{Tak}{Grupy}%
+		{Tak}{Użytkowników}%
+		{Tak}{Jednostki organizacyjne}%
+		{Nie}{Pliki}
+		\item \question{Wskaż zdania prawdziwe dotyczące usługi Active Directory:}%
+		{Tak}{Struktura Active Directory ma strukturę drzewiastą.}%
+		{Tak}{Liśćmi drzewa mogą być użytkownicy, grupy i }%
+		{Nie}{Nie ma możliwości nadania określonemu użytkownikowi praw do zarządzania użytkownikami w jednostce organizacyjnej bez nadawania (...)}%
+		{Tak}{Możliwe jest kopiowanie użytkowników.}
+		\item \question{Program dsget.exe:}%
+		{Tak}{wymaga praw administratora do działania}%
+		{Nie}{może być uruchomione w graficznym interfejsie użytkownika za pomocą odpowiedniej opcji linii poleceń.}%
+		{Tak}{ma tekstowy interfejs użytkownika.}%
+		{Nie}{umożliwia tworzenie jednostek organizacyjnych.}
+		\item \question{Jakie możliwości daje użycie polecenia dsadd (jako polecenie dla Active Directory)? }%
+		{Nie}{Nie może dodawać obiektu typu Computer do katalogu}%
+		{Tak}{Nie może dodać obiektu typu Doman Service do katalogu.}%
+		{Tak}{Może dodawać obiekt typu Computer do katalogu.}%
+		{Nie}{Może dodać obiekt typu Domain Service do katalogu.}
+		\item \question{Różnica pomiędzy zaufaniem do domen forest i external polega na:}%
+		{Nie}{Zaufanie typu forest pozwala na korzystanie z zasobów tylko w obrębie danego drzewa, zaś external we wszystkich drzewach.}%
+		{Tak}{Zaufanie typu external pozwala większej liczby domen na korzystanie ze swoich zasobów niż typ forest.}%
+		{Tak}{Zaufanie typu forest pozwala na korzystanie z zasobów tylko w obrębie drzew połączonych tego typu zaufaniem, zaś external nie musi (...)}%
+		{Nie}{Zaufanie typu external jest dwukierunkowe, typu forest tylko jednokierunkowe.}
+		\newpage
+		\item \question{Polecenie dsquery:}%
+		{Nie}{Zgodnie z określonymi kryteriami wykonuje kwerendę dotyczącą drzewa usługi DNS.}%
+		{Nie}{Jest równoważne poleceniu dsget.}%
+		{Nie}{Wykonuje kwerendę na dowolnej bazie danych.}%
+		{Tak}{Zgodnie z określonymi kryteriami wykonuje kwerendę dotyczącą usługi Active Directory.}
+		\item \question{Dodać grupę można za pomocą:}%
+		{Tak}{Konsoli "Active directory users and computers".}%
+		{Nie}{Polecenia Addgroup.}%
+		{Tak}{Polecenia dsadd group.}%
+		{Nie}{Polecenia adadd group.}
+		\item \question{Jakie występują typy zaufania w Active Directory:}%
+		{Tak}{Lasu (forest)}%
+		{Nie}{Wewnętrzne (internal)}%
+		{Tak}{Zewnętrzne (external)}%
+		{Nie}{Płatka śniegu (snowflake)}
+		\item \question{Struktura Active Directory:}%
+		{Tak}{Podstawową jednostką jest tzw. liść, który położony jest w kontenerze w Active Directory nazywanym jednostką centralną.}%
+		{Tak}{Liście i kontenery zorganizowane są w domeny.}%
+		{Nie}{Domeny zorganizowane w drzewo reprezentowane są w rożnych przestrzeniach adresowych DNS.}%
+		{Nie}{Domena może istnieć samodzielnie, nie musi istnieć w jakimś drzewie i jakimś lesie}
+		\item \question{Polecenie dsadd może posłużyć do:}%
+		{Nie}{Modyfikowania obiektów wewnątrz AD.}%
+		{Tak}{Dodawania grup do AD.}%
+		{Tak}{Dodawania użytkowników do AD.}%
+		{Nie}{Wyszukiwania informacji o obiektach AD.}
+		\item \question{Za pomoca konsoli Active Directory Users and Computers wykonano polecenie "dsadd Ala -pwd makota". Wskaż poprawne odpowiedzi.}%
+		{Nie}{Jeżeli użytkownik "Ala" nie istnieje w systemie wykonanie polecenia nie powiedzie się.}%
+		{Tak}{Powodzenie operacji jest zależne od poziomu uprawnień wykonującego go użytkownika.}%
+		{Tak}{W przypadku powodzenia operacji zostanie utworzony nowy użytkownik o nazwie "Ala" i haśle "makota".}%
+		{Nie}{W przypadku powodzenia operacji hasło istniejącego użytkownika "Ala" zostanie zmienione na "makota".}
+		\item \question{Za pomoca polecenia dsadd można:}%
+		{Tak}{Utworzyć grupę zabezpieczeń.}%
+		{Tak}{Utworzyć jednostkę organizacyjną.}%
+		{Tak}{Utworzyć konto użytkownika.}%
+		{Tak}{Utworzyć grupę dystrybucyjną.}
+		\item \question{Czym jest Active Directory?}%
+		{Nie}{Narzędzie certyfikujące w Windows Server 2003.}%
+		{Tak}{Usługą w systemie Windows, która udostępnia środki pozwalające zarządzać tożsamościami i relacjami.}%
+		{Tak}{Jest to zbiór funkcji, która upraszczają zarządzanie użytkownikami i komputerem.}%
+		{Nie}{Nakładka na system Linux pozwalająca zarządzać komputerem.}
+		\item \question{Poznane w czasach laboratorium narzędzia pozwalające na zarządzanie Active Directory to:}%
+		{Nie}{netsh}%
+		{Tak}{dsget}%
+		{Tak}{dsadd}%
+		{Tak}{Przystawka Active Directory Users and Computers}
+		\item \question{Ile kontrolerów może działać dla domeny w usłudze Active Directory?}%
+		{Tak}{więcej niż 2}%
+		{Tak}{2}%
+		{Tak}{1}%
+		{Nie}{domena może nie posiadać komputera}
+		\item \question{Które z typów relacji zaufania są dwukierunkowe?}%
+		{Tak}{Lasu (forest)}%
+		{Tak}{Zewnętrzne (external)}%
+		{Tak}{Obszaru (realm)}%
+		{Tak}{Skrótu (shortcut)}
+		\item \question{Aby uruchomić na serwerze usługę Active Directory należy:}%
+		{Nie}{Utworzyć użytkownika do zarządzania usługą.}%
+		{Tak}{Zainstalować serwer DNS.}%
+		{Tak}{Dodać rolę Active Directory Domain Services.}%
+		{Nie}{Zainstalować serwer DHCP.}
+		\item \question{Co to jest jednostka organizacyjna (Organization Unit, OU)?}%
+		{Nie}{Pojedynczy komputer wchodzący w skład domeny Active Directory.}%
+		{Nie}{Serwer pracujący pod kontrolą systemu Windows 2008 Server.}%
+		{Tak}{Kontener wykorzystywany do grupowania obiektów wewnątrz domeny w logiczne grupy, na których wykonywane są zadania administracyjne (...)}%
+		{Nie}{Serwer służący do zarządzania protokołem ldap}
+		\item \question{Jakie obiekty mogą być modyfikowane za pomocą usługi Active Directory Sites and Services?}%
+		{Tak}{Łącza lokacji i lokacje.}%
+		{Nie}{Tylko serwery i lokacje.}%
+		{Nie}{Serwery, lokacje, replikacje.}%
+		{Tak}{Serwery, podsieci, ustawienia usługi katalogowej (NTDS)}
+		\item \question{Wskaż zdania prawdziwe:}%
+		{Nie}{Usługa Active Directory dostępna jest w systemach Windows od wersji Vista.}%
+		{Tak}{Za pomocą polecenia dsadd user możliwe jest dodanie użytkownika do Active Directory.}%
+		{Tak}{Za pomocą polecenia dsadd group możliwe jest dodanie grupy do Active Directory.}%
+		{Tak}{Szablon konta użytkownika to konto zawierające wzorcowy zestaw najczęściej wykorzystywanych właściwości, odpowiednich dla danej grupy użytkowników.}
+		\item \question{Które polecenie umożliwia usuwanie obiektów określonego typu?}%
+		{Nie}{dsmod}%
+		{Nie}{csvde}%
+		{Nie}{dsadd}%
+		{Tak}{dsrm}
+		\item \question{W Windows Server 2008 - Active Directory administrator edytując właściwości obiektu klasy Użytkownik, w zakładce Konto ma możliwość:}%
+		{Nie}{Wyznaczenia daty i godziny, w której konto Użytkownika zostanie usunięte z systemu.}%
+		{Tak}{Zablokowania Użytkownikowi możliwości samodzielnej zmiany hasła.}%
+		{Tak}{Ustalenia godzin w których Użytkownik będzie mógł lub nie będzie mógł zalogować się do systemu.}%
+		{Tak}{Określenia do jakich komputerów znajdujących się w domenie Użytkownik ma prawo do zalogowania się.}
+		\item \question{Za pomocą polecenia dsadd w systemie Windows można:}%
+		{Nie}{Zmodyfikować konto użytkownika}%
+		{Tak}{Utworzyć jednostkę organizacyjną}%
+		{Tak}{Utworzyć konto użytkownika}%
+		{Nie}{Przenieść jednostkę organizacyjną z jednej domeny do drugiej}
+		\item \question{Wskaż najważniejsze funkcje Active directory:}%
+		{Tak}{Obsługa LDAP}%
+		{Tak}{Obsługa DNS}%
+		{Tak}{Obsługa zabezpieczeń}%
+		{Tak}{Zgodność z TCP/IP}
+		\item \question{W jednostce organizacyjnej można umieszczać:}%
+		{Tak}{Komputery}%
+		{Tak}{Użytkowników}%
+		{Tak}{Inne jednostki organizacyjne}%
+		{Nie}{Obiekty z innych domen niż domena jednostki organizacyjnej}
+		\item \question{Wskaż poprawne stwierdzenia na temat uprawnień w Active Directory:}%
+		{Nie}{Uprawnienia nie mogą być dziedziczone}%
+		{Tak}{Istnieje możliwość nadania uprawnień administratora na danym komputerze bez posiadania uprawnień administratora w domenie}%
+		{Nie}{Aby skopiować użytkownika, jego konto musi być uprzednio wyłączone}%
+		{Tak}{Użytkownik może należeć do wielu grup}
+		\item \question{Jakie protokoły są wykorzystywane przez Active Directory?}%
+		{Nie}{SSH}%
+		{Tak}{LDAP}%
+		{Tak}{Kerberos}%
+		{Tak}{DNS}
+		\item \question{Do czego służy polecenie dsadd?}%
+		{Nie}{Dodaje możliwość zdalnego dostępu do elementu serwisu Active Directory}%
+		{Nie}{Dodaje atrybut do elementu serwisu Active Directory}%
+		{Nie}{Dodaje połączenie do zarządzania elementem serwisu Active Directory}%
+		{Tak}{Dodanie określony typ elementu do serwisu Active Directory}
+		\item \question{Wskaż prawdziwe zdania dotyczące jednostek organizacyjnych (Organizational Units):}%
+		{Tak}{Mogą tworzyć strukturę hierarchiczną}%
+		{Nie}{Grupują wyłącznie użytkowników}%
+		{Tak}{Mogą być wykorzystane do delegowania uprawnień administracyjnych}%
+		{Nie}{Nie mogą być w sobie zagnieżdżane}
+		\item \question{Za pomocą konsoli Active Directory Users and Computers wykonano polecenie: „dsmod group Alfa -addmbr Beta”. Wskaż wszystkie poprawne odpowiedzi.:}%
+		{Nie}{W przypadku powodzenia operacji do grupy Beta zostanie dodany obiekt Alfa.}%
+		{Tak}{W przypadku powodzenia operacji do grupy Alfa zostanie dodany obiekt Beta.}%
+		{Tak}{Powodzenie operacji jest zależne od poziomu uprawnień wykonującego go użytkownika.}%
+		{Tak}{Obiekt o nazwie Beta może reprezentować użytkownika.}
 		
-	% --- Instalacja Zdalna ---------------- %
-	\input{./Tex/Win_3_IZ.tex}
+		
+	\end{enumerate}
 	
-	% --- RAID ----------------------------- %
-	\input{./Tex/Win_4_RAID.tex}
+	\section{Obiekty Zasad Grup (GPO)}
+		
+		\begin{enumerate}
+			\item \question{Na jakich poziomach w Active Directory mogą być przypisywane obiekty GPO?}%
+			{Tak}{Lokalnie}% 
+			{Nie}{Na poziomie lokacji}%
+			{Tak}{Na poziomie domeny}%
+			{Tak}{Na poziomie jednostki organizacyjnej}%
+			
+			\item \question{Aby wyświetlić wynikowy zestaw zasad dla użytkownia Sysop należy użyć polecenia:}%
+			{Nie}{gpresult /gpo Sysop}%
+			{Nie}{gpresult /?}%
+			{Tak}{gpresult /user Sysop}%
+			{Nie}{gpresult /u Sysop}
+			
+			\item \question{Wskaż prawdziwe zdania dotyczące GPO}%
+			{Nie}{Akronin GPO rozwija się jako Group Policy Operation}%
+			{Tak}{Za pomocą GPO Standard Desktop można zabronić dostępu do Panelu Sterowania}%
+			{Nie}{Dane jednego GPO mogą być przypisane tylko jednej jednostce organizacyjnej}%
+			{Nie}{Nie da się wyłączyć stosowania zasad GPO danej jednostki organizacyjnej bez usuwania GPO lu łącza obiektu}
+			
+			\item \question{Gdzie w rejestrze systemowym można znaleźć wpisy wynikające z GPO?}%
+			{Tak}{HKEY LOCAL MACHINE (HKLM)}%
+			{Nie}{HKEY CLASSES ROOT (HKCR)}%
+			{Tak}{HKEY CURRENT USER (HKCU)}%
+			{Nie}{HKEY USERS (HKU)}
+			
+			\item \question{W jaki sposób można modyfikować domyślne przetwarzanie obiektów zasad grupy?}%
+			{Tak}{Blokując dziedziczenie zasad grupy}%
+			{Nie}{Definiując warunkowe wprowadzanie ustawień.}%
+			{Tak}{Wyłączając przetwarzanie konkretnego łącza GPO}%
+			{Tak}{Wyłączając nadpisywanie ustawień wprowadzanych przez konkretne łącze GPO.}
+			
+			\item \question{Group Policy Management Console umożliwia:}%
+			{Nie}{Wszystkie funkcje konsoli Power Shell, oraz dodatkowo funkcje zarządzania obiektami GPO}%
+			{Tak}{Stworzenie kopii zapasowej obiektów GPO}%
+			{Tak}{Łatwiejsze zarządzanie obiektami GPO, dzięki graficznemu interfejsowi użytkownika}%
+			{Nie}{Tworzenie logów każdej operacji użytkownika w wybranej przez administratora grupie}
+			
+			\item \question{System Windows w ramach zarządzania GPO umożliwia:}%
+			{Tak}{Filtrowanie ustawień GPO - wyłączenie stosowania określonych zasad GPO}%
+			{Tak}{Wymuszanie stosowania zasad GPO}%
+			{Tak}{Przeglądanie wdrażania elementów GPO dla danej jednostki organizacyjnej}%
+			{Tak}{Blokowanie dziedziczenia ustawień obiektów GPO}
+			
+			\item \question{Które narzędzia służą do tworzenia i zarządzania GPO?}%
+			{Tak}{Konsola Group Policy Management}%
+			{Nie}{narzędzie gpadd}%
+			{Tak}{Group Policy Object Editor z Active Directory Users and Computers}%
+			{Nie}{narzędzie gpomod}
+			
+			
+		\end{enumerate}
 	
-	% --- Interpreter poleceń PowerShell --- %
-	\input{./Tex/Win_5_PowerShell.tex}
 	
-	% --- Windows API ---------------------- %
-	\input{./Tex/Win_6_API.tex}
+	\section{Windows Instalacja zdalna}
 	
-% ======== LINUX ============================================== %
+	\section{Windows RAID}
+	
+	\section{Interpreter poleceń PowerShell}
+	
+	\section{Windows API}
+	
 \part{Linux}
-	% --- Usługi graficzne Xwindow --------- %
-	\input{./Tex/Linux_1_Xwindow.tex}
+	\section{Usługi graficzne Xwindow}
 	
-	% --- Linux ACL ------------------------ %
-	\input{./Tex/Linux_2_ACL.tex}
+	\section{Linux ACL}
 	
-	% --- Linux RAID ----------------------- %
-	\input{./Tex/Linux_3_RAID.tex}
+	\section{Linux RAID}
 	
-	% --- Linux LAMP ----------------------- %
-	\input{./Tex/Linux_4_LAMP.tex}
+	\section{Linux LAMP}
 	
-	% --- Wielosystemowość ----------------- %
-	\input{./Tex/Linux_5_Wielosystemowosc.tex}
+	\section{Wielosystemowość}
 	
-	% --- Linux Kernel --------------------- %
-	\input{./Tex/Linux_6_Kernel.tex}
+	\section{Linux Kernel}
 
 
 \end{document}
