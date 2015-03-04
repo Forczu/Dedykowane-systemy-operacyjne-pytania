@@ -144,6 +144,11 @@
 		{Nie}{RAID sprzętowy posiada wyższą wydajność od RAID programowego, gdyż przeliczaniem sum kontrolnych zajmuje się dedykowany kontroler.}%
 		{Nie}{RAID programowy posiada większą kompatybilność z mniej popularnymi systemami operacyjnymi, gdyż wszystkie systemy operacyjne obsługują technologię RAID.}%
 		{Tak}{RAID sprzętowy pozwala na bezpośredni start systemu z macierzy dyskowej.}
-		
+		\item \question{W systemie windows 2008 na 5 dyskach za pomocą systemu operacyjnego został założony RAID5 Po pewnym czasie podczas pracy systemu 2 dyski uległy uszkodzeniu.}
+		{Nie}{jeśli uszkodzone dyski zostaną wymienione na nowe to po ponownym uruchomieniu systemu dane zostaną automatycznie odzyskane}
+		{Nie}{odzyskiwanie danych będzie przezroczyste dla użytkowników jeśli dyski są typu hot swap}
+		{Nie}{w systemie Windows 2008 nie można użyć RAID5}
+		{Tak}{dane będzie można odzyskać tylko z archiwizacji, a nie z RAID5}
+		{\small \emph{Uzasadnienie:} po awarii 2 dysków RAID5 traci dane.}
 		
 	\end{enumerate}
