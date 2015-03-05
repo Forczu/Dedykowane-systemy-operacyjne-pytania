@@ -1,1 +1,199 @@
+%\item \question{}%
+%{Tak}{}%
+%{Nie}{}%
+%{}{}%
+%{}{}
+
+% !TeX spellcheck = pl_PL
+\newpage
 \section{Interpreter poleceń PowerShell}
+	\begin{enumerate}
+		\item \question{Polecenie$>$ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse | remove-item}%
+		{Tak}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test" i podfolderów.}%
+		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów.}%
+		{Nie}{Znajduje i wypisuje wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów.}%
+		{Nie}{Jest niepoprawne}
+		\item \question{Które wersje systemu Windows NIE wpierają PowerShella?}%
+		{Tak}{Windows 2000 SP4}%
+		{Tak}{Windows 2000}%
+		{Nie}{Windows Server 2008}%
+		{Nie}{Windows 7}
+		\item \question{Które polityki wykonywania skryptów w PowerShell zabraniają wykonywania skryptów pochodzących z lokalnego komputera, jeśli skrypty te nie są podpisane przez zaufanego wydawcę?}%
+		{Tak}{Restricted}%
+		{Tak}{AllSigned}%
+		{Nie}{RemoteSigned}%
+		{Nie}{Unrestricted}
+		\item \question{Po wykonaniu poniższego skryptu w PowerShell\\
+			\$przedmiot = "DSO" if (\$przedmiot -eq "DSO") {"Dedykowane Systemy Operacyjne"} elseif (\$przedmiot -eq "PK") {"Programowanie Komputerów"} else {"Nieznany przedmiot"}}%
+		{Nie}{Na ekranie zostanie wyświetlony napis "Nieznany przedmiot".}%
+		{Tak}{Wartość zmiennej \$przedmiot nie ulegnie zmianie.}%
+		{Nie}{Na ekranie pojawi się komunikat o błędzie składniowym.}%
+		{Nie}{Do zmiennej \$przedmiot zostanie przypisana wartość "Dedykowane Systemy Operacyjne".}
+		\newpage
+		\item \question{Aby zwrócić wszystkie obiekty w bieżącej lokalizacji nalezy użyć polecenia:}%
+		{Tak}{Get-children}%
+		{Nie}{Copy-item}%
+		{Nie}{Get-content}%
+		{Nie}{Get-process}
+		\item \question{Polecenie "PS$>$ get-process d* | stop-process"}%
+		{Tak}{poszczególne polecenia należą do tzw. poleceń Cmdlet.}%
+		{Nie}{zatrzymuje wszystkie uruchomione procesy.}%
+		{Nie}{zatrzymuje wszystkie procesy działające na partycji D.}%
+		{Tak}{zatrzymuje wszystkie procesy których nazwa rozpoczyna się literą "d".}
+		\item \question{Aby zwrócić wszystkie obiekty w bieżącej lokalizacji należy użyc polecenia:}%
+		{Nie}{Get-process}%
+		{Nie}{Copy-item}%
+		{Nie}{Get-content}%
+		{Tak}{Get-children}
+		\item \question{Zaznacz poprawne przyporządkowania aliasów do Cmdletów}%
+		{Nie}{taskkill -$>$ Kill-Process}%
+		{Tak}{ls -$>$ Get-Children}%
+		{Tak}{help -$>$ Get-Help}%
+		{Tak}{man -$>$ Get-Help}
+		\item \question{Polecenie Get-EventLog w Windows PowerShell pozwala:}%
+		{Nie}{Zapisywać informacje do dziennika zdarzeń.}%
+		{Nie}{Takie polecenie nie istnieje.}%
+		{Tak}{Pobierać wpisy z dziennika zdarzeń.}%
+		{Nie}{Pobierać wpisy z pliku C:\textbackslash Var\textbackslash Log\textbackslash Messages.}
+		\item \question{Polecenia natywane dla Windows PowerShell, które pozwalają na wykonywanie podstawowych operacji na obiektach w środowisku WPS to:}%
+		{Nie}{Potoki (pipelines)}%
+		{Tak}{Aplety poleceń (cmdlets)}%
+		{Nie}{Aplety skryptowe (scriptlets)}%
+		{Nie}{Komendy linii poleceń (line commands)}
+		\item \question{Wskaż wszystkie poprawne zdania dotyczące interpretera Windows PowerShell:}%
+		{Tak}{PowerShell jest oparty o .NET}%
+		{Nie}{PowerShell nie udostępnia mechanizmów potoku.}%
+		{Tak}{PowerShell pozwala ustawić różne polityki kontrolujące jakie skrypty można uruchomić.}%
+		{Nie}{PowerShell jest kompatybilny z bashem.}
+		\newpage
+		\item \question{Polityka Restricted wykonywania plików:}%
+		{Tak}{Jest domyślną polityką w środowisku PowerShell.}%
+		{Nie}{Pozwala na uruchamianie skryptów z rozszerzeniem .ps1.}%
+		{Nie}{Nie pozwala na wykonywanie komend w oknie interpretera.}%
+		{Nie}{Pozwala na uruchamianie skryptów z rozszerzeniem .ps1xml.}
+		\item \question{Które polecenie wypisze zawartość bieżącego katalogu z pominięciem plików o rozszerzeniu .exe?}%
+		{Nie}{Dir *.exe}%
+		{Tak}{gci -exclude *.exe}%
+		{Tak}{Get-Children -exclude *.exe}%
+		{Nie}{ls -include *.exe}
+		\item \question{Wskaż poprawne polecenia PowerShell usuwające z bieżącego katalogu pliki większe niż 2kB:}%
+		{Nie}{Get-Childitem | Where-Object ( \$\_.length $>$ 2kB ) | Remove-Item}%
+		{Nie}{Get-Childitem | Remove-Item | Where ( \$\_.length $>$ 2kB )}%
+		{Tak}{Get-Childitem | Where-Object ( \$\_.length -gt 2kB ) | Remove-Item}%
+		{Tak}{ls | where-object \{ \$\_.length -gt 2kB \} | rm}
+		\item \question{Polecenie\\ "PS$ > $ get-process | where-object { \$\_.WS -gt 300MB } | stop-process"\\ wydane w interpreterze Windows PowerShell:}%
+		{Nie}{Listuje procesy, które zużywają więcej niż 300 MB.}%
+		{Nie}{Szuka procesu, który zużywa więcej niż 300 MB i wyświetla nazwę.}%
+		{Tak}{Szuka procesu, który zużywa więcej niż 300 MB i zatrzymuje go.}%
+		{Nie}{Szuka procesu, który zużywa mniej niż 300 MB i zatrzymuje go.}
+		\item \question{Która z wersji systemu Windows obsługuje interpreter PowerShell?}%
+		{Tak}{Windows Vista}%
+		{Tak}{Windows 7}%
+		{Tak}{Windows XP SP2/SP3}%
+		{Nie}{Windows 95}
+		\item \question{Polecenie Set-Location w Cmdlets (PowerShell) ma swój odpowiednik w interpreterze komend cmd.exe. Jest to:}%
+		{Tak}{chdir}%
+		{Nie}{set}%
+		{Nie}{sloc}%
+		{Tak}{cd}
+		\newpage
+		\item \question{Które z poleceń są poprawnymi podstawowymi aliasami w Windows PowerShell, służącymi do czyszczenia ekranu?}%
+		{Nie}{Clear-Console}%
+		{Nie}{Clear-Host}%
+		{Tak}{clear}%
+		{Tak}{cls}
+		\item \question{W celu zatrzymania procesów zużywających więcej niż 100MB pamięci RAM należy użyć polecenia:}%
+		{Nie}{PS$ > $ stop-process | where-object { \$\_.WS -gt 100MB }}%
+		{Nie}{PS$ > $ stop-process \$Memory -gt 100MB}%
+		{Nie}{PS$ > $ get-process | where-object { \$Memory -gt 100MB } | stop-process}%
+		{Tak}{PS$ > $ get-process | where-object { \$\_.WS -gt 100MB } | stop-process}
+		\item \question{Zaznacz poprawne zdania dotyczące powłoski PowerShell:}%
+		{Tak}{Wszystkie zmienne są obiektami .NET.}%
+		{Tak}{Do zmiennych odwołuje się używając znaku \$.}%
+		{Nie}{Część zmiennych jest obiektami .NET.}%
+		{Nie}{Do zmiennych odwołuje się używając znaku \#.}
+		\item \question{Za pomocą polecenia:\\Get-Childitem C:\textbackslash Work\textbackslash  -Recurse -Force | Measure-Object -property length -sum\\(Komentarz: polecenie measure-object służy do generowania statystyk)}%
+		{Tak}{Znajdziemy liczbę plików i ich całkowity rozmiar w folderze C:\textbackslash Work oraz w podfolderach.}%
+		{Nie}{Wypiszemy zawartość folderu C:\textbackslash Work.}%
+		{Nie}{Wypiszemy największy plik z folderu C:\textbackslash Work.}%
+		{Nie}{Jest to niepoprawna składnia.}
+		\item \question{Aby usunąć wszystkie pliki z katalogu c:\textbackslash temp\ o rozszerzeniu .xls w Windows PowerShell należy użyć polecenia:}%
+		{Tak}{remove-item c:\textbackslash temp\textbackslash *.xls}%
+		{Tak}{get-childitem c:\textbackslash temp\textbackslash *.xls | foreach-object { remove=item \$\_.fullname }}%
+		{Nie}{remove-item c:\textbackslash temp\textbackslash * -exclude *.xls}%
+		{Nie}{remove-file c:\textbackslash temp\textbackslash * -extension xls}
+		\item \question{Polecenie:\\PS$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse | remove-item }%
+		{Tak}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test" i podfolderów}%
+		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
+		{Nie}{Znajduje i wypisuje wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
+		{Nie}{Jest niepoprawne.}
+		\newpage
+		\item \question{Jakie rozszerzenia mogą mieć skrypty PowerShell?}%
+		{Nie}{.wps}%
+		{Nie}{.shl}%
+		{Nie}{.cmd}%
+		{Tak}{.ps1}
+		\item \question{Której z niżej wymienionych polityk uruchamiania skryptów są dostępne w powerShell systemu Windows?}%
+		{Nie}{NoneAllowed - nie pozwala na uruchamianie żadnych skryptów.}%
+		{Tak}{AllSigned - możliwość uruchomienia tylko podpisanych skryptów.}%
+		{Tak}{RemoteSigned - możliwość uruchamiania skryptów lokalnych oraz podpisanych pochodzących z Internetu.}%
+		{Tak}{Unrestricted - pozwala na uruchamianie wszystkich skryptów.}
+		\item \question{Czym charakteryzują się komendy (tzw. cmdlety) w PowerShell?}%
+		{Tak}{Zazwyczaj zwracają obiekty.}%
+		{Nie}{Nie mogą mieć zdefiniowanych kilku aliasów jednocześnie.}%
+		{Nie}{Mają nazwy postaci "rzeczownik-czasownik"}%
+		{Tak}{Mają nazwy postaci "czasownik-rzeczownik"}
+		\item \question{Aby uzyskać pomoc na temat poleceń w Windows PowerShell należy użyć polecenia:}%
+		{Nie}{please}%
+		{Tak}{help}%
+		{Nie}{Oh genie}%
+		{Tak}{Get-Help}
+		\item \question{Aby sprawdzić czy jakiś katalog już istnieje w Windows PowerShell można skorzystac z poleceń:}%
+		{Nie}{remove-item}%
+		{Tak}{test-path}%
+		{Nie}{path}%
+		{Nie}{mew-item}
+		\item \question{Wskaż wszystkie prawdziwe zdania dotyczące interpretera Windows PowerShell:}%
+		{Tak}{Polecenie ls jest aliasem polecenia Get-Children.}%
+		{Nie}{PowerShell nie posiada modułów i przystawek pozwalających na rozszerzanie powłoki poprzez dodawanie nowych cmdletów.}%
+		{Nie}{W systemie operacyjnym Windows XP SP2 domyślnie zainstalowaną wersją PowerShella jest wersja "PowerShell v2"}%
+		{Tak}{PowerShell pozwala na przetwarzanie potokowe, które pozwala na przekazywanie obiektu z jednego cmdletu do drugiego, bez potrzeby korzystania z parsowania tekstu czy zmiany formatowania.}
+		\newpage
+		\item \question{Polecenie:
+			"new-item c:\textbackslash temp\textbackslash test -type directory"\\
+			spowoduje:}%
+		{Nie}{Utworzenie katalogu directory w katalogu c:\textbackslash temp\textbackslash test}%
+		{Nie}{Sprawdzi istnienie katalogu test w katalogu c:\textbackslash temp}%
+		{Tak}{Utworzenie katalogu test w katalogu c:\textbackslash temp}%
+		{Nie}{Sprawdzi czy "test" w katalogu c:\textbackslash temp jest katalogiem}
+		\item \question{Które wersje systemu Windows NIE wpierają PowerShella?}%
+		{Nie}{Windows Vista}%
+		{Tak}{Windows 2000}%
+		{Nie}{Windows XP SP2}%
+		{Nie}{Windows 7}
+		\item \question{Wskaż wszystkie prawdziwe zdania dotyczące interpretera Windows PowerShell:}%
+		{Tak}{Wszystkie zmienne są obiektami .NET.}%
+		{Tak}{Aby skopiować plik należy wpisać polecenie "Copy-item lokalizacja1 lokalizacja2"}%
+		{Nie}{Aby skopiować plik należy wpisać polecenie "Set-Location lokalizacja1 lokalizacja2"}%
+		{Tak}{PowerShell jest elementem pakietu Windows Management Framework.}
+		\item \question{W Windows PowerShell poprawnie stworzona pętla to:}%
+		{Tak}{ \$a = 1 do { \$a; \$a++ } while (\$a -lt 10) }%
+		{Nie}{ \$a = 10 do { \$a; \$a-- } while (\$a -lt 3) }%
+		{Tak}{ for (\$a = 1; \$a -le 10; \$a++) { \$a } }%
+		{Nie}{ foreach ( \$i in get-child c:\textbackslash scripts ) {\$i.extended} }
+		\item \question{Co należy wstawić w miejsce znaków zapytania, aby poniższy skrypt PowerShella wyświetlał nazwę procesu w danej chwili najbardziej obciążającego procesor?\\
+			\$ps = get-process\\
+			\$max = \$ps[0]\\
+			foreach (\$p in \$ps )\\
+			{\\
+				if ( ??? )\\
+				{ \$max = \$p }
+			}\\
+			\$max.processname
+			}%
+		{Nie}{ \$p $ > $ \$max }%
+		{Tak}{ \$p.cpu -gt \$max.cpu }%
+		{Nie}{Brak odpowiedzi w źródle.}%
+		{Nie}{Brak odpowiedzi w źródle.}
+		
+	\end{enumerate}
