@@ -1,1 +1,198 @@
 \section{Usługi graficzne Xwindow}
+
+\begin{enumerate}
+	
+	\item \question{Wskaż wszystkie poprawne stwierdzenia odnoszące się do X Window System}
+	{Tak}{Został on zaprojektowany w architekturze klient-serwer}
+	{Tak}{Jest to zbiór funkcji i protokołów wyświetlających informacje graficzne na ekranie}
+	{Nie}{Odpowiada za wygląd okien wyświetlanych w systemie}
+	{Tak}{Pozwala na zdalną pracę na odległym komputerze, wykorzystując komputer lokalny jako serwer X}
+
+	\item \question{Które z podanych komponentów NIE wchodzi w skład X Window System}
+	{Tak}{Serwer Apache}
+	{Nie}{Menadżer okien}
+	{Tak}{Baza danych}
+	{Nie}{X serwer}
+	
+	\item \question{Czym różnią się zdm/gdm/lightdm i startx?}
+	{Tak}{Gdy X zostanie opuszczony za pomocą polecenia zakończenia menadżera okna \textbf{Xdm} ponownie pokazuje ekran logowania}
+	{Tak}{Xdm/Gdm/lightdm uruchamia ekran logowania}
+	{Nie}{Startx uruchamia ekran logowania}
+	{Nie}{Gdy X zostanie opuszczony za pomocą polecenia zakończenia menadżera okna \textbf{startx} ponownie pokazuje ekran logowania}
+	
+	\item \question{Polecenie Xorg -configure}
+	{Nie}{Jest narzędziem graficznym}
+	{Tak}{Pracuje w trybie tekstowym}
+	{Tak}{Służy do konfiguracji X-serwera}
+	{Tak}{Modyfikuje/Generuje domyślny plik Xorg.conf}
+
+	\item \question{Wpis do /etc/X11/xorg.conf: Section "Device"
+		Identifier "Videocard0"
+		Driver "nvidia"
+		Endsection}
+	{Tak}{wykorzysta sterownik nvidia do obsługi pierwszej karty graficznej}
+	{Nie}{jest niepoprawnym wpisem}
+	{Nie}{utworzy nową wirtualną kartę graficzną}
+	{Nie}{nic nie zmieni, bo plik konfiguracyjny Xorg znajduje się w innej lokalizacji}
+	
+	\item \question{Manager okien w systemie Linux}
+	{Nie}{Jest X-Serwerem}
+	{Nie}{zarządza pamięcią X-serwera}
+	{Tak}{Jest odpowiedzialny za wygląd i funkcjonalność pulpitu}
+	{Tak}{Jest odpowiedzialny za wygląd okien}
+	
+	\item \question{Wartości domyślne używane przez standardowe aplikacje Systemu X mogą zostać zmienione. Służą do tego pliki w katalogu:}
+	{Nie}{\textasciitilde/app-defaults/}
+	{Tak}{/etc/X11/app-defaults/}
+	{Nie}{\textasciitilde/defaults-app-values/}
+	{Nie}{/etc/X11/default-app-values}
+	
+	\item \question{Dostępne są 2 komputery, serwer - saturn, oraz klient - jupiter. Po wykonaniu komend na komputerze saturn: \\
+		\$ xhost +jupiter \\
+		na komputerze jupiter: \\
+		\$ export DISPLAY=saturn:0 \\
+		\$ xeyes \\
+		Efektem będzie:}
+	{Nie}{Wynik programu "xeyes" widziany będzie na obu komputerach}
+	{Tak}{Wynik programu "xeyes" widziany będzie tylko na komputerze saturn}
+	{Tak}{Program "xeyes" wykonany zostanie na komputerze jupiter}
+	{Nie}{Program "xeyes" wykonany zostanie na komputerze saturn}
+
+	\item \question{Menadżerem okien jest:}
+	{Nie}{gdm}
+	{Nie}{lightdm}
+	{Tak}{KDE}
+	{Tak}{Gnome}
+	
+	\item \question{X11 (X Window System) to:}
+	{Tak}{Graficzny system komputerowy}
+	{Nie}{Manager okien}
+	{Nie}{Aplikacja pozwalająca na zalogowanie się do systemu}
+	{Nie}{żadna z powyższych}	
+
+	\item \question{System X}
+	{Tak}{jest zaprojektowany w architekturze klient-serwer}
+	{Nie}{odpowiada za obsługę okien}
+	{Tak}{odpowiada za obsługę urządzeń wejścia}
+	{Nie}{odpowiada za zamykanie/otwieranie programów}
+
+	\item \question{X Window Server}
+	{Tak}{...zajmuje się obsługą urządzeń wejściowych (myszki, klawiatury, tabletu).}
+	{Nie}{...dostarcza rozbudowany interfejs użytkownika.}
+	{Nie}{...zajmuje się obsługą okien, dostarcza wbudowane mechanizmy do ich przesuwania, zmiany rozmiaru, zamykania i uruchamiania programów itd.}
+	{Tak}{...udostępnia interfejs graficzny i pozwala rysować nieskomplikowane elementy na ekranie.}
+	
+	\item \question{Zaznacz implementacje X Window System}
+	{Tak}{XFree86}
+	{Nie}{Gnome}
+	{Nie}{KDE}
+	{Tak}{X.Org}
+	
+	\item \question{Dodatkowe skrypty startowe Systemu X Window mogą być zdefiniowane w}
+	{Tak}{\textasciitilde/.xinitrc}
+	{Tak}{/etc/X11/xinit/xinitrc}
+	{Nie}{/etc/xorgrc}
+	{Nie}{\textasciitilde/.xorgrc}
+	
+	\item \question{Podaj polececenie potrzebne o uruchomienia Xwindow}
+	{Tak}{startx}
+	{Nie}{/etc/init.d/gdm start}
+	{Nie}{/etc/X11/xorg start}
+	{Nie}{setx start}
+	
+	\item \question{Domyślne skróty klawiszowe dla serwera X, to:}
+	{Tak}{[Alt]+[Ctrl]+[FX], gdzie X={1,2...7} - przełączanie się między konsolami tekstowymi. Zazwyczaj [Alt] + [F7] pozwala na przełączenie z trybu tekstowego  w tryb graficzny.}
+	{Nie}{[Alt] + [Ctrl] + [F12] - otwiera tekstowy menadżer konfiguracji serwera X.}
+	{Nie}{[Alt] + [Esc] - restart serwera X}
+	{Tak}{[Ctrl] + [Alt] + [Backspace] - wyłączenie serwera X.}
+	
+	\item \question{W jaki sposób można uruchomić powłokę graficzną w systemie Linux?}
+	{Tak}{Skorzystać z menadżera wyświetlania, np. xdm}
+	{Tak}{Uruchomić aplikację startową dostarczaną wraz ze środowiskiem graficznym, np startxfce4}
+	{Tak}{Może być skonfigurowany do uruchomienia na odpowiednim poziomie uruchomieniowym}
+	{Tak}{Skorzystać ze skryptu startowego startx/xinit}
+
+	\item \question{Plik /etc/X11/Xorg.conf pozwala na zmianę:}
+	{Tak}{Ustawień myszy i klawiatury.}
+	{Tak}{Modelu używanej karty graficznej i jej parametrów.}
+	{Tak}{Rozdizelczości ekranu oraz częstotliwości odświeżania.}
+	{Tak}{Zakres odświeżania pionowego dla używanego monitora.}
+	
+	\item \question{Uruchomienie w konsoli któregoś z menadżerów ekranu (ang. Display Manager, np gdm, xdm, lightdm) przez użytkownika root, przy założeniu, że X nie jest uruchomiony, spowoduje:}
+	{Nie}{nie można uruchomić menadżera ekranu z konsoli}
+	{Nie}{uruchomienie sesji X użytkownika, który uruchamiał polecenie}
+	{Nie}{zakończenie sesji użytkownika root, w której wykonał polecenie}
+	{Tak}{wyświetlenie ekranu logowania}
+	
+	\item \question{W skaład X-Window wchodzi:}
+	{Tak}{Menadżer Okien}
+	{Nie}{X-Writer}
+	{Tak}{X-Serwer}
+	{Tak}{X-klient}
+	
+	\item \question{Zazanacz zdania prawidzwe na temat podsystemu graficznego X Windows:}
+	{Nie}{Jego implementacją jest np. Gnome lub KDE.}
+	{Tak}{Jego implementacją jest X.org oraz XFree86}
+	{Nie}{Po jego uruchomieniu oraz systemu Linux istnieje możliwość przejścia z trybu graficznego do konsoli tekstowej za pomocą skrótu ALT+CTRL+\textbf{1}}
+	{Tak}{Po jego uruchomieniu oraz systemu Linux istnieje możliwość przejścia z trybu graficznego do konsoli tekstowej za pomocą skrótu ALT+CTRL+\textbf{F1}}
+	
+	\item \question{Plik /etx/X11/xorg.conf}
+	{Nie}{(Nie wiadomo co jest tu napisane, zdaniem starszych roczników fałsz)}
+	{Nie}{Zawiera ustawienia menadżera okien, takie jak np. ułożenie ikon na pulpicie, kolory, style obramowania okien itp.}
+	{Tak}{Zawiera konfigurację urządzeń wejścia/wyjścia podłączonych do komputera}
+	{Nie}{Jest plikiem wykonywalnym}
+	
+	\item \question{Wskaż poprawne zdania dotyczące pliku konfiguracyjnego Xorf.conf}
+	{Nie}{W pliku Xorg.conf może znaleźć się tylko jedna sekcja Device}
+	{Tak}{Rozdzielczość monitora definiuje się po słowie Modes}
+	{Nie}{W jednej sekcji Display może zdefiniować maksymalnie jedną \textbf{rozdzielczość} monitora.}
+	{Tak}{W jednej sekcji Display może zdefiniować maksymalnie jedną \textbf{głębię kolorów} monitora.}
+	
+	\item \question{Zaznacz prawidłowe stwierdzenia:}
+	{Tak}{xinit wywołuje xterm}
+	{Nie}{xterm wywołuje xinit}
+	{Tak}{startx wywołuje xinit}
+	{Nie}{xinit wywołuje xstart}
+	
+	\item \question{Plik konfiguracyjny X-Serwera (w systemie X.org)}
+	{Tak}{nie jest wymagany (x-serwer wykona wtedy konfigurację dynamiczną)}
+	{Nie}{musi zawierać sekcje Device, Monitor, Screen, Keyboard, Mouse}
+	{Nie}{musi zawierać przynajmniej sekcję Device}
+	{Nie}{musi zawierać skecje Device, Monitor, Screen oraz Display}
+	
+	\item \question{W pliku /etx/X1/xorg.conf mamy możliwość skonfigurowania:}
+	{Tak}{rozdzielczości, z jaką startuje system graficzny}
+	{Tak}{myszy}
+	{Nie}{drukare, które są dostępne w systemie}
+	{Tak}{sterownika grafiki, z którego skorzystać ma system}
+	
+	\item \question{X Window System:}
+	{Tak}{zawiera mechanizmy obsługi klawiatury i myszy}
+	{Nie}{dostarcza graficzny interfejs użytkownika (okna, przyciski itd.)}
+	{Nie}{Jest rozbudowanym serwerem VNC}
+	{Tak}{zawiera protokoły sieciowe umożliwiające wykonywanie programów X w jednym komputerze i wyświetlanie rezultatu ich pracy na drugim}
+	
+	\item \question{Które z podanych zdań prawidłowo opisują architekturę X Widnow System?}
+	{Tak}{Serwer X jest lokalny i działa na komputerze użytkownika.}
+	{Nie}{Klienci zawsze działają lokalnie, natomiast serwer X może działać na innej maszynie.}
+	{Tak}{Klienci mogą działać na różnych maszynach.}
+	{Nie}{Zarówno serwer X, jak i klienci muszą działać lokalnie, na komputerze użytkownika.}
+	
+	\item \question{Zaznacz zdania prawdziwe dotyczące systemu Linux}
+	{Nie}{Środowisko graficzne X jest uruchamiane zawsze przy starcie systemu, niezależnie od konfiguracji.}
+	{Tak}{W czasie pracy w sieci z wykorzystaniem Xwindow: X-Serwer jest uruchomiony na lokalnym komputerze, z którego odbywa się sterowanie, natomiast X-Klient na serwerze zdalnym, gdzie odbywa się przetwarzanie danych.}
+	{Nie}{Xwindow pozwala pracować jedynie w trybie z jednym użytkownikiem.}
+	{Tak}{Przejścia między konsolami tekstowymi odbywa się przy pomocy klawiszów [Alt]+[Ctrl]+[F1] do [F6]}
+	
+	\item \question{Co jest dodatkowym elementem systemu X Window}
+	{Tak}{Serwer czcionek}
+	{Tak}{Zarządca okien (window manager)}
+	{Nie}{Serwer plików tekstowych}
+	{Nie}{Zarządca sieci (network-manager)}
+	
+	\item \question{Jakie sekcje może zawierać plik Xorg.conf}
+	{Nie}{WindowManager}
+	{Tak}{Device}
+	{Tak}{Screen}
+	{Tak}{Monitor}
+\end{enumerate}
