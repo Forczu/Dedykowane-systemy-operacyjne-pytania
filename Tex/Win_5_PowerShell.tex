@@ -195,5 +195,61 @@
 		{Tak}{ \$p.cpu -gt \$max.cpu }%
 		{Nie}{Brak odpowiedzi w źródle.}%
 		{Nie}{Brak odpowiedzi w źródle.}
+		\item \question{Aby wyświetlić wszystkie pliki o rozszerzeniu .txt znajdujące się w obecnym katalogu można użyć polecenia:}%
+		{Tak}{Get-ChildItem *.* -include *.txt}%
+		{Nie}{Get-ChildItem -extension *.txt}%
+		{Nie}{Get-ChildItem -exclude *.txt}%
+		{Tak}{Get-ChildItem | Where-Object {\$\_.Attributes -ne "Directory" -and \$\_.Extension -eq ".txt"}}
+		\item \question{Zaznacz prawidłowe komendy ustawiające aktualną lokalizację na „C:\textbackslash”:}%
+		{Tak}{Set-Location c:\textbackslash}%
+		{Tak}{chdir c:\textbackslash}%
+		{Tak}{cd c\textbackslash}%
+		{Nie}{goto c:\textbackslash}
+		\item \question{Zaznacz wszystkie prawidłowe odpowiedzi opisujące Windows PowerShell (WPS):}%
+		{Nie}{WPS to narzędzie open source do zarządzania systemami Windows spod konsoli linuxowej}%
+		{Tak}{WPS zapewnia dostęp do obiektów COM}%
+		{Tak}{WPS to środowisko oparte na platformie .NET}%
+		{Tak}{WPS to środowisko do automatyzowania zadań administracyjnych przy użyciu skryptów}
+		\item \question{Polecenie\\dir -exclude *.zip -name -recurse -force}%
+		{Tak}{Wyświetli nazwy wszystkich plików znajdujących się w danym katalogu, wraz z plikami ze wszystkich podfolderów i ich podfolderów, wraz z plikami ukrytymi i bez dostępu do nich, bez plików z rozszerzeniem zip}%
+		{Nie}{Wyświetli nazwy wszystkich plików, z pominięciem plików z rozszerzeniem zip, znajdujących się tylko w danym katalogu, wraz z plikami ukrytymi i bez dostępu do nich.}%
+		{Nie}{Wyświetli nazwy wszystkich plików znajdujących się tylko w danym katalogu, wraz z plikami ukrytymi i bez dostępu do nich.}%
+		{Nie}{Wyświetli nazwy wszystkich plików z rozszerzeniem zip znajdujących się w danym katalogu, wraz ze wszystkimi podfolderami, wraz z plikami ukrytymi i bez dostępu do nich.}
+		\item \question{Wskaż polecenia działające w powłoce bash oraz powershell}%
+		{Tak}{man}%
+		{Tak}{cp}%
+		{Tak}{cd}%
+		{Nie}{gps}
+		\item \question{Zmienne w interpreterze PowerShell:}%
+		{Tak}{nie muszą być deklarowane}%
+		{Nie}{wymagają określenia typu}%
+		{Tak}{mogą mieć różne typy}%
+		{Tak}{są obiektami .NET}
+		\item \question{Polecenie PoweShell:\\„PS> get-process a* | stop-process”}%
+		{Nie}{Dotyczy wszystkich procesów (a* = all)}%
+		{Nie}{Jest poleceniem błędnym – nie wykona się}%
+		{Tak}{Zatrzyma procesy, których lista jest pobierana za pomocą polecenia get-process a*}%
+		{Tak}{Dotyczy tylko procesów, których nazwa zaczyna się na literę „a”}
+		\item \question{W interpreterze PowerShell polecenie Get-Process:}%
+		{Tak}{Pozwala wypisać wszystkie aktualnie uruchomione procesy}%
+		{Nie}{Pozwala zmieniać priorytet procesu}%
+		{Nie}{Pozwala zmieniać właściciela procesu na aktualnie zalogowanego użytkownika}%
+		{Nie}{Przekierowywuje wynik działania procesu (standardowe wyjście) do pliku}
+		\item \question{Interpreter Windows PowerShell:}%
+		{Nie}{w systemie Windows 7 (lub Windows Server 2008) wymaga wcześniejszej instalacji}%
+		{Tak}{Jest zintegrowany z .NET Framework}%
+		{Tak}{Dostarcza środowisko do wykonywania zadań administracyjnych wykonywanych poleceniami cmdlets}%
+		{Tak}{Wynikiem polecenia w interpreterze jest ciąg obiektów określonego typu}
+		\item \question{Zanzacz wszystkie prawidłowe sformułowania dotyczące powłoki PowerShell:}%
+		{Tak}{Dzięki operatorowi | (tzw. pipe) można przekierować wyjście jednego polecenia na wejście drugiego, np. get-process | stop-process}%
+		{Tak}{Wszystkie zmienne są obiektami .NET}%
+		{Nie}{Skrypty pisane dla linuksowego interpretera Bash mogą być uruchamiane w interpreterze PowerShell}%
+		{Nie}{Polecenia PowerShell mają ściśle określone nazwy, do których nie można tworzyć aliasów.}
+		
+		%\item \question{}%
+		%{Tak}{}%
+		%{Nie}{}%
+		%{}{}%
+		%{}{}
 		
 	\end{enumerate}
