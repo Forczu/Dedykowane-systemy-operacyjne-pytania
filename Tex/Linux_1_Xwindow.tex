@@ -26,14 +26,16 @@
 	{Tak}{Służy do konfiguracji X-serwera}
 	{Tak}{Modyfikuje/Generuje domyślny plik Xorg.conf}
 
-	\item \question{Wpis do /etc/X11/xorg.conf: Section "Device"
-		Identifier "Videocard0"
-		Driver "nvidia"
+	\item \question{Wpis do /etc/X11/xorg.conf: \\ Section "Device" \\
+		Identifier "Videocard0" \\
+		Driver "nvidia" \\
 		Endsection}
 	{Tak}{wykorzysta sterownik nvidia do obsługi pierwszej karty graficznej}
 	{Nie}{jest niepoprawnym wpisem}
 	{Nie}{utworzy nową wirtualną kartę graficzną}
 	{Nie}{nic nie zmieni, bo plik konfiguracyjny Xorg znajduje się w innej lokalizacji}
+	
+	\newpage
 	
 	\item \question{Manager okien w systemie Linux}
 	{Nie}{Jest X-Serwerem}
@@ -76,6 +78,8 @@
 	{Tak}{odpowiada za obsługę urządzeń wejścia}
 	{Nie}{odpowiada za zamykanie/otwieranie programów}
 
+	\newpage
+
 	\item \question{X Window Server}
 	{Tak}{...zajmuje się obsługą urządzeń wejściowych (myszki, klawiatury, tabletu).}
 	{Nie}{...dostarcza rozbudowany interfejs użytkownika.}
@@ -117,6 +121,8 @@
 	{Tak}{Modelu używanej karty graficznej i jej parametrów.}
 	{Tak}{Rozdizelczości ekranu oraz częstotliwości odświeżania.}
 	{Tak}{Zakres odświeżania pionowego dla używanego monitora.}
+	
+	\newpage
 	
 	\item \question{Uruchomienie w konsoli któregoś z menadżerów ekranu (ang. Display Manager, np gdm, xdm, lightdm) przez użytkownika root, przy założeniu, że X nie jest uruchomiony, spowoduje:}
 	{Nie}{nie można uruchomić menadżera ekranu z konsoli}
