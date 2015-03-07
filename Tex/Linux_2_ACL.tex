@@ -1,1 +1,193 @@
+\newpage
 \section{Linux ACL}
+
+\begin{enumerate}
+	
+	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
+		-rw-r----- 1 me students 0 2010-02-20 23:10 file.txt \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl file.txt uzyskując następujący wynik: \\ \\
+		$\sharp$file: file.txt \\
+		$\sharp$owner: me \\
+		$\sharp$group: students \\
+		user::rw- \\
+		user:friend:r-- \\
+		group::r-- \\
+		group: class:rw- \\
+		mask::rw- \\
+		other::--- \\
+		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
+	{Tak}{setfacl -m u:friend:4, g:class:6 file.txt}
+	{Tak}{setfacl -m u:friend:r, g:class:rw file.txt}
+	{Nie}{setfacl -m u:r:friend, g:rw:class file.txt}
+	{Nie}{setfacl -x u:friend:4, g:class6 file.txt}
+	
+	\item \question{Efekt polecenia ls -l test jest następujący: \\
+		drw-r----- 1 so1 students 0 2011-06-10 23:10 test \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test uzyskując następujący wynik: \\ \\
+		$\sharp$file: test \\
+		$\sharp$owner: so1 \\
+		$\sharp$group: students \\
+		user::rwx \\
+		group::r-x \\
+		other::r-x \\
+		default:user::rwx \\
+		default:group::r-x \\
+		default:grup:teachers:rwx \\
+		default:mask::rwx \\
+		default:other::r-x \\
+		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
+	{Tak}{setfacl -d -m g:teacher:rwx test}
+	{Nie}{brak poprawnej odpowiedzi}
+	{Nie}{setacl -m g:teacher:rwx test}
+	{Nie}{nie istnieje żadne polecenie, które pozwalałoby uzyskać podany wynik}
+	
+	\newpage
+	
+	\item \question{Którym poleceniem można zmienić ustawienia pliku file, tak aby użytkownik user1 miał pełne uprawnienia, a grupa group1 mogła czytać i modyfikować, ale nie mogła go wykonać jako skryptu?}
+	{Tak}{setfacl -m u:user1:7, g:group1:6 file}
+	{Nie}{setfacl -m u:user1:r-x, g:group1:rw- file}
+	{Nie}{setfacl -m u:user1:6, g:group1:7 file}
+	{Tak}{setfacl -m u:user1:rwx, g:group1:rw- file}
+	
+	\item \question{Polecenie getfacl:}
+	{Tak}{zwraca informacje na temat aktualnych uprawnień zdefiniowanych na liście ACL}
+	{Nie}{usuwa uprawnieniaa zdefiniowane na liście ACL}
+	{Tak}{zwraca informację na temat właściciela pliku}
+	{Tak}{Pozwala wyświetlić informacje na temat uprawnień zdefiniowanych w ACL dla kilku plików na raz}
+	
+	\item \question{Zaznacz odpowiadające sobie mapowanie typów ACL na standardowe Linuxowe klasy użytkowników:}
+	{Nie}{named user - owner}
+	{Tak}{owner - owner}
+	{Tak}{mask - group}
+	{Nie}{owning group - group}
+	
+	\item \question{Polecenie, w wyniku którego każdy nowoutworzony PLIK będzie miał uprawnienia -rwxr-x--- to:}
+	{Nie}{umask 027}
+	{Nie}{umask 750}
+	{Nie}{umask 750}
+	{Tak}{brak poprawnej odpowiedzi}
+	
+	\item \question{Polecenie setfacl -m u:user1:6, g:group1:7 file.txt:}
+	{Nie}{Ustawi prawa do pliku "file.txt" wszystkich użytkowników jako rwx.}
+	{Nie}{Umożliwi użytkownikowi o nazwie "user1" wykonanie pliku "file.txt".}
+	{Tak}{Ustawi prawa do pliku "file.txt" użytkownika o nazwie "user1" jako rw-, a grupy o nazwie "group1" jako rwx.}
+	{Nie}{Ustawi prawa do pliku "file.txt" użytkownika o nazwie "user1" jako r--m a grupy o nazwie "group1" jako ---.}
+	
+	\item \question{W systemie Linux Debian użytkownik wykonał sekwencję poleceń: \\
+		umask 075; touch test; ls -l |grep test; \\
+		Zaznacz poprawny wynik dla podanej sekwencji poleceń:}
+	{Nie}{---rwxr-x 1 labso labso 0 2010-06-11 16:30 test}
+	{Tak}{-rw----w- labso labso 0 2010-06-11 16:30 test}
+	{Nie}{-rwx----wx 1 labso labso 0 2010-06-11 16:30 test}
+	{Nie}{-rw-rw-r-- 1 labso labso 0 2010-06-11 16:30 test}
+	
+	\newpage
+	
+	\item \question{Wskaż poprawną odpowiedź dotyczącą instalacji ACL na komputerze z systemem ubuntu/debian:}
+	{Nie}{ACL nie znajduje się oficjalnie w repozytorium. Należy pobrać źródła z internetu oraz samodzielnie przeprowadzić kompilację oraz konfigurację.}
+	{Nie}{Nie jest wymagana instalacja ACL. Systemy te zawierają preinstalowane paczki związane z ACL.}
+	{Nie}{Należy zainstalować acl komendą sudo apt-get install acl. Instalator automatycznie skonfiguruje system do pracy z ACL.}
+	{Tak}{Należy zainstalować acl komendą sudo apt-get install acl, a następnie manualn ie przeprowadzić konfigurację systemów plików w pliku /etc/fstav podłączając ACL.}
+	
+	\item \question{Uprawnienia dla nowo tworzonych plików przy masce 066 wyglądają następująco:}
+	{Nie}{-rwxrwxrwx}
+	{Nie}{-rw-rw-r--}
+	{Nie}{---rw-rw-}
+	{Tak}{-rw------}
+	
+	\item \question{W stosunku do chmod, lista ACL rozszerzyła możliwości przyznawania praw o:}
+	{Tak}{Określenie praw do pliku dla dowolnej grupy.}
+	{Tak}{Określenie praw do pliku dla dowolnego użytkownika.}
+	{Nie}{Określenie praw do pliku dla innych - other.}
+	{Nie}{Określenie praw do pliku dla właściciela - owner.}
+	
+	\item \question{W systemie Linux z działającym systemem ACL wydano polecenie getfacl mySong.bin. Otrzymano następujący wynik: \\
+		 $\sharp$file: mySong.bin \\
+		 $\sharp$owner: jan \\
+		 $\sharp$group: homegroup \\
+		 user::rw- \\
+		 user:maria:r-- \\
+		 group::r-- \\
+		 group:dzieci:rw- \\
+		 mask::rwx \\
+		 other::---
+		\\ W tym przypadku: }
+	{Tak}{użytkownik z grupy dzieci może odczytywać plik mySong.bin}
+	{Tak}{użytkownik maria może odczytywać plik mySong.bin}
+	{Nie}{użytkownik maria może modyfikować plik mySong.bin}
+	{Tak}{uzytkowik z grupy dzieci może modyfikować plik mySong.bin}
+	
+	\newpage
+	
+	\item \question{Zaznacz poprawne odpowiedzi dotyczace maski oraz wyznaczania uprawnień dla wpisów ACL powiązancyh z klasą grupy:}
+	{Tak}{Maska definiuje maksymalne efektywne uprawnienia dla wszystkich wpisów ACL powiązanych z klasą grupy}
+	{Nie}{Uprawnienia efektywne powstają przez zsumowanie uprawnień maski z uprawnieniami odpowiedniej klasy ACL}
+	{Nie}{Maska definiuje minimalne efektywne uprawnienia dla wszystkich wpisów ACL powiązanych z klasą grupy}
+	{Tak}{Uprawnienia efektywne powstają przez przecięcie uprawnień maski z uprawnieniami odpowiedniej klasy ACL}
+
+	\item \question{Wskaż poprawne stwierdzenia dotyczące Linux ACL}
+	{Tak}{Uprawnienie typu named-group można zamaskować}
+	{Tak}{Maska w Linux ACL określa maksymalne uprawnienia}
+	{Nie}{Uprawnienie wpisu ACL other można zamaskować}
+	{Tak}{Uprawnienie typu named-user można zamaskować}
+	
+	\item \question{Aby korzystać w systemie Linux z Acces Control List (ACL) należy:}
+	{Nie}{ACL jest domyślnie włączony zaraz po instalacji dystrybucji systemu Linux.}
+	{Tak}{Dodać obsługę ACL do wszytskich systemów plików w pliku /etc/fstab.}
+	{Nie}{Żadna odpowiedź nie jest poprawna.}
+	{Tak}{Zainstalować pakiet acl.}
+	
+	\item \question{Efekt polecenia ls -l test.txt jest następujący: \\
+		-rw-r----- 1 so1 students 0 2011-06-10 23:10 test \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
+		$\sharp$file: test \\
+		$\sharp$owner: so1 \\
+		$\sharp$group: students \\
+		user::rwx \\
+		group::r-x \\
+		other::r-x \\
+		default:user::rwx \\
+		default:group::r-x \\
+		default:group:teachers:rwx \\
+		default:mask::rwx \\
+		default:other::r-x \\
+		default:other::---
+		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
+	{Nie}{brak poprawnej odpowiedzi}
+	{Nie}{setfacl -d -m g:teachers:rwx test}
+	{Nie}{setfacl -m g:teachers:rwx test}
+	{Tak}{Nie istnieje żadne polecenie, które pozwalałoby uzyskać podany wynik}
+	
+	\newpage
+	
+	\item \question{W jaki sposób można sprawdzić, czy dany plik ma zdefiniowane dodatkowe uprawnienia ACL?}
+	{Tak}{Poprzez użycie polecenia getfacl}
+	{Nie}{Poprzez użycie polecenia filefrag}
+	{Nie}{Korzystając z polecenia ps z argumentem -aux}
+	{Tak}{Używając polecenia ls}
+	
+	\item \question{Polecenie, wyniku którego każdy nowoutworzony KATALOG w systemie Debian będzie miał uprawnienia 644 to:}
+	{Nie}{umask 644}
+	{Nie}{brak poprawnej odpowiedzi}
+	{Tak}{umask 133}
+	{Nie}{umask 022}
+	
+	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
+		-rw-r----- 1 so1 students 0 2010-02-20 23:10 test.txt \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
+		$\sharp$file: test.txt \\
+		$\sharp$owner: so1 \\
+		$\sharp$group: students \\
+		user::rw- \\
+		user:so2:rw- \\
+		group::r-- \\
+		group: teachers:rwx \\
+		mask::rwx \\
+		other::--- \\
+		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
+	{Tak}{setfacl -m u:so2:rw, g:teachers:rwx test.txt}
+	{Tak}{setfacl -m u:so2:6, g:teachers:7 test.txt}
+	{Nie}{setfacl -x u:so2:rw, g:teachers:rwx test.txt}
+	{Nie}{setfacl -m user:rw:so2, group:rwx:teachers test.txt}
+		
+\end{enumerate}
