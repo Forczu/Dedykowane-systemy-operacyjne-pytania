@@ -17,10 +17,10 @@
 		{Nie}{wszystkie 5 dysków spiętych w RAID5}%
 		{Nie}{dyski spięte w spanned volume, 2 dyski spięte w mirror}
 		\item \question{Maksymalna ilość dysków, które mogą ulec awarii bez utraty danych wynosi:}%
-		{Nie}{1, dla 2 dysków pracujących w RAID 0}%
-		{Tak}{1, dla 3 dysków pracujących w RAID 5}%
-		{Tak}{1, dla 2 dysków pracujących w RAID 1}%
-		{Nie}{2, dla 3 dysków pracujących w RAID 5}
+		{Nie}{1, dla 2 dysków pracujących w RAID0}%
+		{Tak}{1, dla 3 dysków pracujących w RAID5}%
+		{Tak}{1, dla 2 dysków pracujących w RAID1}%
+		{Nie}{2, dla 3 dysków pracujących w RAID5}
 		\item \question{RAID:}%
 		{Tak}{jest stosowane w celu zwiększenia niezawodności}%
 		{Nie}{wymaga minimum 3 dysków fizycznych do pracy}%
@@ -73,17 +73,17 @@
 		{Nie}{wszystkie 3 dyski spięte w RAID5}%
 		{Nie}{wszystkie dyski spięte w mirror}
 		\item \question{Które konfiguracje RAID zwiększają wydajność (gdzie wzrost wydajności należy zrozumieć jako wzrost prędkości odczytu i zapisu)?}%
-		{Tak}{RAID 0}%
-		{Tak}{RAID 0+1}%
-		{Tak}{RAID 1+0}%
-		{Nie}{RAID 1}
+		{Tak}{RAID0}%
+		{Tak}{RAID0+1}%
+		{Tak}{RAID1+0}%
+		{Nie}{RAID1}
 		\item \question{W systemie Windows 7 na 5 dyskach za pomocą systemu operacyjnego został założony RAID5. Po pewnym czasie podczas pracy systemu 1 dysk uległ uszkodzeniu.}%
 		{Nie}{odzyskiwanie danych będzie możliwe tylko z ostatniej archiwizacji}%
 		{Nie}{jeśli uszkodzony dysk zostanie wymieniony na nowy to po ponownym uruchomieniu systemu dane zostaną automatycznie odzyskane}%
 		{Nie}{danych nie będzie można odzyskać}%
 		{Tak}{w systemie Windows 7 nie można użyć RAID5}
 		{\small \emph{Uzasadnienie:} W systemie Windows 7 nie można założyć RAID5, gdyż taki poziom RAID jest dostępny dopiero w systemach serwerowych.}
-		\item \question{Konfiguracja RAID 0:}%
+		\item \question{Konfiguracja RAID0:}%
 		{Tak}{Pojemność wszystkich połączonych dysków jest równa N*pojemność\_najmniejszego\_dysku, gdzie N to liczba połączonych dysków.}%
 		{Tak}{Nie dostarcza żadnego zabezpieczenia danych.}%
 		{Tak}{Znajduje idealne zastosowanie gdzie wydajność jest ważniejsza od bezpieczeństaw danych.}%
@@ -93,20 +93,20 @@
 		{Tak}{Spanned Volume}%
 		{Tak}{Stripped Volume}%
 		{Tak}{Simple Volume}
-		\item \question{W konfiguracji RAID 1:}%
+		\item \question{W konfiguracji RAID1:}%
 		{Tak}{Dane zapisywane są na obu dyskach równocześnie.}%
-		{Nie}{Dane są zapisywane na kolejnych dyskach bit po bicie, tak jak w przypadku RAID 2.}%
+		{Nie}{Dane są zapisywane na kolejnych dyskach bit po bicie, tak jak w przypadku RAID2.}%
 		{Tak}{Efektywna pojemność wynosi 50\% pojemności dysków.}%
 		{Nie}{Wykorzystuje paskowanie dysków.}
-		\item \question{Które z poniższych zdań opisują macierz RAID 1 (mirroring)?}%
-		{Nie}{RAID 1 oferuje możliwość strippingu danych.}%
+		\item \question{Które z poniższych zdań opisują macierz RAID1 (mirroring)?}%
+		{Nie}{RAID1 oferuje możliwość strippingu danych.}%
 		{Nie}{Całkowita pojemność danych macierzy jest równa pojemności największego dysku.}%
 		{Nie}{Pojemność macierzy jest równa pojemności najmniejszego dysku pomnożonego przez liczbę dysków.}%
 		{Tak}{Odporność na awarię $ N-1 $ dysków w $ N $-dyskowej macierzy.}
 		\newpage
 		\item \question{W przypadku którego typu konfiguracji dysków istnieje możliwość odzyskania danych jeśli jeden z dysków macierzy ulegnie awarii?}%
 		{Nie}{konfiguracja typu stripped volume}%
-		{Tak}{konfiguracja typu RAID 5}%
+		{Tak}{konfiguracja typu RAID5}%
 		{Tak}{konfiguracja typu mirror}%
 		{Nie}{konfiguracja typu spanned volume}
 		\item \question{Mirrored volume w systemie Windows 2008 ma następujące właściwości:}%
@@ -115,10 +115,10 @@
 		{Nie}{całkowicie likwiduje ryzyko utraty danych.}%
 		{Tak}{nie można go założyć na dyskach typu "basic disk".}
 		\item \question{Który z typów RAID zapewni bezpieczeństwo przy awarii jednego dysku?}%
-		{Tak}{RAID 0+1}%
-		{Nie}{RAID 0}%
-		{Tak}{RAID 1}%
-		{Tak}{RAID 5}
+		{Tak}{RAID0+1}%
+		{Nie}{RAID0}%
+		{Tak}{RAID1}%
+		{Tak}{RAID5}
 		\item \question{Wskaż poprawną odpowiedź:}%
 		{Tak}{Przestrzeń macierzy w RAID0 jest zależna od rozmiaru najmniejszego z użytych dysków.}%
 		{Nie}{RAID0+1 i RAID1+0 udostępniają 100\% sumy pojemności wszystkich użytych dysków.}%
@@ -150,5 +150,47 @@
 		{Nie}{w systemie Windows 2008 nie można użyć RAID5}
 		{Tak}{dane będzie można odzyskać tylko z archiwizacji, a nie z RAID5}
 		{\small \emph{Uzasadnienie:} po awarii 2 dysków RAID5 traci dane.}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		\item \question{}%
+		{Tak}{}%
+		{Nie}{}%
+		{}{}%
+		{}{}
+		
+		
+		%\item \question{}%
+		%{Tak}{}%
+		%{Nie}{}%
+		%{}{}%
+		%{}{}
 		
 	\end{enumerate}
