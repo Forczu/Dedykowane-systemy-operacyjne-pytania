@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  8 MAR 2015 16:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  8 MAR 2015 18:01
 entering extended mode
 **DSO_main.tex
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.tex"
@@ -1180,27 +1180,22 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
  [21] [22] [23]
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-
- []
-
-[26] [27] [28] [29] [30] [31]
-Overfull \hbox (32.36638pt too wide) in paragraph at lines 390--390
+[24] [25] [26] [27] [28] [29] [30]
+Overfull \hbox (32.36638pt too wide) in paragraph at lines 403--403
 []\OT4/cmr/m/n/10 Znajduje i usu-wa wszyst-kie pli-ki z roz-sze-rze-niem "kol" 
 z fol-de-ru nad-rz¦d-ne-go do "C:\OMS/cmsy/m/n/10 n\OT4/cmr/m/n/10 Kolokwium\OM
 S/cmsy/m/n/10 n\OT4/cmr/m/n/10 Main",
  []
 
 
-Overfull \hbox (4.86633pt too wide) in paragraph at lines 390--390
+Overfull \hbox (4.86633pt too wide) in paragraph at lines 403--403
 []\OT4/cmr/m/n/10 Znajduje i usu-wa wszyst-kie pli-ki z roz-sze-rze-niem "kol" 
 wy-ª¡cz-nie z fol-de-ru "C:\OMS/cmsy/m/n/10 n\OT4/cmr/m/n/10 Kolokwium\OMS/cmsy
 /m/n/10 n\OT4/cmr/m/n/10 Main"
  []
 
-[32] [33]) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_6_API.tex" [34]
-[35]
+[31] [32] [33]) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Win_6_API.tex"
+[34] [35]
 LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 64.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\ot4cmtt.fd"
@@ -1278,31 +1273,31 @@ Package rerunfilecheck Info: File `DSO_main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 21641 strings out of 493921
- 343653 string characters out of 3147285
+ 21683 strings out of 493921
+ 344037 string characters out of 3147285
  408913 words of memory out of 3000000
- 23385 multiletter control sequences out of 15000+200000
- 15910 words of font info for 44 fonts, out of 3000000 for 9000
+ 23386 multiletter control sequences out of 15000+200000
+ 16457 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  68i,7n,98p,10440b,527s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/pl/plmi.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}<C:/Program Files/MiKTeX 2.9/
+KTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Pro
+gram Files/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/pl/plbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/p
-lr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/pl/plsl10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/pl/plti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-
-Output written on DSO_main.pdf (46 pages, 369597 bytes).
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plbxti10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/pl/plr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/p
+l/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr17.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/pl/plsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti9.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
+Output written on DSO_main.pdf (46 pages, 383996 bytes).
 PDF statistics:
- 1804 PDF objects out of 2073 (max. 8388607)
- 1292 named destinations out of 1440 (max. 500000)
+ 1858 PDF objects out of 2073 (max. 8388607)
+ 1332 named destinations out of 1440 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

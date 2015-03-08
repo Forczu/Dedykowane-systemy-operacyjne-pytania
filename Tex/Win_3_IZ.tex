@@ -38,6 +38,8 @@
 		{Tak}{karty sieciowej}%
 		{Nie}{napędu CD / DVD}%
 		{Nie}{nie ma to znaczenia}
+		
+		\newpage
 		\item \question{Jakie elementy są wymagane do poprawnej pracy WDS?}%
 		{Nie}{Windows Server w wersji 2008 lub wyższej.}%
 		{Tak}{Usługa Windows Deployment Services zainstalowana na serwerze udostępniającym obrazy do instalacji.}%
@@ -52,7 +54,7 @@
 		{Tak}{Jeden serwer umożliwia instalację wielu wersji systemu (użytkownik może sam wybrać).}%
 		{Nie}{Jeden serwer pozwala na instalację tylko jednej wersji systemu (np. Ultimate)}%
 		{Tak}{Pliki z obrazem systemu muszą być dostępne na serwerze.}%
-		{Nie}{Do komputera na którym instalowany jest system trzeba włożyć płytę z obrazem systemu (ale konfiguracja instalowanego systemu jest (...))}
+		{Nie}{Do komputera na którym instalowany jest system trzeba włożyć płytę z obrazem systemu (ale konfiguracja instalowanego systemu jest pobierana przez sieć)}
 		\item \question{Jakie warunki muszą być spełnione by można było pomyślnie zainstalować usługę WDS?}%
 		{Nie}{Sieć musi być połączona z Internetem.}%
 		{Tak}{Komputer musi być członkiem domeny Active Directory.}%
@@ -68,10 +70,12 @@
 		{Tak}{Zdalną instalację systemów Windows.}%
 		{Nie}{Zdalne zarządzanie zainstalowanymi systemami Windows.}%
 		{Tak}{Zdalną instalację systemów z obrazów płyt .wim}
+		
+		\newpage
 		\item \question{Wskaż poprawne zdania dotyczące WDS:}%
-		{Tak}{Proces instalacji systemu na komputerze klienckim rozpoczyna się od przesłania po sieci obrazu bardzo uproszczonego systemu operacyjnego (...) głównego instalatora.}%
+		{Tak}{Proces instalacji systemu na komputerze klienckim rozpoczyna się od przesłania po sieci obrazu bardzo uproszczonego systemu operacyjnego służącego do uruchomienia głównego instalatora.}%
 		{Nie}{Serwer w momencie instalowania usługi WDS automatycznie instaluje obrazy płyt używane do instalacji systemu po sieci.}%
-		{Tak}{Aby zainstalować na komputerze klienckim system Windows, używając mechanizmu WDS, należy ustawić w BIOSie bootowanie rozpoczynające (...) sieciowej.}%
+		{Tak}{Aby zainstalować na komputerze klienckim system Windows, używając mechanizmu WDS, należy ustawić w BIOSie bootowanie rozpoczynające się od karty sieciowej.}%
 		{Nie}{Używając WDS możemy instalować po sieci każdy system z rodziny Microsoft Windows i Linux.}
 		\item \question{Wskaż poprawne zdania dotyczące WDS:}%
 		{Nie}{Serwer w momencie instalowania usługi WDS automatycznie instaluje obrazy płyt używane to instalacji systemu po sieci}%

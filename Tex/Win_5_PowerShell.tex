@@ -28,12 +28,11 @@
 		{Nie}{RemoteSigned}%
 		{Nie}{Unrestricted}
 		\item \question{Po wykonaniu poniższego skryptu w PowerShell\\
-			\$przedmiot = "DSO" if (\$przedmiot -eq "DSO") {"Dedykowane Systemy Operacyjne"} elseif (\$przedmiot -eq "PK") {"Programowanie Komputerów"} else {"Nieznany przedmiot"}}%
+			\$przedmiot = "DSO" if (\$przedmiot -eq "DSO") \{"Dedykowane Systemy Operacyjne"\} elseif (\$przedmiot -eq "PK") \{"Programowanie Komputerów"\} else \{"Nieznany przedmiot"\}}%
 		{Nie}{Na ekranie zostanie wyświetlony napis "Nieznany przedmiot".}%
 		{Tak}{Wartość zmiennej \$przedmiot nie ulegnie zmianie.}%
 		{Nie}{Na ekranie pojawi się komunikat o błędzie składniowym.}%
 		{Nie}{Do zmiennej \$przedmiot zostanie przypisana wartość "Dedykowane Systemy Operacyjne".}
-		\newpage
 		\item \question{Aby zwrócić wszystkie obiekty w bieżącej lokalizacji nalezy użyć polecenia:}%
 		{Tak}{Get-children}%
 		{Nie}{Copy-item}%
@@ -44,6 +43,8 @@
 		{Nie}{zatrzymuje wszystkie uruchomione procesy.}%
 		{Nie}{zatrzymuje wszystkie procesy działające na partycji D.}%
 		{Tak}{zatrzymuje wszystkie procesy których nazwa rozpoczyna się literą "d".}
+		
+		\newpage
 		\item \question{Aby zwrócić wszystkie obiekty w bieżącej lokalizacji należy użyc polecenia:}%
 		{Nie}{Get-process}%
 		{Nie}{Copy-item}%
@@ -59,7 +60,7 @@
 		{Nie}{Takie polecenie nie istnieje.}%
 		{Tak}{Pobierać wpisy z dziennika zdarzeń.}%
 		{Nie}{Pobierać wpisy z pliku C:\textbackslash Var\textbackslash Log\textbackslash Messages.}
-		\item \question{Polecenia natywane dla Windows PowerShell, które pozwalają na wykonywanie podstawowych operacji na obiektach w środowisku WPS to:}%
+		\item \question{Polecenia natywne dla Windows PowerShell, które pozwalają na wykonywanie podstawowych operacji na obiektach w środowisku WPS to:}%
 		{Nie}{Potoki (pipelines)}%
 		{Tak}{Aplety poleceń (cmdlets)}%
 		{Nie}{Aplety skryptowe (scriptlets)}%
@@ -69,7 +70,6 @@
 		{Nie}{PowerShell nie udostępnia mechanizmów potoku.}%
 		{Tak}{PowerShell pozwala ustawić różne polityki kontrolujące jakie skrypty można uruchomić.}%
 		{Nie}{PowerShell jest kompatybilny z bashem.}
-		\newpage
 		\item \question{Polityka Restricted wykonywania plików:}%
 		{Tak}{Jest domyślną polityką w środowisku PowerShell.}%
 		{Nie}{Pozwala na uruchamianie skryptów z rozszerzeniem .ps1.}%
@@ -78,8 +78,10 @@
 		\item \question{Które polecenie wypisze zawartość bieżącego katalogu z pominięciem plików o rozszerzeniu .exe?}%
 		{Nie}{Dir *.exe}%
 		{Tak}{gci -exclude *.exe}%
-		{Tak}{Get-Children -exclude *.exe}%
+		{Tak}{Get-Childitem -exclude *.exe}%
 		{Nie}{ls -include *.exe}
+		
+		\newpage
 		\item \question{Wskaż poprawne polecenia PowerShell usuwające z bieżącego katalogu pliki większe niż 2kB:}%
 		{Nie}{Get-Childitem | Where-Object ( \$\_.length $>$ 2kB ) | Remove-Item}%
 		{Nie}{Get-Childitem | Remove-Item | Where ( \$\_.length $>$ 2kB )}%
@@ -100,17 +102,18 @@
 		{Nie}{set}%
 		{Nie}{sloc}%
 		{Tak}{cd}
-		\newpage
-		\item \question{Które z poleceń są poprawnymi podstawowymi aliasami w Windows PowerShell, służącymi do czyszczenia ekranu?}%
+		\item \question{Które z poleceń są poprawnymi podstawowymi aliasami w Windows PowerShell, służącymi do czyszczenia ekranu?}%\textsl{}
 		{Nie}{Clear-Console}%
 		{Nie}{Clear-Host}%
 		{Tak}{clear}%
 		{Tak}{cls}
 		\item \question{W celu zatrzymania procesów zużywających więcej niż 100MB pamięci RAM należy użyć polecenia:}%
-		{Nie}{PS$ > $ stop-process | where-object { \$\_.WS -gt 100MB }}%
+		{Nie}{PS$ > $ stop-process | where-object \{ \$\_.WS -gt 100MB \}}%
 		{Nie}{PS$ > $ stop-process \$Memory -gt 100MB}%
-		{Nie}{PS$ > $ get-process | where-object { \$Memory -gt 100MB } | stop-process}%
-		{Tak}{PS$ > $ get-process | where-object { \$\_.WS -gt 100MB } | stop-process}
+		{Nie}{PS$ > $ get-process | where-object \{ \$Memory -gt 100MB \} | stop-process}%
+		{Tak}{PS$ > $ get-process | where-object \{ \$\_.WS -gt 100MB \} | stop-process}
+		
+		\newpage
 		\item \question{Zaznacz poprawne zdania dotyczące powłoski PowerShell:}%
 		{Tak}{Wszystkie zmienne są obiektami .NET.}%
 		{Tak}{Do zmiennych odwołuje się używając znaku \$.}%
@@ -121,9 +124,9 @@
 		{Nie}{Wypiszemy zawartość folderu C:\textbackslash Work.}%
 		{Nie}{Wypiszemy największy plik z folderu C:\textbackslash Work.}%
 		{Nie}{Jest to niepoprawna składnia.}
-		\item \question{Aby usunąć wszystkie pliki z katalogu c:\textbackslash temp\ o rozszerzeniu .xls w Windows PowerShell należy użyć polecenia:}%
+		\item \question{Aby usunąć wszystkie pliki z katalogu c:\textbackslash temp\textbackslash o rozszerzeniu .xls w Windows PowerShell należy użyć polecenia:}%
 		{Tak}{remove-item c:\textbackslash temp\textbackslash *.xls}%
-		{Tak}{get-childitem c:\textbackslash temp\textbackslash *.xls | foreach-object { remove=item \$\_.fullname }}%
+		{Tak}{get-childitem c:\textbackslash temp\textbackslash *.xls | foreach-object \{ remove=item \$\_.fullname \}}%
 		{Nie}{remove-item c:\textbackslash temp\textbackslash * -exclude *.xls}%
 		{Nie}{remove-file c:\textbackslash temp\textbackslash * -extension xls}
 		\item \question{Polecenie:\\PS$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse | remove-item }%
@@ -131,7 +134,6 @@
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
 		{Nie}{Znajduje i wypisuje wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
 		{Nie}{Jest niepoprawne.}
-		\newpage
 		\item \question{Jakie rozszerzenia mogą mieć skrypty PowerShell?}%
 		{Nie}{.wps}%
 		{Nie}{.shl}%
@@ -142,6 +144,8 @@
 		{Tak}{AllSigned - możliwość uruchomienia tylko podpisanych skryptów.}%
 		{Tak}{RemoteSigned - możliwość uruchamiania skryptów lokalnych oraz podpisanych pochodzących z Internetu.}%
 		{Tak}{Unrestricted - pozwala na uruchamianie wszystkich skryptów.}
+		
+		\newpage
 		\item \question{Czym charakteryzują się komendy (tzw. cmdlety) w PowerShell?}%
 		{Tak}{Zazwyczaj zwracają obiekty.}%
 		{Nie}{Nie mogą mieć zdefiniowanych kilku aliasów jednocześnie.}%
@@ -162,7 +166,6 @@
 		{Nie}{PowerShell nie posiada modułów i przystawek pozwalających na rozszerzanie powłoki poprzez dodawanie nowych cmdletów.}%
 		{Nie}{W systemie operacyjnym Windows XP SP2 domyślnie zainstalowaną wersją PowerShella jest wersja "PowerShell v2"}%
 		{Tak}{PowerShell pozwala na przetwarzanie potokowe, które pozwala na przekazywanie obiektu z jednego cmdletu do drugiego, bez potrzeby korzystania z parsowania tekstu czy zmiany formatowania.}
-		\newpage
 		\item \question{Polecenie:
 			"new-item c:\textbackslash temp\textbackslash test -type directory"\\
 			spowoduje:}%
@@ -170,11 +173,18 @@
 		{Nie}{Sprawdzi istnienie katalogu test w katalogu c:\textbackslash temp}%
 		{Tak}{Utworzenie katalogu test w katalogu c:\textbackslash temp}%
 		{Nie}{Sprawdzi czy "test" w katalogu c:\textbackslash temp jest katalogiem}
-		\item \question{Które wersje systemu Windows NIE wpierają PowerShella?}%
+		\item \question{Które wersje systemu Windows NIE wspierają PowerShella?}%
 		{Nie}{Windows Vista}%
 		{Tak}{Windows 2000}%
 		{Nie}{Windows XP SP2}%
 		{Nie}{Windows 7}
+		
+		\newpage
+		\item \question{Które wersje systemu Windows NIE wspierają PowerShella?}%
+		{Tak}{Windows 2000}%
+		{Tak}{Windows 2000 SP4}
+		{Nie}{Windows Server 2008}%
+		{Nie}{Windows 7}%
 		\item \question{Wskaż wszystkie prawdziwe zdania dotyczące interpretera Windows PowerShell:}%
 		{Tak}{Wszystkie zmienne są obiektami .NET.}%
 		{Tak}{Aby skopiować plik należy wpisać polecenie "Copy-item lokalizacja1 lokalizacja2"}%
@@ -189,10 +199,10 @@
 			\$ps = get-process\\
 			\$max = \$ps[0]\\
 			foreach (\$p in \$ps )\\
-			{\\
+			\{\\
 				if ( ??? )\\
-				{ \$max = \$p }
-			}\\
+				\{ \$max = \$p \}
+			\}\\
 			\$max.processname
 			}%
 		{Nie}{ \$p $ > $ \$max }%
@@ -203,14 +213,14 @@
 		{Tak}{Get-ChildItem *.* -include *.txt}%
 		{Nie}{Get-ChildItem -extension *.txt}%
 		{Nie}{Get-ChildItem -exclude *.txt}%
-		{Tak}{Get-ChildItem | Where-Object {\$\_.Attributes -ne "Directory" -and \$\_.Extension -eq ".txt"}}
-		
-		\newpage
+		{Tak}{Get-ChildItem | Where-Object \{\$\_.Attributes -ne "Directory" -and \$\_.Extension -eq ".txt"\}}
 		\item \question{Zaznacz prawidłowe komendy ustawiające aktualną lokalizację na „C:\textbackslash”:}%
 		{Tak}{Set-Location c:\textbackslash}%
 		{Tak}{chdir c:\textbackslash}%
 		{Tak}{cd c\textbackslash}%
 		{Nie}{goto c:\textbackslash}
+		
+		\newpage
 		\item \question{Zaznacz wszystkie prawidłowe odpowiedzi opisujące Windows PowerShell (WPS):}%
 		{Nie}{WPS to narzędzie open source do zarządzania systemami Windows spod konsoli linuxowej}%
 		{Tak}{WPS zapewnia dostęp do obiektów COM}%
@@ -236,13 +246,13 @@
 		{Nie}{Jest poleceniem błędnym – nie wykona się}%
 		{Tak}{Zatrzyma procesy, których lista jest pobierana za pomocą polecenia get-process a*}%
 		{Tak}{Dotyczy tylko procesów, których nazwa zaczyna się na literę „a”}
-		
-		\newpage
 		\item \question{W interpreterze PowerShell polecenie Get-Process:}%
 		{Tak}{Pozwala wypisać wszystkie aktualnie uruchomione procesy}%
 		{Nie}{Pozwala zmieniać priorytet procesu}%
 		{Nie}{Pozwala zmieniać właściciela procesu na aktualnie zalogowanego użytkownika}%
 		{Nie}{Przekierowywuje wynik działania procesu (standardowe wyjście) do pliku}
+		
+		\newpage
 		\item \question{Interpreter Windows PowerShell:}%
 		{Nie}{w systemie Windows 7 (lub Windows Server 2008) wymaga wcześniejszej instalacji}%
 		{Tak}{Jest zintegrowany z .NET Framework}%
@@ -258,8 +268,6 @@
 		{Tak}{Get-Help, man}%
 		{Nie}{Remove-File, rm}%
 		{Tak}{Remove-Item, del}
-		
-		\newpage
 		\item \question{Liczby od 1 do 5 wypisze następujący skrypt:}%
 		{Tak}{\$i = 1\\
 			do \{\\
@@ -285,6 +293,8 @@
 				i++\\
 			\}\\
 			while (\$i -le 5)}
+		
+		\newpage
 		\item \question{Które polecenia są poprawne i wyświetlają, posortowaną wg. pewnej kolumny, zawartośd bieżącego katalogu?}%
 		{Tak}{ls | Sort-Object Name}%
 		{Nie}{ls | Sort-Name}%
@@ -303,14 +313,15 @@
 		\item \question{PS E:\textbackslash test$ > $ ls\\
 			Directory: E:\textbackslash test\\
 			Mode   LastWriteTime Length Name\\
-			----   ------------- ------ ----\\
-			-a---  2012-06-02    16:12  0 a.xyz\\
-			-a---  2012-06-02    16:12  0 b.xyz\\
-			-a---  2012-06-02    16:12  0 c.xyz\\
-			-a---  2012-06-02    16:12  0 d.xyy\\
-			-a---  2012-06-02    16:12  0 e.xxy\\
+			$ ----\;\;\;\;\;\;-------------\;\;\;------\;\;\;---- $\\
+			$ -a--- $  2012-06-02    16:12  0 a.xyz\\
+			$ -a--- $  2012-06-02    16:12  0 b.xyz\\
+			$ -a--- $  2012-06-02    16:12  0 c.xyz\\
+			$ -a--- $  2012-06-02    16:12  0 d.xyy\\
+			$ -a--- $  2012-06-02    16:12  0 e.xxy\\
 			PS E:\textbackslash test$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.xyz -recurse | remove-item\\
-			Zaznacz możliwe do otrzymania wyniki działania komendy ls z dowolnymi parametrami po wykonaniu powyższej komendy:}%
+			Zaznacz możliwe do otrzymania wyniki działania komendy ls z dowolnymi parametrami po wykonaniu powyższej komendy:\\
+			\textbf{(\emph{Zbieracz Forczu}: te kreski są przerywane, zwykłe myślniki)}}%
 		{Tak}{Directory: E:\textbackslash test\\
 			Mode  LastWriteTime Length Name\\
 			----  ------------- ------ ----\\
@@ -324,6 +335,8 @@
 			e.xxy\\
 			PS E:\textbackslash test$ > $}%
 		{Tak}{Directory: E:\textbackslash test\textbackslash }
+		
+		\newpage
 		\item \question{Zdania prawdziwe, opisujące zmienne PowerShell, to:}%
 		{Nie}{Zmienne muszą mieć zdefiniowany typ}%
 		{Tak}{Wszystkie zmienne są obiektami .NET}%
@@ -361,6 +374,8 @@
 		{Nie}{Zostanie wypisany tekst „Piątka mniejsza od szóstki większa od trójki”}%
 		{Tak}{Zostanie wypisany tekst „Piątka większa od trójki”}%
 		{Nie}{Zostanie wypisany komunikat o błędzie w kodzie programu}
+		
+		\newpage
 		\item \question{Które z wymienionych opisów dotyczy PowerShella:}%
 		{Tak}{ułatwia zadania administracyjne}%
 		{Nie}{jest zgodny linuksową powłoką shell}%
@@ -376,8 +391,6 @@
 		{Nie}{W konsoli PowerShell jest możliwe uruchomienie skryptu bez podania jego pełnej ścieżki, jednak wymaga to ustawienia odpowiedniej polityki uruchamiania skryptów.}%
 		{Nie}{W konsoli PowerShell jest możliwe uruchomienie jakiegokolwiek skryptu bez podania jego pełnej ścieżki pod warunkiem, że bieżącą ścieżką będzie folder zawierający skrypt oraz polityka uruchamiania skryptów jest ustawiona na Unrestricted.}%
 		{Nie}{W konsoli PowerShell jest możliwe uruchomienie skryptu bez podawania jego pełnej ścieżki w przypadku gdy skrypt ten pochodzi z komputera lokalnego.}
-		
-		\newpage
 		\item \question{Windows PowerShell:}%
 		{Tak}{Jest zintegrowany z .NET Framework}%
 		{Nie}{Dostępny jest dla systemu Windows 2000}%
@@ -388,20 +401,22 @@
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem "kol" z folderu nadrzędnego do "C:\textbackslash Kolokwium\textbackslash Main", tzn. "C:\textbackslash Kolokwium"}%
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem "kol" wyłącznie z folderu "C:\textbackslash Kolokwium\textbackslash Main"}%
 		{Nie}{Żadna z odpowiedzi nie jest prawidłowa}
+		
+		\newpage
 		\item \question{Wskaż poprawne zdania dotyczące zmiennych w Windows PowerShell:}%
 		{Tak}{Wszystkie zmienne są obiektami .NET.}%
-		{Tak}{Zmienne muszą mied nadany typ.}%
+		{Tak}{Zmienne muszą mieć nadany typ.}%
 		{Nie}{Wartość do zmiennej przypisuje operator „:=”}%
 		{Tak}{Zmienne mogą mieć zakres widoczności.}
 		\item \question{Które z poniższych skryptów PowerShella wydrukują listę nazw wszystkich plików o rozszerzeniu .txt w aktualnie wybranym katalogu?}%
-		{Tak}{get-childitem | where-object {\$\_.extension -eq ".txt"} | format-table Name}%
-		{Nie}{get-childitem | format-table Name | where-object {\$\_.extension -eq ".txt"}}%
+		{Tak}{get-childitem | where-object \{\$\_.extension -eq ".txt"\} | format-table Name}%
+		{Nie}{get-childitem | format-table Name | where-object \{\$\_.extension -eq ".txt"\}}%
 		{Tak}{foreach(\$a in get-childitem) \{\\
 				if(\$a.extension -eq ".txt") \{\\
 					\$a.Name\\
 				\}\\
 			\}}%
-		{Tak}{get-childitem | foreach {if(\$\_.extension -eq ".txt"){\$\_.Name}}}
+		{Tak}{get-childitem | foreach \{if(\$\_.extension -eq ".txt")\{\$\_.Name\}\}}
 		\item \question{Zamiennikiem poleceo dir i ls w PowerShell jest polecenie:}%
 		{Tak}{Get-ChildItem}%
 		{Nie}{Get-Content}%
@@ -409,14 +424,12 @@
 		{Nie}{Set-Variable}
 		\item \question{Co charakteryzuje PowerShell:}%
 		{Tak}{Nie rozróżnia wielkości liter w komendach}%
-		{Nie}{Każdą linię w pliku .ps należy zakooczyd średnikiem}%
+		{Nie}{Każdą linię w pliku .ps należy zakończyć średnikiem}%
 		{Tak}{Zmienne oznacza się znakiem dolara '\$'}%
 		{Tak}{Istnieje różnica między pojedynczym a podwójnym cudzysłowem}
-		
-		\newpage
 		\item \question{Które zdania o PowerShel są FAŁSZYWE:}%
 		{Nie}{jest zintegrowany z .NET Framework}%
-		{Tak}{GetChildItem zwraca wszystkie obiekty jakie zawierają dzieci bierzącej lokalizacji}%
+		{Tak}{GetChildItem zwraca wszystkie obiekty jakie zawierają dzieci bieżącej lokalizacji}%
 		{Nie}{Zmienne są obiektami}%
 		{Tak}{Do zmiennych odwołujemy się znakiem \%}
 		\item \question{Instrukcja w PowerShel która zatrzymuje (ang.kill) procesy zaczynające się na literę Y to:}%
@@ -424,7 +437,9 @@
 		{Nie}{get-process Y* | kill-proces}%
 		{Tak}{ps Y* | stop-process}%
 		{Tak}{ps Y* | kill-process}
-		\item \question{Użytkownik korzysta z Powershella w środowisku Windows i znajduje się w lokalizacji C:\textbackslash MyScripts$ > $ po wywołaniu komendy ls, okazało się, że w tym folderze znajduje się plik script.ps1. Użytkownik zamierzając go uruchomid, zmienił aktualna politykę wykonywania skryptów z Restricted na RemoteSigned. Które z poniższych komend uruchomią w/w skrypt?}%
+		
+		\newpage
+		\item \question{Użytkownik korzysta z Powershella w środowisku Windows i znajduje się w lokalizacji C:\textbackslash MyScripts$ > $ po wywołaniu komendy ls, okazało się, że w tym folderze znajduje się plik script.ps1. Użytkownik zamierzając go uruchomić, zmienił aktualna politykę wykonywania skryptów z Restricted na RemoteSigned. Które z poniższych komend uruchomią w/w skrypt?}%
 		{Nie}{run script.ps1}%
 		{Nie}{script.ps1}%
 		{Tak}{C:\textbackslash MyScripts\textbackslash script.ps1}%
@@ -444,8 +459,6 @@
 		{Nie}{Może uruchamiać niepodpisane skrypty pochodzące z lokalnego komputera}%
 		{Nie}{Może uruchamiać podpisane skrypty pobrane z Internetu}%
 		{Nie}{Może uruchamiać niepodpisane skrypty pobrane z Internetu}
-		
-		\newpage
 		\item \question{W PowerShell polecenie Get-Process:}%
 		{Tak}{Wylistuje wszystkie aktualnie uruchomione procesy}%
 		{Nie}{Zmieni priorytet procesu}%
@@ -456,12 +469,25 @@
 		{Tak}{Uruchamianie skryptów podpisanych przez zaufanego wydawcę.}%
 		{Tak}{Uruchamianie niepodpisanych skryptów, które powstały na lokalnym komputerze.}%
 		{Nie}{Korzystanie jedynie z pojedynczych komend, bez możliwości uruchamiania skryptów.}
+		
+		\newpage
 		\item \question{Prawidłowa postad pętli for w PowerShell to:}%
 		{Nie}{for (i = 1, i -le 10, i++) \{ \}}%
 		{Nie}{for (i = 1; i -le 10; i++) \{ \}}%
 		{Nie}{for (\$i = 1; \$i $ < $= 10; i++) \{ \}}%
 		{Tak}{for (\$i = 1; \$i -le 10; \$i++) \{ \}}
-		
+		\item \question{Jaki jest rezultat polecenia interpretera PowerShell:\\
+			get-childitem C:\textbackslash Work\textbackslash -recurse | get-acl | where \{ \$\_.Owner -match "Maniek"\}}%
+		{Tak}{Wypisze wszystkie pliki, których właścicielem jest Maniek z folderu C:\textbackslash Work oraz podfolderów}%
+		{Nie}{Wypisze tylko pliki z folderu C:\textbackslash Work, których właścicielem jest Maniek.}%
+		{Nie}{Wypisze wszystkie pliki z dysku C:, których właścicielem jest Maniek.}%
+		{Nie}{Wypisze pliki, które nie należą do użytkownika Maniek, z folderu C:\textbackslash Work}
+		\item \question{Co otrzymamy po wykonaniu następującej komendy w interpreterze PowerShell:\\
+			PS C:\textbackslash $ > $ Get-ChildItem | where \{ \$\_.PslsContainer  \} | Select-Object Name}%
+		{Nie}{Tylko nazwy folderów jakie znajdują się w lokalizacji C:\textbackslash}%
+		{Nie}{Tylko nazwy folderów i podfolderów jakie znajdują się w lokalizacji C:\textbackslash}%
+		{Tak}{Tylko nazwy plików jakie znajdują się w lokalizacji C:\textbackslash}%
+		{Nie}{Dokładny opis folderów, czyli m.in. nazwy i uprawnienia jakie znajdują się w lokalizacji C:\textbackslash}
 		
 		%\item \question{}%
 		%{Tak}{}%
