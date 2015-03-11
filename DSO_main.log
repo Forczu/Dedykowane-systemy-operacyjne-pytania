@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  11 MAR 2015 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  11 MAR 2015 23:19
 entering extended mode
 **DSO_main.tex
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.tex"
@@ -1011,97 +1011,79 @@ Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count176
-\lst@gtempboxa=\box49
-\lst@token=\toks30
-\lst@length=\count177
-\lst@currlwidth=\dimen173
-\lst@column=\count178
-\lst@pos=\count179
-\lst@lostspace=\dimen174
-\lst@width=\dimen175
-\lst@newlines=\count180
-\lst@lineno=\count181
-\lst@maxwidth=\dimen176
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count182
-\lst@skipnumbers=\count183
-\lst@framebox=\box50
+("C:\Program Files\MiKTeX 2.9\tex\latex\xargs\xargs.sty"
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+\xargs@max=\count176
+\xargs@toksa=\toks30
+\xargs@toksb=\toks31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2014/09/06 1.5e listings configuration
-))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box51
+\ttl@box=\box49
 \beforetitleunit=\skip77
 \aftertitleunit=\skip78
-\ttl@plus=\dimen177
-\ttl@minus=\dimen178
-\ttl@toksa=\toks31
-\titlewidth=\dimen179
-\titlewidthlast=\dimen180
-\titlewidthfirst=\dimen181
+\ttl@plus=\dimen173
+\ttl@minus=\dimen174
+\ttl@toksa=\toks32
+\titlewidth=\dimen175
+\titlewidthlast=\dimen176
+\titlewidthfirst=\dimen177
 )
+("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_macrodefs.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 55.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    ... okay on input line 55.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count184
-\scratchdimen=\dimen182
-\scratchbox=\box52
-\nofMPsegments=\count185
-\nofMParguments=\count186
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count187
-\MPscratchDim=\dimen183
-\MPnumerator=\count188
-\makeMPintoPDFobject=\count189
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count177
+\scratchdimen=\dimen178
+\scratchbox=\box50
+\nofMPsegments=\count178
+\nofMParguments=\count179
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count180
+\MPscratchDim=\dimen179
+\MPnumerator=\count181
+\makeMPintoPDFobject=\count182
+\everyMPtoPDFconversion=\toks34
 )
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 95.
+\AtBeginShipoutBox=\box51
+Package hyperref Info: Link coloring OFF on input line 55.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count190
+\c@section@level=\count183
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.out")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.out")
@@ -1111,7 +1093,6 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
-Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1120,35 +1101,29 @@ Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
 \FBsc@max=\skip79
 \FBso@max=\skip80
 )
-\c@lstlisting=\count191
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-LaTeX Font Info:    Try loading font information for OML+plm on input line 114.
-
+LaTeX Font Info:    Try loading font information for OML+plm on input line 73.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 114
-.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 73.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 114
-.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 73.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 114.
+(Font)              <12> on input line 73.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 114.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 114.
+(Font)              <6> on input line 73.
  [1
 
 {C:/Users/Mati/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -1259,28 +1234,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--191
 
 ) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_3_RAID.tex" [46] [47]
 [48] [49] [50] [51] [52])
-("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_4_LAMP.tex")
+("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_4_LAMP.tex" [53])
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_5_Wielosystemowosc.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_6_Kernel.tex")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
- [53]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
+ [54]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
 
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
-Package rerunfilecheck Info: File `DSO_main.out' has not changed.
-(rerunfilecheck)             Checksum: 9A030818429DA12E82FD4770B977417D;1978.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+
+
+Package rerunfilecheck Warning: File `DSO_main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `DSO_main.out':
+(rerunfilecheck)             Before: 3BC15AF342281724B5088E5B9FD13534;1872
+(rerunfilecheck)             After:  9A030818429DA12E82FD4770B977417D;1978.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 21910 strings out of 493921
- 346066 string characters out of 3147285
- 408913 words of memory out of 3000000
- 23386 multiletter control sequences out of 15000+200000
+ 20689 strings out of 493921
+ 328868 string characters out of 3147285
+ 385539 words of memory out of 3000000
+ 22164 multiletter control sequences out of 15000+200000
  16457 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 68i,7n,98p,10440b,527s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,7n,98p,10440b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
 ps/pl/plms.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Pro
@@ -1296,9 +1278,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><C:/Program Files/MiKTeX
 2.9/fonts/type1/public/pl/plsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti9.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on DSO_main.pdf (53 pages, 425721 bytes).
+Output written on DSO_main.pdf (54 pages, 427888 bytes).
 PDF statistics:
- 2153 PDF objects out of 2487 (max. 8388607)
- 1559 named destinations out of 1728 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2165 PDF objects out of 2487 (max. 8388607)
+ 1569 named destinations out of 1728 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,85 @@
+
+
+% === DEFINICJA ZIELONEGO ==================== %
+\definecolor{Gurin}{rgb}{0, 0.35, 0}
+
+% === MAKRODEFINICJA POPRAWNEJ I ZŁEJ ODPOWIEDZI ==================== %
+\newcommand{\Tak}[1] {
+	\color{Gurin}{#1}
+}
+\newcommand{\Nie}[1] {
+	\color{Red}{#1}
+}
+
+% === Porównywarka odpowiedzi
+\newcommand{\answer}[2] {
+	\ifnum\pdfstrcmp{#1}{Tak}=0
+	\Tak{\item #2}
+	\else
+	\Nie{\item #2}
+	\fi
+}
+
+% === MAKRODEFINICJA PYTANIA I ODPOWIEDZI =========================== %
+% ** Pierwszy argument to treść pytania
+% ** Kolejne argumenty to:
+% * parzyste - Tak lub Nie
+% * nieparzyste - Treści odpowiedzi
+\newcommand{\question}[9] {
+	\textbf{#1}
+	\begin{enumerate}[a.]
+		\answer{#2}{#3}
+		\answer{#4}{#5}
+		\answer{#6}{#7}
+		\answer{#8}{#9}
+	\end{enumerate}
+}
+
+
+% === MAKRODEFINICJE PYTANIA I WIĘCEJ NIŻ 4 ODPOWIEDZI =========================== %
+% ** Pierwszy argument to treść pytania
+% ** Kolejne argumenty to:
+% * parzyste - Tak lub Nie
+% * nieparzyste - Treści odpowiedzi
+
+\newcommand{\questionVIII}[2]{ %
+	\setkeys{Question}{#1}, %
+	\begin{enumerate}[a.]
+		\setkeys{Answers}{#2}
+	\end{enumerate}
+}
+
+\makeatletter
+\define@key{Question}{question}{\textbf{#1}}
+\define@key{Answers}{isTrue1}{\def\QA@isTrueI{#1}}
+\define@key{Answers}{answer1}{\answer{\QA@isTrueI}{#1}}
+\define@key{Answers}{isTrue2}{\def\QA@isTrueII{#1}}
+\define@key{Answers}{answer2}{\answer{\QA@isTrueII}{#1}}
+\define@key{Answers}{isTrue3}{\def\QA@isTrueIII{#1}}
+\define@key{Answers}{answer3}{\answer{\QA@isTrueIII}{#1}}
+\define@key{Answers}{isTrue4}{\def\QA@isTrueIV{#1}}
+\define@key{Answers}{answer4}{\answer{\QA@isTrueIV}{#1}}
+\define@key{Answers}{isTrue5}{\def\QA@isTrueV{#1}}
+\define@key{Answers}{answer5}{\answer{\QA@isTrueV}{#1}}
+\define@key{Answers}{isTrue6}{\def\QA@isTrueVI{#1}}
+\define@key{Answers}{answer6}{\answer{\QA@isTrueVI}{#1}}
+\define@key{Answers}{isTrue7}{\def\QA@isTrueVII{#1}}
+\define@key{Answers}{answer7}{\answer{\QA@isTrueVII}{#1}}
+\define@key{Answers}{isTrue8}{\def\QA@isTrueVIII{#1}}
+\define@key{Answers}{answer8}{\answer{\QA@isTrueVIII}{#1}}
+
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+
+
+

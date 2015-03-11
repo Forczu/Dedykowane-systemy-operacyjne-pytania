@@ -23,7 +23,8 @@
 \usepackage{blindtext}
 \usepackage{enumerate}
 \usepackage{wrapfig}
-\usepackage{listings}
+\usepackage{xargs}
+
 
 
 
@@ -47,54 +48,12 @@
 \titleformat{\part}[display]
 {\normalfont\LARGE\bfseries\centering}{}{0pt}{}
 
-% === DEFINICJA ZIELONEGO ==================== %
-\definecolor{Gurin}{rgb}{0, 0.35, 0}
 
-% === MAKRODEFINICJA POPRAWNEJ I ZŁEJ ODPOWIEDZI ==================== %
-\newcommand{\Tak}[1] {
-	\color{Gurin}{#1}
-}
-\newcommand{\Nie}[1] {
-	\color{Red}{#1}
-}
-
-% === MAKRODEFINICJA PYTANIA I ODPOWIEDZI =========================== %
-% ** Pierwszy argument to treść pytania
-% ** Kolejne argumenty to:
-% * parzyste - Tak lub Nie
-% * nieparzyste - Treści odpowiedzi
-\newcommand{\question}[9] {
-	\textbf{#1}
-	\begin{enumerate}[a.]
-		\ifnum\pdfstrcmp{#2}{Tak}=0
-			\Tak{\item #3}
-		\else
-			\Nie{\item #3}
-		\fi
-		\color{black}
-		\ifnum\pdfstrcmp{#4}{Tak}=0
-			\Tak{\item #5}
-		\else
-			\Nie{\item #5}
-		\fi
-		\color{black}
-		\ifnum\pdfstrcmp{#6}{Tak}=0
-			\Tak{\item #7}
-		\else
-			\Nie{\item #7}
-		\fi
-		\color{black}
-		\ifnum\pdfstrcmp{#8}{Tak}=0
-			\Tak{\item #9}
-		\else
-			\Nie{\item #9}
-		\fi
-	\end{enumerate}
-}
+% === MAKRODEFINICJE === %
+\input{./DSO_macrodefs.tex}
 
 \begin{document}
 \bibliographystyle{plain}
-\lstset{language=sh}
 
 % ************************************************************
 % *** WZÓR PYTANIA DO SKOPIOWANIA
