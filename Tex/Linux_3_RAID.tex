@@ -1,1 +1,181 @@
+%\item \question{}%
+%{Tak}{}%
+%{Nie}{}%
+%{}{}%
+%{}{}
+
+% !TeX spellcheck = pl_PL
+% *****************************************************
+% Możliwe, że coś się wymieszało z Windowsem,
+% do sprawdzenia bliżej laborek
+% *****************************************************
+\newpage
 \section{Linux RAID}
+	\begin{enumerate}
+		\item \question{Macierz typu raid 5 złożona z 3 dysków o jednakowej pojemności i parametrach:}%
+		{Nie}{ma pojemność 2 dysków i nie jest odporna na awarię ani jednego dysku}%
+		{Tak}{oferuje spowolniony odczyt w przypadku awarii 1 dysku}%
+		{Nie}{ma pojemność 1 dysku i jest odporna na awarię maksymalnie 2 dysków}%
+		{Tak}{ma pojemność 2 dysków i jest odporna na awarię maksymalnie 1 dysku}
+		\item \question{W systemie Ubuntu, zakładając, że pliki blokowe /dev/sdb1 i /dev/sdb2 reprezentują partycje o rozmiarze 50MB, bezpośrednio po utworzeniu woluminu /dev/md0 poleceniem:\\
+		mdadm $ -- $create $ -- $verbose /dev/md0 $ -- $level=linear $ -- $raid-devices=2\\/dev/sdb1/dev/sdb2:}%
+		{Tak}{wolumin /dev/md0 będzie miał wielkość 100MB}%
+		{Nie}{wolumin /dev/md0 będzie miał wielkość 50MB}%
+		{Nie}{wolumin /dev/md0 będzie można zamontować poleceniem mount /dev/md0 /mnt}%
+		{Tak}{uszkodzenie dokładnie jednego spośród urządzeń /dev/sdb1 oraz /dev/sdb2 może spowodować utratę danych w woluminie /dev/md0}
+		\item \question{Zaznacz prawdziwe stwierdzenia:}%
+		{Tak}{Sprzętowy RAID oferuje większą wydajność poprzez zmniejszenie obciążenia CPU, gdyż przeliczaniem sum kontrolnych zajmuje się wówczas dedykowany kontroler.}%
+		{Nie}{RAID sprzętowy jest niekompatybilny z dużą liczbą systemów operacyjnych, ze względu na zachowanie odróżniające taki RAID od pojedynczego dysku twardego.}%
+		{Tak}{RAID software'owy oferuje możliwość łączenia różnych interfejsów takich jak ATA, SCSI, SATA, USB w obrębie jednej macierzy.}%
+		{Nie}{Dla takich samych dysków RAID 6 oferuje większą szybkość zapisu niż RAID 0.}
+		\item \question{RAID5 może składad się z następującej ilości dysków:}%
+		{Nie}{2}%
+		{Tak}{3}%
+		{Tak}{4}%
+		{Tak}{5}
+		\item \question{RAID inaczej zwanym lustrzanym (mirroringiem) to:}%
+		{Tak}{RAID1}%
+		{Nie}{RAID2}%
+		{Nie}{RAID3}%
+		{Nie}{RAID5}
+		\item \question{Jakie polecenie pozwoli na rozpoczecie procedury tworzenia partycji:}%
+		{Tak}{fdisk /dev/hda}%
+		{Nie}{mkdir /dev/sda}%
+		{Tak}{fdisk /dev/sdb}%
+		{Nie}{mdadd /dev/sdb}
+		\item \question{Jaka ilość dysków jest wystarczająca, aby zastosować RAID:}%
+		{Nie}{1}%
+		{Nie}{2}%
+		{Tak}{3}%
+		{Tak}{4}
+		
+		\newpage
+		\item \question{Mając do dyspozycji 3 identyczne dyski twarde można stworzyć macierz RAID w konfiguracji:}%
+		{Tak}{RAID 0}%
+		{Tak}{RAID 5}%
+		{Nie}{RAID 6}%
+		{Nie}{RAID 10}
+		\item \question{Trzy dyski zostały połączone w macierz RAID 0.}%
+		{Nie}{Łączna przestrzeń dyskowa jest równa sumie przestrzeni, każdego z dysków}%
+		{Tak}{Łączna przestrzeń dyskowa jest równa potrojonej przestrzeni dyskowej najmniejszego dysku}%
+		{Tak}{Szybkość jest równa potrojonej szybkości najwolniejszego z dysków}%
+		{Nie}{Szybkość jest równa szybkości najwolniejszego z dysków}
+		\item \question{Zaznacz cele zastosowania macierzy RAID:}%
+		{Tak}{Zwiększenie odporności na awarie}%
+		{Tak}{Zwiększenie wydajności transmisji danych}%
+		{Tak}{Powiększenie przestrzeni dyskowej, dostępnej jako jedna całość}%
+		{Nie}{Dwukrotne zwiększenie całkowitej przestrzeni dyskowej}
+		\item \question{Administrator podłączył do komputera dwa dyski twarde o pojemności 200GB każdy i połączył je w macierz RAID 1. Do komputera nie zostały podłączone żadne inne dyski. Które z poniższych twierdzeń są prawidłowe?}%
+		{Tak}{Całkowita pojemność partycji dostępnych w systemie nie przekracza 200GB.}%
+		{Nie}{Rozwiązanie takie zapewnia o wiele większą prędkość odczytu i zapisu danych niż macierz RAID 0.}%
+		{Tak}{Rozwiązanie takie zapewnia o wiele większe bezpieczeństwo danych niż macierz RAID 0.}%
+		{Nie}{W przypadku awarii jednego dysku użytkownik straci wszystkie swoje dane}
+		\item \question{Zaznacz zdania prawdziwe dotyczące sprzętowej macierzy RAID:}%
+		{Tak}{Macierz jest zupełnie przezroczysta, przez co z punktu widzenia Systemu Operacyjnego zachowuje się ona jak każdy inny dysk twardy}%
+		{Nie}{mniejsza wydajność poprzez zwiększenie obciążenia CPU}%
+		{Tak}{Minimalna liczba dysków potrzebna do stworzenia macierzy to 2}%
+		{Nie}{Sprzętowa macierz RAID zawsze umożliwia przywrócenie danych w razie awarii jednego z dysków}
+		\item \question{Zaznacz zdania prawdziwe dotyczące programowej macierzy RAID:}%
+		{Nie}{Macierz jest zupełnie przezroczysta, przez co z punktu widzenia Systemu Operacyjnego zachowuje się ona jak każdy inny dysk twardy}%
+		{Tak}{mniejsza wydajność poprzez zwiększenie obciążenia CPU}%
+		{Tak}{Minimalna liczba dysków potrzebna do stworzenia macierzy to 2}%
+		{Nie}{Programowa macierz RAID zawsze umożliwia przywrócenie danych w razie awarii jednego z dysków}
+		
+		\newpage
+		\item \question{System Linux pozwala na:}%
+		{Tak}{Tworzenie programowych macierzy RAID.}%
+		{Tak}{Tworzenie wolumenów liniowych.}%
+		{Nie}{Tworzenie partycji za pomocą polecenia "create"}%
+		{Tak}{Tworzenie macierzy RAID 5.}
+		\item \question{Woluminy liniowe w katalogu dev oznaczone są jako:}%
+		{Tak}{md0,md1,...}%
+		{Nie}{ma0,ma1,...,mb0,mb1,...}%
+		{Nie}{raid0,raid1,...}%
+		{Nie}{rda0,rda1,...,rdb0,rdb1,...}
+		\item \question{Za pomocą polecenia mdadm można:}%
+		{Tak}{utworzyć wolumin liniowy}%
+		{Nie}{Sformatować partycję}%
+		{Tak}{Sprawdzić konfigurację macierzy}%
+		{Tak}{Zasymulować awarię woluminu}
+		\item \question{Która z aplikacji umożliwia stworzenie partycji na twardym dysku?}%
+		{Nie}{/etc/fstab}%
+		{Tak}{/sbin/fdisk}%
+		{Tak}{/sbin/cfdisk}%
+		{Nie}{/etc/mtab}
+		\item \question{Wskaż poprawne zdania dotyczące RAID.}%
+		{Nie}{Polecenie „mdadm -C -v /dev/md0 --level=0 -n 2 /dev/sda1 /dev/sdb1” służy do stworzenia wolumenu liniowego na partycjach sda1 i sdb1.}%
+		{Tak}{Polecenie „mdadm -C -v /dev/md0 –level=1 -n 2 /dev/sda1 /dev/sdb1” służy do stworzenia mirroru.}%
+		{Tak}{Polecenie „mkfs -t ext3 /dev/md0” służy do sformatowania urządzenia.}%
+		{Nie}{Wolumenu liniowego /dev/md0 nie można dodać do pliku /etc/fstab, aby była montowana przy starcie systemu operacyjnego.}
+		\item \question{Które z wymienionych rodzajów macierzy RAID zapewniają mirroring:}%
+		{Nie}{RAID 0}%
+		{Tak}{RAID 1}%
+		{Tak}{RAID 5}%
+		{Tak}{RAID 10}
+		\item \question{Które z wymienionych poleceń umożliwia zarządzanie macierzami RAID w systemie GNU/Linux:}%
+		{Nie}{hdparm}%
+		{Tak}{mdadm}%
+		{Nie}{fdisk}%
+		{Nie}{parted}
+		
+		\newpage
+		\item \question{Celem wyłączenia automatycznego montowania urządzenia cdrom w systemie Linux należy:}%
+		{Tak}{Odpowiednio zmodyfikować plik '/etc/fstab'.}%
+		{Nie}{Wykonać polecenie 'nmount -n cdrom'.}%
+		{Nie}{Wykonać polecenie 'nmount cdrom'.}%
+		{Nie}{Odpowiednio zmodyfikować plik '/etc/amount'.}
+		\item \question{Polecenie 'fdisk' w systemie Linux można wykorzystać do:}%
+		{Tak}{tworzenia partycji.}%
+		{Tak}{wypisania informacji o dysku.}%
+		{Nie}{montowania dysku.}%
+		{Nie}{tworzenia kopii zapasowej danych.}
+		\item \question{Wskaż poprawne odpowiedzi dotyczące RAID5:}%
+		{Tak}{Umożliwia odzyskanie danych w razie awarii jednego z dysków}%
+		{Nie}{Składa się z minimum 2 dysków}%
+		{Nie}{Odzyskiwanie danych w razie awarii odbywa się przy wykorzystaniu danych i kodów korekcyjnych zapisanych na jednym, specjalnie do tego przeznaczonym dysku}%
+		{Tak}{W przypadku awarii dysku dostęp do danych jest spowolniony}
+		\item \question{Wskaż poprawne odpowiedzi dotyczące mirroring-u:}%
+		{Tak}{Polega na zapisywaniu tych samych danych na dwóch lub więcej dyskach jednocześnie}%
+		{Nie}{W przypadku awarii co najmniej połowy z dysków nie ma możliwości odzyskania wszystkich danych}%
+		{Tak}{Dostępna przestrzeń ma rozmiar najmniejszego nośnika}%
+		{Tak}{Czas równoległego zapisu jest równy czasowi zapisu na najwolniejszym dysku}
+		\item \question{Wskaż poprawne zdania dotyczące RAID5 w systemie Linux:}%
+		{Nie}{Do utworzenia RAID5 potrzebne są co najmniej dwie partycje.}%
+		{Nie}{Do utworzenia RAID5 można użyć maksymalnie trzech partycji.}%
+		{Nie}{Do odtworzenia danych z uszkodzonej partycji zawsze wykorzystywana jest jedna, specjalnie do tego przygotowanej partycja.}%
+		{Tak}{RAID5 jest całkowicie odporny na uszkodzenie jednej partycji (dane można w pełnie odtworzyć).}
+		\item \question{Wskaż poprawne zdania dotyczące RAID1 (mirror) w systemie Linux.}%
+		{Tak}{Całkowita pojemność partycji połączonych w RAID1 jest taka jak pojemność najmniejszej z tych partycji.}%
+		{Tak}{Do utworzenia RAID1 można wykorzystać trzy partycje.}%
+		{Nie}{Zastosowanie RAID1 pozwala na zwiększenie szybkości zapisu i odczytu danych.}%
+		{Tak}{RAID1 jest całkowicie odporny na uszkodzenie jednej partycji (dane można w pełni odtworzyć).}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	\end{enumerate}
