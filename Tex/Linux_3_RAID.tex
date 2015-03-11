@@ -149,30 +149,102 @@
 		{Tak}{Do utworzenia RAID1 można wykorzystać trzy partycje.}%
 		{Nie}{Zastosowanie RAID1 pozwala na zwiększenie szybkości zapisu i odczytu danych.}%
 		{Tak}{RAID1 jest całkowicie odporny na uszkodzenie jednej partycji (dane można w pełni odtworzyć).}
+		\item \question{Które z poniższych funkcji macierzy RAID zwiększają bezpieczeństwo danych?}%
+		{Tak}{mirroring (lustrzane odbicie)}%
+		{Nie}{stripping (paskowanie)}%
+		{Nie}{macierze liniowe}%
+		{Tak}{kontrola parzystości}
 		
+		\newpage
+		\item \question{Trzy dyski, każdy o pojemności 1TB, połączyliśmy w macierz RAID5. Jaką pojemnośd ma uzyskany wolumien?}%
+		{Nie}{0.5 TB}%
+		{Nie}{1 TB}%
+		{Tak}{2 TB}%
+		{Nie}{3 TB}
+		\item \question{Zaznacz poprawną odpowiedz dotyczącą RAID:}%
+		{Tak}{RAID pozwala łączyć ze sobą dyski celem stworzenia pamięci masowej o dużej pojemności I niezawodności}%
+		{Tak}{macierz RAID można stworzyć za pomocą sprzętowych kontrolerów oraz systemowych narzędzi}%
+		{Nie}{do utworzenia RAID5 wystarczą dwa dyski}%
+		{Nie}{nie da stworzyć się macierzy dyskowej z dwóch dysków}
+		\item \question{Skrót RAID oznacza:}%
+		{Tak}{Redundant Array of Independent Disks}%
+		{Nie}{Redundant Array of Independent Drives}%
+		{Nie}{Remote Array of Independent Disks}%
+		{Nie}{Reserved Array of Independent Disks}
+		\item \question{Macierz RAID 5 charakteryzuje się}%
+		{Nie}{Zastosowaniem minimum 2 dysków}%
+		{Tak}{Zastosowaniem minimum 3 dysków}%
+		{Nie}{Odpornością na awarię dwóch dysków}%
+		{Tak}{Zmniejszoną szybkością zapisu}
+		\item \question{Macierz RAID 0 używana jest do:}%
+		{Tak}{Poprawy wydajności zapisu}%
+		{Nie}{Zabezpieczeniem danych przed awarią dysku kosztem dostępnego miejsca}%
+		{Nie}{Zabezpieczeniem danych przed awarią dysku kosztem czasu dostępu}%
+		{Nie}{Skrócenia czasu odbudowy macierzy}
+		\item \question{Co jest zawartością pliku /proc/mdstat ?}%
+		{Tak}{Konfiguracje RAID}%
+		{Tak}{Aktualny stan macierzy}%
+		{Nie}{Standardowe procery obsługi RAID}%
+		{Nie}{Listę uruchomionych procesów}
+		\item \question{Aby połączyć dwa wolumeny w wolumen liniowy użyjemy instrukcji:}%
+		{Tak}{mdadm –create –verbose /dev/md0/ $ -- $level=linear –raid-dervices=2 /dev/sdb1 /dev/sdb2}%
+		{Nie}{Mdfs –create –verbose /dev/md0/ $ -- $level=linear –raid-dervices=2 /dev/sdb1 /dev/sdb2}%
+		{Nie}{mdadm –create –verbose /dev/md0/ $ -- $level=raid1 –raid-dervices=2 /dev/sdb1 /dev/sdb2}%
+		{Nie}{mdadm –new –verbose /dev/md0/ $ -- $level=linear –raid-dervices=2 /dev/sdb1 /dev/sdb2}
+		\item \question{}%
+		{Nie}{Zapewnia ochronę przed utratą danych}%
+		{Tak}{Zapewnia zwiększoną wydajność zapisu}%
+		{Tak}{Zapewnia zwiększoną wydajność odczytu}%
+		{Nie}{Do jej stworzenia potrzebne są minimalnie 3 dyski}
 		
+		\newpage
+		\item \question{Na komputerze została stworzona macierz RAID 1 złożona z 3 partycji sda1, sdb1 i sdc1, wszystkie dyski pracuja poprawnie i nie są uszkodzone, co się stanie w momencie wywołania komendy:\\'mdadm /dev/md0 -- remove /dev/sda1'}%
+		{Nie}{Partycja sda1 zostanie usunięta z macierzy md0}%
+		{Tak}{Nic}%
+		{Tak}{Partycja sda1 zostanie usunięta z macierzy jeśli przedtem wywołano komendę 'mdadm $ -- $fail /dev/md0 /dev/sda1'}%
+		{Nie}{Macierz md0 zostanie usunięta}
+		\item \question{Wskaż typy macierzy dyskowych, które do ochrony danych wykorzystują sumy kontrolne}%
+		{Nie}{RAID 0}%
+		{Nie}{RAID 1}%
+		{Tak}{RAID 3}%
+		{Tak}{RAID 5}
+		\item \question{Cztery dyski twarde o rozmiarach 200GB 200GB 150GB 150GB połączono w macierz typu striped volume:}%
+		{Nie}{Macierz taka jest bardziej odporna na awarie niż pojedynczy dysk}%
+		{Tak}{Sumaryczna szybkość takiej macierzy jest 4-krotnością szybkości najwolniejszego z dysków}%
+		{Nie}{Macierz jest widziana w systemie jako pojedynczy dysk logiczny o rozmiarze 700GB}%
+		{Tak}{Prawdopodobieństwo utraty danych jest większe niż dla analogicznej macierzy RAID 1}
+		\item \question{Zaznacz prawdziwe zdania dotyczące RAID5.}%
+		{Nie}{RAID5 polega na tworzeniu kopi danych na rożnych dyskach (mirroring)}%
+		{Nie}{Macierz składa się z 5 lub więcej dysków}%
+		{Nie}{Macierz składająca się z n dysków jest odporna na awarię n – 2 dysków}%
+		{Tak}{Wszystkie powyższe odpowiedzi są nie poprawne}
+		\item \question{W maszynie zainstalowana jest macierz RAID. Jeden z dysków podlega awarii. Zaznacz zdania prawdziwe.}%
+		{Tak}{Dla macierzy RAID 5 po wymianie uszkodzonego dysku dane zostaną odbudowane.}%
+		{Nie}{Macierz RAID 1 przestanie funkcjonować.}%
+		{Tak}{Jeśli zainstalowane były 3 dyski, macierz RAID 1 pozwoli na dalsza pracę bez utraty danych.}%
+		{Tak}{Macierz RAID 5 nie wymaga wymiany dysku na nowy przed wznowieniem pracy.}
+		\item \question{Wpisanie polecenia fdisk /dev/hda oraz p spowoduje:}%
+		{Nie}{sformatowanie dysku hda}%
+		{Tak}{wypisanie listy partycji istniejących na dysku hda}%
+		{Nie}{utworzenie na dysku hda partycji zajmującej całą dostępną przestrzeń}%
+		{Nie}{uruchomienie systemu operacyjnego z dysku hda}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		\newpage
+		\item \question{Wskaż cechy RAID 5:}%
+		{Nie}{bity parzystości są zapisywane na specjalnie do tego przeznaczonym dysku}%
+		{Nie}{szybkość dostępu do danych nie ulega zmianie w wypadku awarii jednego z dysków}%
+		{Tak}{gwarantuje stuprocentowe bezpieczeństwo danych przy awarii jednego dysku}%
+		{Tak}{jego zaletą jest szybki odczyt, jego wada to powolny zapis}
+		\item \question{Co odróżnia macierze RAID programowe od sprzętowych?}%
+		{Tak}{Obsługą macierzy programowych zajmuje się odpowiednie oprogramowanie, np. mdadm.}%
+		{Nie}{Macierze programowe mają większą wydajność w porównaniu do sprzętowych.}%
+		{Nie}{Problem awarii fizycznego nośnika w żaden sposób nie dotyczy macierzy programowych.}%
+		{Nie}{W macierzach programowych problem awarii fizycznego dotyczy jedynie poziomu RAID 0.}
+		\item \question{Wykonywanie jakich czynności związanych z macierzami RAID umożliwia polecenie „mdadm” w systemach z rodziny Linux?}%
+		{Tak}{Podłączanie nowych urządzeń do macierzy.}%
+		{Tak}{Generowanie zawartości plików konfiguracyjnych macierzy.}%
+		{Tak}{Sprawdzanie statusu macierzy.}%
+		{Tak}{Programowe symulowanie awarii w macierzy.}
 		
 		
 		

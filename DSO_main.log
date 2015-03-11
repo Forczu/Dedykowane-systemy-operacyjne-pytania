@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  11 MAR 2015 18:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  11 MAR 2015 19:02
 entering extended mode
 **DSO_main.tex
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.tex"
@@ -1258,11 +1258,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--191
  []
 
 ) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_3_RAID.tex" [46] [47]
-[48] [49]) ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_4_LAMP.tex")
+[48] [49] [50] [51] [52])
+("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_4_LAMP.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_5_Wielosystemowosc.tex")
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\Tex\Linux_6_Kernel.tex")
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
- [50]
+ [53]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
 
 ("F:\Uczelnia\Sem 6\DSO\DSO_kueszczons\DSO_main.aux")
@@ -1273,8 +1274,8 @@ Package rerunfilecheck Info: File `DSO_main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 21792 strings out of 493921
- 345010 string characters out of 3147285
+ 21910 strings out of 493921
+ 346066 string characters out of 3147285
  408913 words of memory out of 3000000
  23386 multiletter control sequences out of 15000+200000
  16457 words of font info for 45 fonts, out of 3000000 for 9000
@@ -1295,9 +1296,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><C:/Program Files/MiKTeX
 2.9/fonts/type1/public/pl/plsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plti9.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on DSO_main.pdf (50 pages, 404078 bytes).
+Output written on DSO_main.pdf (53 pages, 425721 bytes).
 PDF statistics:
- 2003 PDF objects out of 2073 (max. 8388607)
- 1441 named destinations out of 1728 (max. 500000)
+ 2153 PDF objects out of 2487 (max. 8388607)
+ 1559 named destinations out of 1728 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
