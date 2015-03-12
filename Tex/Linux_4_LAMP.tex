@@ -30,36 +30,247 @@
 % !TeX spellcheck = pl_PL
 \newpage
 \section{Linux LAMP}
-\begin{enumerate}
-	\item \questionVIII{%
-			question=Zaznacz wszystkie poprawne stwierdzenia dotyczące rozwiązania LAMP: %
+	\begin{enumerate}
+		\item \questionVIII{%
+				question=Zaznacz wszystkie poprawne stwierdzenia dotyczące rozwiązania LAMP: %
+			}{%
+				isTrue1=Nie, %
+				answer1=Konfiguracja baz danych może odbywać się wyłącznie poprzez narzędzie phpMyAdmin., %
+				isTrue2=Nie, %
+				answer2=MySQL pozwala na wykonywanie kodu zapisanego w języku PHP na stronie wwww., %
+				isTrue3=Tak, %
+				answer3=Funkcją MySQL jest zarządzanie bazą danych., %
+				isTrue4=Tak, %
+				answer4=Podstawową funkcją serwera Apache jest przesyłanie do klienta treści plików znajdujących się na dysku przy wykorzystaniu protokołu HTTP., %
+				isTrue5=Nie, %
+				answer5=Kod PHP wewnątrz pliku z rozszerzeniem .html może znajdować się pomiędzy znacznikiem $ < $php$ > $ oraz znacznikiem $ < $/php$ > $., %
+				isTrue6=Tak, %
+				answer6=Kod PHP wewnątrz pliku z rozszerzeniem .php może znajdować się pomiędzy znacznikiem $ < $? oraz znacznikiem ?$ > $., %
+				isTrue7=Tak, %
+				answer7=Pliki konfiguracyjne serwera Apache znajdują się w katalogu /etc/apache2/, %
+				isTrue8=Nie, %
+				answer8=phpMyAdmin jest narzędziem do konfiguracji w trybie tekstowym., %
+				isTrue9=Nie, %
+				answer9= {Elementy LAMP to Apache, MySQL i Prolog}, %
+				isTrue10=Tak, %
+				answer10={Można powiedzieć, że dynamiczna strona internetowa stworzona w PHP na Linuksie, korzystająca z serwera Apache, z bazą danych MySQL jest opartą o LAMP.},%
+				isTrue11=Nie, %
+				answer11=Jako język programowania stron w LAMP można wykorzystać wyłącznie PHP., %
+				isTrue12=Tak, %
+				answer12={Elementy LAMP zostały stworzone jako osobne rozwiązania, ale razem stanowią popularną platformę systemową.},%
+				isTrue13=Nie, %
+				answer13={Kod w HTML wymaga kompilacji zanim zostanie umieszczony na serwerze.}, %
+				isTrue14=Nie, %
+				answer14={Narzędzie phpMyAdmin służy do konfiguracji serwera Apache.}, %
+				isTrue15=Tak, %
+				answer15={MySql może być użyty jako serwer bazy danych.}, %
+				isTrue16=Tak, %
+				answer16={PHP może być użyty do tworzenia stron dynamicznych.},%
+				isTrue17=Nie, %
+				answer17={Tylko administrator może korzystać z narzędzia phpMyAdmin.}, %
+				isTrue18=Nie, %
+				answer18={PostgreSQL może być użyty jako język skryptowy do tworzenia stron dynamicznych.}, %
+				isTrue19=Nie, %
+				answer19={Kod w PHP wymaga kompilacji zanim zostanie umieszczony na serwerze.}, %
+			}
+			
+		\item \questionVIII{%
+			question=Wskaż zdania prawdziwe dotyczące języka PHP%
 		}{%
 			isTrue1=Nie, %
-			answer1=Konfiguracja baz danych może odbywać się wyłącznie poprzez narzędzie phpMyAdmin., %
-			isTrue2=Nie, %
-			answer2=MySQL pozwala na wykonywanie kodu zapisanego w języku PHP na stronie wwww., %
-			isTrue3=Tak, %
-			answer3=Funkcją MySQL jest zarządzanie bazą danych., %
-			isTrue4=Tak, %
-			answer4=Podstawową funkcją serwera Apache jest przesyłanie do klienta treści plików znajdujących się na dysku przy wykorzystaniu protokołu HTTP., %
+			answer1={PHP wymaga by zmiennym nadawać typy.}, %
+			isTrue2=Tak, %
+			answer2={Nazwy zmiennych zaczynają się znakiem dolara.}, %
+			isTrue3=Nie, %
+			answer3={Jeśli kod PHP jest połączony ze znacznikami HTML, to musi się znajdować w pliku o rozszerzeniu phtml.}, %
+			isTrue4=Nie, %
+			answer4={Skrypt MUSI znajdować się w znacznikach $ < $?php ?$ > $ (żadnych innych)}, %
 			isTrue5=Nie, %
-			answer5=Kod PHP wewnątrz pliku z rozszerzeniem .html może znajdować się pomiędzy znacznikiem $ < $php$ > $ oraz znacznikiem $ < $/php$ > $., %
+			answer5={Funkcja mysql\_query() zwraca wynik w formie tablicy stringów.}, %
 			isTrue6=Tak, %
-			answer6=Kod PHP wewnątrz pliku z rozszerzeniem .php może znajdować się pomiędzy znacznikiem $ < $? oraz znacznikiem ?$ > $., %
-			isTrue7=Tak, %
-			answer7=Pliki konfiguracyjne serwera Apache znajdują się w katalogu /etc/apache2/, %
-			isTrue8=Nie, %
-			answer8=phpMyAdmin jest narzędziem do konfiguracji w trybie tekstowym., %
-			isTrue9=Nie, %
-			answer9= {Elementy LAMP to Apache, MySQL i Prolog}, %
-			isTrue10=Tak, %
-			answer10={Można powiedzieć, że dynamiczna strona internetowa stworzona w PHP na Linuksie, korzystająca z serwera Apache, z bazą danych MySQL jest opartą o LAMP.},%
-			isTrue11=Nie, %
-			answer11=Jako język programowania stron w LAMP można wykorzystać wyłącznie PHP., %
-			isTrue12=Tak, %
-			answer12={Elementy LAMP zostały stworzone jako osobne {rozwiązania, ale} razem stanowią popularną platformę systemową}.
+			answer6={Skrypty PHP w typowych rozwiązaniach wykonywane są po stronie serwera.}, %
+			isTrue7=Nie, %
+			answer7={W pliku .php może wystąpić tylko jeden blok ograniczony znacznikami $ < $? i ?$ > $.}, %
+			isTrue8=Tak, %
+			answer8={PHP jest językiem interpretowanym.}, %
 		}
-\end{enumerate}
+		
+		\newpage
+		\item \questionVIII{%
+			question=Język PHP: %
+		}{%
+			isTrue1=Nie, %
+			answer1={Jest językiem kompilowanym}, %
+			isTrue2=Tak, %
+			answer2={Posiada biblioteki umożliwiające dostęp do bazy danych np. MySQL.}, %
+			isTrue3=Tak, %
+			answer3={Może być przeplatany z kodem HTML.}, %
+			isTrue4=Nie, %
+			answer4={Jest statycznie typowany.}, %
+			isTrue5=Tak, %
+			answer5={może być przeplatany z językiem HTML.}, %
+			isTrue6=Nie, %
+			answer6={wymaga deklarowania zmiennych.}, %
+			isTrue7=Tak, %
+			answer7={nie wymaga deklarowania zmiennych.}, %
+			isTrue8=Tak, %
+			answer8={wymaga, aby każda zmienna była poprzedzona znakiem \$.}, %
+		}
+		
+		\item \question{Każda zmienna w PHP poprzedzona jest znakiem:}%
+			{Nie}{\%}%
+			{Nie}{\#}%
+			{Nie}{$ < $?}%
+			{Tak}{\$}
+			
+		\item \questionVIII{%
+			question={W jaki sposób w języku PHP można odczytać dane (lub ich część) przesłane przez formularz na stronie internetowej (pobrać dane z formularza)?}%
+		}{%
+			isTrue1=Tak, %
+			answer1={Używając tablicy \$\_POST}, %
+			isTrue2=Nie, %
+			answer2={Używając tablicy \$\_SEND\_DATA}, %
+			isTrue3=Tak, %
+			answer3={Używając tablicy \$\_GET}, %
+			isTrue4=Tak, %
+			answer4={Używając tablicy \$\_REQUEST}, %
+			isTrue5=Nie, %
+			answer5={Używając tablicy \$\_DATA}, %
+			isTrue6=Nie, %
+			answer6={Używając tablicy \$\_RESPONSE}, %
+		}
+			
+		\item \question{Skrypty PHP:}%
+			{Nie}{Są wykonywane po stronie przeglądarki internetowej klienta.}%
+			{Tak}{Mogą zostać osadzone w plikach HTML.}%
+			{Tak}{ZAWSZE rozpoczynają się od: $ < $?php .}%
+			{Tak}{Mogą być zdefiniowane w osobnych plikach, bez osadzania w kodzie HTML.}
+			
+		\item \questionVIII{%
+			question=Od jakich elementów systemu pochodzi określenie LAMP?
+		}{%
+			isTrue1=Nie, %
+			answer1={Linux, Apache, McEdit, Perl}, %
+			isTrue2=Tak, %
+			answer2={Linux, Apache, MySQL, Perl}, %
+			isTrue3=Nie, %
+			answer3={Linux, Access, McEdit, PHP}, %
+			isTrue4=Tak, %
+			answer4={Linux, Apache, MySQL, Python}, %
+			isTrue5=Nie, %
+			answer5={Linux, Apache, MySQL, PHP}, %
+		}
+		
+		\item \question{W skład LAMP wchodzi:}%
+			{Nie}{PostgreSQL}%
+			{Tak}{Linux}%
+			{Tak}{Perl}%
+			{Nie}{Windows}
+		
+		\newpage
+		\item \question{Co może oznaczać „P” w skrócie LAMP?}%
+			{Nie}{PostgreSQL}%
+			{Tak}{Perl}%
+			{Tak}{Python}%
+			{Tak}{PHP}
+				
+		\item \question{Do poprawnego działania LAMP pod Linuxem potrzebny jest:}%
+			{Tak}{PHP}%
+			{Tak}{Apache}%
+			{Tak}{MySQL}%
+			{Tak}{Pakiety wiążące ze sobą pozostałe składniki.}%
+			
+		\item \question{Jaki serwer www wchodzi w skład LAMP?}%
+			{Nie}{MySQL.}%
+			{Nie}{IIS}%
+			{Tak}{Apache}%
+			{Nie}{Zależy od konfiguracji}
+			
+		\item \question{Serwer Apache:}%
+			{Tak}{Jest serwerem www.}%
+			{Tak}{Można zainstalować osobno.}%
+			{Nie}{Można zainstalować tylko razem z serwerem bazy danych MySQL oraz bibliotekami języka PHP.}%
+			{Tak}{Współpracuje z interpreterem języka PHP po doinstalowaniu odpowiednich pakietów.}
+			
+		\item \question{Moduł userdir serwera Apache umożliwia:}%
+			{Nie}{Edycję ustawień dotyczących folderów znajdujących się w pliku konfiguracyjnym serwera Apache.}%
+			{Tak}{Zakładanie stron poprzez dodawanie folderu public\_html w katalogu domowym użytkownika.}%
+			{Tak}{Proste dodawanie stron www użytkownikom systemu.}%
+			{Nie}{Dostęp do założonych stron użytkownika poprzez adres http://localhost/?NAZWA\_UZYTKOWNIKA}
+		
+		\item \question{Przy prawidłowo działającym w domyślnej konfiguracji module userdir zawartość strony http://localhost/~joe to:}%
+			{Tak}{zawartość folderu public\_html w katalogu domowym użytkownika joe.}%
+			{Nie}{zawartość folderu localhost na pulpicie użytkownika joe.}%
+			{Nie}{zawartość folderu Joe na dysku C.}%
+			{Nie}{zawartość folderu www w katalogu domowym użytkownika joe.}
+			
+		\newpage
+		\item \question{Po włączeniu w Apache modułu userdir, pliki umieszczone przez użytkownika "jan" w folderze "/home/jan/public\_html" będą (...) :}%
+			{Tak}{http://localhost/~jan}%
+			{Nie}{http://localhost/home/jan/public\_html}%
+			{Nie}{http://localhost/jan}%
+			{Tak}{http://127.0.0.1/~jan}
+			
+		\item \questionVIII{%
+			question={Które z podanych niżej operacji są prawidłowe, aby włączyć dowolny moduł w serwerze Apache?}%
+		}{%
+			isTrue1=Nie, %
+			answer1={Skorzystanie z polecenia /etc/init.d/apache2 restart}, %
+			isTrue2=Tak, %
+			answer2={Utworzenie łącza symbolicznego w katalogu mods-enabled do pliku z katalogu mods-available.}, %
+			isTrue3=Tak, %
+			answer3={Skorzystanie z polecenia 'a2enmod'}, %
+			isTrue4=Nie, %
+			answer4={Skorzystanie z polecenia 'anenmod $ < $ nazwa\_modulu $ > $'}, %
+			isTrue5=Nie, %
+			answer5={Skorzystanie z polecenia /etc/init.d/apache2 force-reload} %
+		}
+			
+		\item \question{Jakim poleceniem można zrestartować serwer Apache w celu odświeżenia konfiguracji?}
+			{Tak}{/etc/init.d/apache2 restart}%
+			{Tak}{/etc/init.d/apache2 stop \&\& /etc/init.d/apache2/start}%
+			{Nie}{/etc/init.d/apache2 refresh}%
+			{Nie}{apache2-restart}%
+			
+		\item \question{Konfiguracja serwera Apache w systemie Ubuntu Server:}
+			{Nie}{wpływa na działający serwer zarz po zapisaniu pliku.}%
+			{Tak}{w przypadku modułów serwera opiera się o dowiązania plików.}%
+			{Tak}{znajduje się w folderze /etc/apache2.}%
+			{Tak}{jest wstępnie przygotowana po zainstalowaniu serwera.}%
+			
+		\item \question{Który z modułów odpowiada za włączenie obsługi języka PHP w serwerze Apache?}%
+			{Nie}{status}%
+			{Nie}{proxy}%
+			{Tak}{php5}%
+			{Nie}{userdir}
+			
+		\item \question{Który z modułów pozwala dodawać strony www w Apache poprzez utworzenie katalogu public\_html w katalogu domowym?}%
+			{Nie}{status}%
+			{Nie}{proxy}%
+			{Nie}{php5}%
+			{Tak}{userdir}
+			
+		\item \question{Które moduły należy uruchomić, aby była możliwość dodawania stron www przez zwykłego użytkownika?}%
+			{Nie}{usertrack}%
+			{Nie}{proxy}%
+			{Nie}{cache}%
+			{Tak}{userdir}
+		
+		\newpage
+		\item \question{Do wybrania bazy danych w MySQL w języku PHP służy funkcja:}%
+			{Nie}{mysql\_db\_name}%
+			{Nie}{mysql\_connect\_db}%
+			{Nie}{mysql\_select\_db}%
+			{Tak}{mysqli\_connect}
+		
+		\item \question{Jaki będzie wynik polecenia w języku skryptowym PHP:\\
+			mysql\_connect("server:db", password, user) ?}%
+			{Nie}{Połączenie się z bazą "db:server" na lokalnym komputerze.}%
+			{Nie}{Połączenie się z bazą "server" na serwerze "db".}%
+			{Nie}{Połączenie się z bazą "db" na serwerze "server".}%
+			{Tak}{Zwrócenie błędu.}
+		
+	\end{enumerate}
 
 
 
