@@ -1,1 +1,162 @@
+
+\newpage
 \section{Linux Kernel}
+
+\begin{itemize}
+	
+	
+	\item \questionVIII{%
+		question={Zaznacz wszystkie poprawne odpowiedzi:} %
+	}{%
+		isTrue1=Nie, %
+		answer1={Jądro Linuxa jest mikrojądrem (microkernel)}, %
+		isTrue2=Nie, %
+		answer2={Jądro Linuxa jest jądrem typu hybrydowego (hybrid)}, %
+		isTrue3=Tak, %
+		answer3={Jądro Linuxa jest jądrem typu monolitycznego (monolythic)}, %
+		isTrue4=Nie, %
+		answer4={Jądro Linuxa jest napisane w C++}, %
+		isTrue5=Nie, %
+		answer5={Jądro Linuxa wykorzystuje bibliotekę libc (dzięki temu można wykorzystywać np. funkcję printf()}, %
+		isTrue6=Tak, %
+		answer6={Jądro Linuxa jest napisane w C},
+		isTrue7=Tak,
+		answer7={Jądtro Linuxa zarządza pamięcią operacyjną (przydziały/zwolnienia)}.
+	}
+	
+	\item \questionVIII{%
+		question={Zaznacza wszystkie poprawne odpowiedzi:} %
+	}{%
+		isTrue1=Nie, %
+		answer1={Do sterowania paramterami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/var}}, %
+		isTrue2=Tak, %
+		answer2={Do sterowania pracą jądra Linuxa można wykorzystać polecenie \textbf{sysctl}}, %
+		isTrue3=Tak, %
+		answer3={Do jądra systemu operacyjnego Linux można, w czasie jego pracy, dołączać różnorodną funkjconalność (np. sterowniki urządzenia)}, %
+		isTrue4=Nie, %
+		answer4={Do załadowania modułu w jądrze można wykorzystać polecenia rmmod oraz modprobe -r}, %
+		isTrue5=Tak, %
+		answer5={Do sterowania paramterami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/proc}}, %
+		isTrue6=Nie, %
+		answer6={Do sterowania pracą jądra Linuxa można wykorzystać polecenie \textbf{sysinfo}}, %
+		isTrue7=Nie, %
+		answer7={Do usunięcia modułu z jądra można wykorzystać polecenie insmod}, %
+		isTrue8=Tak, %
+		answer8={Do sprawdzenia jakie moduły załadowane są do jądra można wykorzystać polecenie lsmod}, %
+		isTrue9=Tak, %
+		answer9={Do załadowania modułu w jądrze można wykorzystać polecenie modprobe oraz insmod}, %
+		isTrue10=Tak, %
+		answer10={Katalog \textbf{/proc} zawiera plki, pozwalające na zmianę sposobu przydzielania pamięci programom przez jądro Linux},%
+		isTrue11=Nie, %
+		answer11={Katalog \textbf{/var} zawiera pliki, pozwalające na zmianę sposobu przydzielania pamięci programom przez jądro systemu Linux}, %
+		isTrue12=Tak, %
+		answer12={Do usunięcia modułu z jądra można wykorzystać polecenia modprobe oraz mmod},
+		isTrue13=Tak, %
+		answer13={Katalogi /proc, /sys oraz polecenie sysctl pozwalają na kontrolę pracy systemu},
+		isTrue14=Tak,
+		answer14={Z jądra systemu operacyjnego Linux, w trakcie jego pracy, można usuwać różnorodną funkcjonalność (na przykład sterowniki urządzenia)}.
+	}
+	
+	
+	\item \question{Zaznacz wszystkie funkcje realizowane przez jądro monolityczne (na przykład jądro Linuxa)}
+	{Tak}{Szeregowanie procesów}
+	{Tak}{Zarządzanie pamięcią (zwalnianie/przydzielanie)}
+	{Tak}{Szeregowanie I/O}
+	{Tak}{Obsługa systemu plików}
+	
+	\item \question{Jakie operację można wykonać za pomocą polecenia sysctl?}
+	{Tak}{Ustawić wartości dla paramterów jądra}
+	{Nie}{Ustawić wartości dla parametrów systemu plików}
+	{Tak}{Wypisać wszystkie parametry jądra w trakcie działania systemu}
+	{Nie}{Wypisać wszystkie parametry systemu plików}
+	
+	\newpage
+	
+		\item \questionVIII{%
+			question={Polecenie sysctl:} %
+		}{%
+		isTrue1=Nie, %
+		answer1={Służy do zmiany hasła użytkownika systemu}, %
+		isTrue2=Nie, %
+		answer2={Umożliwia zmianę nazwy użytkownika}, %
+		isTrue3=Nie, %
+		answer3={Wyświetla listę użytkowników w systemie}, %
+		isTrue4=Tak, %
+		answer4={Pozwala na zmianę parametrów jądra systemu w trakcie działania systemu operacyjnego}, %
+		isTrue5=Tak, %
+		answer5={To komenda pozwalająca na konfiguracje parametró jądra systemu Linux.}, %
+		isTrue6=Tak, %
+		answer6={Wykonuje konfigurację jaką można także wykonać w weirtualnym systemie plików /proc/sys.}, %
+		isTrue7=Nie, %
+		answer7={Pozwala na rekompilację jądra z uwzględnieniem nowych plików konfiguracyjnych.}, %
+		isTrue8=Nie, %
+		answer8={Wyświetla wszystkie procesy w systemie.}.
+	}
+	
+	\item \question{Wskaż prawdziwe zdania:}
+	{Nie}{przy overcommit\_memory ustawionym na 2 system zawsze pzydzieli aplikacjom dokładnie 100\% pamięci RAM}
+	{Tak}{przy overcommit\_memory ustawionym na 1 możliwe jest uzyskanie za pomocą malloc() ilości pamięci wirtualnej większej niż objętość pamięci fizycznej + swap}
+	{Tak}{przy overcommit\_memory ustawionym na 2 ilość pamięci przydzielonej aplikacjom zależy od ovecommit\_ratio}
+	{Nie}{kernel nigdy nie przydziela więcej pamięci niż jest dostępne fizycznie}
+	
+	\item \question{Sterowanie jądrem systemu Linux. Zaznacz poprawne odpowiedzi:}
+	{Nie}{Nawet najdrobniejsza zmiana w pracy jądra systemu wymaga jego ponownej kompilacji.}
+	{Tak}{Możliwa jest zmiana niektórych parametrów jądra w "locie" korzystając z komendy sysctl.}
+	{Nie}{Po każdej zmianie parametru w jądrze systemu Linux należy ponownie uruchomić komputer.}
+	{Tak}{Wartości sysctl wczytywane są podczas startu systemu z pliku /etc/sysct.conf.}
+	
+	\item \question{Sterowniki w systemach Linuxowych: Wskaż poprawne odpowiedzi.}
+	{Tak}{Można wkompilować w jądro, ale można ładować dynamicznie bez potrzeby wkompilowywania.}
+	{Tak}{Mogą być ładowane dynamicznie w trakcie działania systemu.}
+	{Nie}{Są tylko wkompilowane w jądro i uruchamiane automatycznie. Nie ma innej możliwości instalacji i uruchomienia.}
+	{Nie}{Po instalacji nowego sterownika zawsze wymagane jest ponowne uruchomienie komputera.}
+	
+	\item \question{W jaki sposóbm ożna wyłączyć partycję SWAP?}
+	{Nie}{Nie można wyłączyć partycji SWAP}
+	{Nie}{sudo setswap off}
+	{Tak}{sudo swapoff -a}
+	{Nie}{sudo swap stop}
+	
+	\item \question{Jakie jest zadanie jądra w systemie Linux?}
+	{Tak}{Ładuje i odładowuje sterowniki urządzeń.}
+	{Nie}{Tylko i wyłącznie zarządza pamięcią.}
+	{Tak}{Pośredniczy pomiędzy aplikacją użytkownika a sprzętem.}
+	{Tak}{Zarządza pamięcią.}
+	
+	\item \question{Jądro w systemie Linux odpowiedzialne jest za:}
+	{Tak}{Sterowniki urządzeń}
+	{Nie}{Wygląd interfejsu graficznego}
+	{Tak}{Zarządzanie procesami}
+	{Tak}{Obsługę pamięci}
+	
+	\item \question{Moduły jądra systemu Linux: wskaż wszystkie poprawne odpowiedzi.}
+	{Tak}{Można pisać w języku C}
+	{Nie}{Mogą być załadowane przez każdego użytkownika}
+	{Tak}{Nie posiadają możliwości wyprowadzania danych na standardowe wyjście stdout za pomocą printf}
+	{Tak}{Można je kompilować na tym samym systemie na którym zamierzamy je uruchomić.}
+	
+	\item \question{Co znajduje się w katalogu /proc/?}
+	{Tak}{Informacje o procesach w systemie}
+	{Nie}{Informacje o użytkownikach}
+	{Tak}{Informacje o sieci}
+	{Tak}{Ogólne onformacje o systemie}
+	
+	\item \question{Program modprobe:}
+	{Nie}{wymaga restartu aby zmiany zostały wprowadzone}
+	{Tak}{umożliwia usuwanie modułów z kernela}
+	{Tak}{umożliwia ładowanie modułów kernela}
+	{Tak}{automatycznie dodaje moduły zależne}
+	
+	\item \question{Parametry jądra systemu Linux można odczytać za pomocą:}
+	{Nie}{pliku /proc/stat}
+	{Tak}{katalogu /proc/sys}
+	{Nie}{komendy ps}
+	{Tak}{komendy sysctl}
+	
+	\item \question{Które z poniższych komend sprawdza logi jądra systemu Linux}
+	{Tak}{dmesg}
+	{Nie}{klog}
+	{Nie}{kmllg}
+	{Nie}{kernelog}
+	
+\end{itemize}

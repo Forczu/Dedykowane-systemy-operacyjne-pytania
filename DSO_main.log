@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  13 MAR 2015 20:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.22)  13 MAR 2015 21:43
 entering extended mode
 **DSO_main.tex
 (G:\Git\DSO_kueszczons\DSO_main.tex
@@ -1264,12 +1264,12 @@ Overfull \hbox (44.84352pt too wide) in paragraph at lines 87--87
 t plik kon-fi-gu-ra-cyj-ny /bo-ot/grub.grub.cfg? 
  []
 
-[62] [63] [64]) (G:\Git\DSO_kueszczons\Tex\Linux_6_Kernel.tex)
+[62] [63] [64]) (G:\Git\DSO_kueszczons\Tex\Linux_6_Kernel.tex [65] [66]
+[67])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
- [65]
+ [68]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
-
-(G:\Git\DSO_kueszczons\DSO_main.aux)
+ (G:\Git\DSO_kueszczons\DSO_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
 Package rerunfilecheck Info: File `DSO_main.out' has not changed.
@@ -1277,36 +1277,37 @@ Package rerunfilecheck Info: File `DSO_main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 21035 strings out of 493921
- 333914 string characters out of 3144857
+ 21122 strings out of 493921
+ 334700 string characters out of 3144857
  385754 words of memory out of 3000000
- 22201 multiletter control sequences out of 15000+200000
- 16457 words of font info for 45 fonts, out of 3000000 for 9000
+ 22203 multiletter control sequences out of 15000+200000
+ 16792 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 68i,7n,98p,10440b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/pltt.enc}
-{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plit.enc}{C
-:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plms.enc}{C:/
-Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Us
-ers/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/plrm.enc}<C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/B
-artłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plbx10.pfb><C:/User
-s/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plbx12.pfb><C:/U
-sers/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plbxti10.pfb>
-<C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plmi10.p
-fb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plr10
-.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plr
-12.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/p
-lr17.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl
-/plr9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/p
-l/plsl10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/publi
-c/pl/plsy10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/pu
-blic/pl/plti9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/
-public/pl/pltt10.pfb>
-Output written on DSO_main.pdf (65 pages, 489572 bytes).
+ 68i,7n,98p,10440b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Bartłomiej\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\tcrm1000.pk>{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dv
+ips/pl/pltt.enc}{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvip
+s/pl/plit.enc}{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
+pl/plms.enc}{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl
+/plmi.enc}{C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/pl/p
+lrm.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/plb
+x10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/pl/
+plbx12.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/
+pl/plbxti10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1/pu
+blic/pl/plmi10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/type1
+/public/pl/plr10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/typ
+e1/public/pl/plr12.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts/t
+ype1/public/pl/plr17.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/fonts
+/type1/public/pl/plr9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/font
+s/type1/public/pl/plsl10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/public/pl/plsy10.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/2.
+9/fonts/type1/public/pl/plti9.pfb><C:/Users/Bartłomiej/AppData/Roaming/MiKTeX/
+2.9/fonts/type1/public/pl/pltt10.pfb>
+Output written on DSO_main.pdf (68 pages, 507088 bytes).
 PDF statistics:
- 2573 PDF objects out of 2984 (max. 8388607)
- 1878 named destinations out of 2073 (max. 500000)
+ 2689 PDF objects out of 2984 (max. 8388607)
+ 1962 named destinations out of 2073 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
