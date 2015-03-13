@@ -1,1 +1,203 @@
+\newpage
 \section{Wielosystemowość}
+\begin{enumerate}
+
+	\item \question{Po zmianie w plikach konfiguracyjnych programu GRUB:}
+	{Tak}{zmiany NIE SĄ automatycznie wprowadzone po zmianie zawartości plików}
+	{Tak}{nalezy wydać polecenie update-grub jako root, aby konfiguracja nowa konfiguracja została wprowadzona}
+	{Nie}{zmiany od razu nie są wprowadzone, zaraz po zmianie pliku}
+	{Nie}{plików konfiguracyjnych GRUBa nie wolno edytować (jest to robione automatycznie przez system)}
+	
+	\item \question{Wksaż poprawne zdanie na temat dysku /dev/sdd3}
+	{Nie}{Jest to czwarta partycja czwartego dysku SATA}
+	{Nie}{Jest to czwarta partycja trzeciego dysku SATA}
+	{Nie}{Oznaczenie nie jest poprawne}
+	{Tak}{Jest to trzecia partycja czwartego dysku SATA}
+	
+	\item \question{Czym charakteryzuje się plik konfiguracyjny "grub.cfg" menedżera GRUB 2, znajdujący się standardowo w katalogu "/boot/grub"?}
+	{Nie}{Jest to jedyny plik konfiguracji GRUB 2, którego własnoręczna edycja nie jest odradzana}
+	{Tak}{Nie powinien być bezpośrednio edytowany przez użytkownika.}
+	{Tak}{Może zostać nadpisany w wyniku polecenia "update-grub".}
+	{Tak}{Zawiera wpisy dotyczące uruchamianych systemów operacyjnych.}
+	
+	\item \question{Polecenie mount -a}
+	{Nie}{montuje wszystkie systemy plików wylistowane w pliku /etc/fstab}
+	{Tak}{montuje systemy plików wylistowane w pliku /etc/fstab, które nie korzystają z opcji noauto}
+	{Nie}{może być wykonane przez dowolnego użytkownika}
+	{Tak}{zarezerwowane jest tylko dla roota}
+	
+	\item \question{Wskaż, które z poniższych twierdzeń odnoszących się do pliku konfiguracyjnego "/etc/fstab" są poprawne.}
+	{Tak}{Definiując poszczególne systemy plików możemy posłużyć się zarówno unikalnym identyfikatorem dysku, jak i nazwą urządzenia.}
+	{Nie}{Edytując plik użytkownik może wskazać jako miejsce montowania nieistniejący katalog, w trakcie uruchomienia systemu, katalog taki zostanie utworzony.}
+	{Tak}{Plik ten zawiera informację na temat wszystkich systemów plików, które powinny być montowane w trakcie uruchamiania systemu.}
+	{Tak}{Do edycji pliku wymagane są uprawnienia administratora.}
+	
+	\item \question{Używając bootloader'a GRUB2:}
+	{Tak}{hd1 oznacza drugi dysk w systemie (/dev/sdb)}
+	{Nie}{hd1 oznacza pierwszy dysk w systemie (/dev/sda)}
+	{Tak}{setroot(hd0, 1) odwoła się do pierwszej partycji pierwszego dysku (dev/sda1)}
+	{Nie}{setroot(hd0, 1) odwoła się do drugiej partycji pierwszego dysku (dev/sda2)}
+	
+	\item \question{Co spowoduje dodanie następującego wpisu do pliku /etc/grub.d/4-\_custom \\
+		menuentry "Windows" \{ \\
+		ser root='(hd0,1)' \\
+		chainloader + 1 \\
+		\} }
+	{Nie}{Podczas startu bootloadera będziemy mogli wybrać system o nazwie "Windows" i będzie one pierwszy na liście dostępnych systemów.}
+	{Nie}{Jest to niepoprawny wpis.}
+	{Tak}{Podczas startu bootloadera będziemy mogli wybrać system o nazwie "Windows", znajdujący się na dysku "hd0".}
+	{Tak}{W celu załadowania systemu Windows sterowanie zostanie przekazane do pierwszego sektora z podanej partycji (zostanie uruchomiony kod, który się tam znajduje).}
+
+	\item \question{Program Grub pozwala na:}
+	{Nie}{Rekompilację jądra Linux}
+	{Tak}{Automatyczne uruchomienie wybranego systemu z pominięciem wyświetlania ekranu wyboru.}
+	{Nie}{Zarządzanie dyskami i ich partycjonowanie}
+	{Tak}{Wybór systemu operacyjnego, który będzie uruchomiony.}
+
+	\item \question{Parametr w opcjach montowania pliku /etc/fstab oznacza, że:}
+	{Nie}{możliwy jest zapis i odczyt na danym systemie plików}
+	{Tak}{system plików jest zamontowany w trybie tylko do odczytu}
+	{Nie}{urządzenie może być montowane przez użytkownika}
+	{Nie}{system plików może być montowany przez każdego użytkownika}
+	
+	\item \question{W jaki sposób dodajemy informacje o innych systemach opracyjnych do GRUB2}
+	{Tak}{Do pliku /etc/grub.d/40\_custom dodajemy wpis o systemie, następnie uruchamiamy polecenie sidu update-grub2}
+	{Nie}{Należy wykonanać polecenie grub2-add-new-os z prawami użytkownika}
+	{Tak}{Można nadać prawa wykonywania skryptowi: /etc/grub.d/30\_od-prober. Grub2 podczas aktualizacji wyszuka dostępne systemy operacyjne na dyskach twardych}
+	{Nie}{GRUB2 sam wykryje wszystkie systemy operacyjne bez konfiguracji}
+	
+	\item \question{Plik /boot/grub.cfg dla Grand United Bootloader w wersji 2:}
+	{Tak}{posiada definicje wszystkich systemów uruchamianych przez niego}
+	{Tak}{w przypadku edycji za każdym razem musi być zaktualizowany za pomocą polecenia update-grub}
+	{Tak}{Tworzony jest automatycznie na podstawie skryptów znajdujących się w ktalogu /etc/grub.d/}
+	{Nie}{Tworzony jest automatycznie na podstawie konfiguracji zdefiniowanej w pliku /etc/grub/default}
+	
+	\newpage
+
+	\item \question{Wskaż, które z poniższych twierdzeń odnoszących się do bootmanagera GRUB2 są poprawne.}
+	{Nie}{Aby zablokować możliwość wykonywania się danego skryptu podczas aktualizacji GRUB'a wystarczy odebrać mu uprawnienia do odczytu.}
+	{Tak}{Lista zdefiniowanych, uruchamianych przez GRUB2 systemów operacyjnych zdefiniowana jest w pliku "/boot/grub/grub.cfg".}
+	{Tak}{Wywołanie polecenia "update-grub" powoduje uruchomienie skryptów umieszczonych w katalogu "/etc/grub.d"}
+	{Nie}{Po wywołaniu polecenia "update-grub" skrypt "30\_os-prober" zostanie uruchomiony przed skryptem "10\_linux".}
+	
+	\item \question{Jakim poleceniem tworzony (bądź aktualizowany) jest plik konfiguracyjny /boot/grub.grub.cfg?}
+	{Nie}{grub-config}
+	{Nie}{grub-install}
+	{Nie}{grub-refresh}
+	{Tak}{update-grub}
+	
+	\item \question{Na jednym fizycznym komputerze, na osobnych partycjach są zainstalowane systemu buntu Linux i Windows 7. Przy obecnej konfiguracji użytkownik mam możliwość (przy użyciu bootmanagera GRUB 2) uruchomienia TYLKO systemu Ubuntu. W jaki sposób można zapeewić użytkownikowi możliwość wyboru systemu operacyjnego przy uruchamianu komputera?}
+	{Tak}{Należy utworzyć własny plik z odpowiednim wpisem systemu oraz prawami uruchamiania w /etc/grub.d/, a następnie zaktualizować pliki konfiguracyjne GRUB'a}
+	{Tak}{Dodać odpowiedni wpis w pliku /boot/grub/grub.cfg}
+	{Nie}{Należy włożyć dysk instalacyjny Windowsa i z linii poleceń, za pomocą komendy bootrec /fixmbr zainstalować w MBR bootloader dla systemu Windows}
+	{Tak}{Ustawić prawa uruchamiania dla skrypty /etc/grub,d/30\_os-prober oraz uruchomić update-grub}
+
+	\item \question{Zaznacz, które z podanych plików w systemach z rodziny Linux zawierają informacje o systemach, które mają zostać automatycznie zamontowane przy uruchomieniu systemu operacyjnego.}
+	{Nie}{/boot/grub/grub.cfg}
+	{Nie}{/etc/default/grub}
+	{Nie}{/etc/mtab}
+	{Tak}{/etc/fstab}
+	
+	\item \question{Wskaż wszystkie poprawne odpowiedzi dotyczące bootmanagera GRUB2}
+	{Tak}{Skrypty konfiguracyjne znajdujące się w katalogu /etc/grub.d/ uruchamiane są w momencie wywołania grub-update}
+	{Nie}{Nie wymaga aktualizowania pliku /etc/boot/grub.cfg po wprowadzeniu zmian do pliku konfiguracyjnego /etc/default/grub - zawartość tego pliku odczytywana jest na bieżąco w momencie uruchamiania systemu.}
+	{Tak}{Jest domyślnym managerem bootowania systemu Linux Ubuntu od dystybucji 9.10}
+	{Tak}{Plik /boot/grub/grub.cfg jest jednym z najistotniejszych plików konfiguracyjnych managera GRUB2}
+	
+	\newpage
+	
+	\item \question{Program fdisk}
+	{Tak}{Pozwala na sformatowanie wybranej partycji}
+	{Tak}{Wywołany z parametrem -i wyświetla tablice partycji dla podanych urządzeń}
+	{Nie}{Pozwala na obsługę tablicy partycji systemu linux}
+	{Nie}{Zmiany wprowadzone za pomocą tego programu automatycznie modyfikują zawartość plików /etx/fstab i /etc/mtab}
+
+	\item \question{Jeżeli nie chcemy, aby konfiguracja zdefiniowana w pewnym skrypcie konfiguracyjnym GRUBA znajdującym się w katalogu /etc/grub.d/ była uwzględniona po wykonaiu polecenia update-grub, należy:}
+	{Nie}{Zabrać temu skryptowi uprawnienia zapisu}
+	{Nie}{Wprowadzić odpowiednie zmiany w pliku /etc/default/grub}
+	{Nie}{Zabrać temu skryptowi uprawnienia odczytu}
+	{Tak}{Zabrać temu skryptowi uprawnienia wykonywalności}
+	
+	\item \question{Plik /etc/fstab zawiera informacje o:}
+	{Tak}{systemach plików montowanych podczas uruchomienia systemu}
+	{Nie}{aktualnie zamontowanych systemach plików}
+	{Nie}{tablicach partycji na aktualnie podłączonych dyskach}
+	{Nie}{mapowaniu identyfikatorów UUID na oznaczenia linuksowe (sda, sdb, itd.)}
+	
+	\item \question{Wskaż prawdziwe zdania:}
+	{Tak}{Plik /boot.grub/grub.cfg jest generowany automatycznie na podstawie skryptów z katalogu /etc/grub.d/}
+	{Tak}{Pod Windowsem możliwe jest odczytywanie partycji ext2/ext3 za pomocą dodatkowego oprogramowania}
+	{Nie}{Pod Linuksem jest możliwość obsługi partycji NTFS, ale jedynie w trybie do odczytu}
+	{Nie}{GRUB jest w stanie uruchamiać jedynie Linuksa i Windowsa}
+	
+	\item \question{Domyślnie skrypt /etc/grub.d/30\_os-prober}
+	{Nie}{ustawia tło, kolory tekstu, motyw graficzny}
+	{Nie}{lokalizuje jądra hurd}
+	{Nie}{lokalizuje jądro Linuksa}
+	{Tak}{wyszukuje w każdej partycji systemów operacyjnych i integruje je w startowym menu}
+
+	\item \question{Plik /etc/mtab przechowuje informacje o:}
+	{Nie}{Systemach plików montowanych przy starcie systemu}
+	{Tak}{Aktualnie zamontowanych systemach plików}
+	{Nie}{Systemach plików oczekujących na zamontowanie w systemie}
+	{Nie}{Systemach plików, które z jakiś powodów nie mogły zostać zamontowane i pojawić się tym samym pliku /etc/fstab}
+	
+	\newpage
+	
+	\item \question{Dodanie systemu operacyjnego do menu GRUB'a może nastąpić w wyniku}
+	{Tak}{wykonania standardowego skryptu 30\_os-prober, a następnie wykonania polecenia update-grub}
+	{Tak}{stworzenia własnego skryptu w katalogu /etc/grub.d/, a następnie wykonania polecenia update-grub}
+	{Nie}{dodania odpowiedniego wpisu do pliku device.map, a następnie wykonania polecenia update-grub}
+	{Tak}{dodania odpowiedniego wpisu do pliku 40\_custom, a następnie wykonania polecenia update-grub}
+	
+	\item \question{Wskaż wszystkie poprawne zdania odnoścnie pliku device.map}
+	{Tak}{Ręczna zmiana pliku device.map wymaga aktualizacji konfiguracji GRUBa}
+	{Tak}{Zawiera zmapowane nazwy urządzeń GRUBa na nazwy Linuxowe}
+	{Nie}{Po każdym restracie systemu zapisywana jest do niego aktualna struktura dysków.}
+	{Nie}{W wersji bootloadera GRUB2 plik ten nie istnieje}
+	
+	\item \question{Parametr ro w opcjoach montowania pliku etc/fstab oznacza, że:}
+	{Nie}{możliwy jest zapis i odczyt na danym systemie plików}
+	{Tak}{system plików jest zamontowany w trybie tylko do odczytu}
+	{Nie}{urządzenie może być montowane przez użytkownika}
+	{Nie}{system plików może być montowany przez każdego użytkownika}
+	
+	\item \question{Dodajemy własny wpis do menu GRUB2. Które z poniższych wartości parametru "setroot" bloku menuentry są poprawne?}
+	{Nie}{setroot = (hda,1)}
+	{Tak}{setroot = (hd0, msdos1)}
+	{Nie}{setroot = (sda,1)}
+	{Tak}{setroot = (hd0,1)}
+	
+	\item \question{Informacje na temat wszystkich systemów plików, które mają być montowane podczas uruchamiania systemu znajdują się w pliku:}
+	{Nie}{/mnt}
+	{Tak}{/etc/fstab}
+	{Nie}{/etc/default/fstab}
+	{Nie}{/etc/mtab}
+	
+	\item \question{Plik /boot/grub/grub.cfg zawiera:}
+	{Nie}{tryb, w jakim ma się ładować system.}
+	{Tak}{liste systemów operacyjnych, które można uruchomić za pomocą GRUBa}
+	{Tak}{informację o tym, który sytem jest systemem domyślnym.}
+	{Tak}{czas oczekiwania na wybór systemu przez użytkownika, po upływie którego uruchomi się domyślny system.}
+	
+	\newpage
+	
+	\item \question{Jakie informacje na temat zamontowanych systemów plików znajdują się w /etc/fstab?}
+	{Nie}{Data zamontowania urządzenia.}
+	{Tak}{Miejsce zamontowania systemu plików}
+	{Tak}{Typ systemu plików.}
+	{Nie}{Wielkość partycji.}
+
+	\item \question{Zaznacz zdania poprawne dotyczące odwoływania się do systemów plików w systemie Linux.}
+	{Tak}{/dev/fd0 - oznacza dyskietkę/}
+	{Tak}{/dev/hdd2 - oznacza drugą partycję znajdującą się na dysku "slave" podpiętego do drugiego kontrolera IDE.}
+	{Nie}{/dev/sda1 - oznacza pierwszą partycję pierwszego dysku SCSII lub drugą partycję na kontrolerze SATA1.}
+	{Nie}{/dev/ssd1 - oznacza pierwszą partycję dysku stworzonego w oparciu o technologię SSD}
+	
+	\item \question{Plik /etc/fstab:}
+	{Tak}{może być modyfikowany przez administartora systemu}
+	{Nie}{zawiera informacje o aktualnie zalogowanych użytkownikach}
+	{Tak}{Jest odczytywany w trakcie uruchamiania systemu operacyjnego}
+	{Tak}{zawiera informacje o systemach plików, jakie mają być montowane w trakcie uruchamiania systemu.}
+		
+\end{enumerate}
