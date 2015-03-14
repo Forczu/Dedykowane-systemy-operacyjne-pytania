@@ -5,7 +5,7 @@
 
 	\item \question{Po zmianie w plikach konfiguracyjnych programu GRUB:}
 	{Tak}{zmiany NIE SĄ automatycznie wprowadzone po zmianie zawartości plików}
-	{Tak}{nalezy wydać polecenie update-grub jako root, aby konfiguracja nowa konfiguracja została wprowadzona}
+	{Tak}{należy wydać polecenie update-grub jako root, aby konfiguracja nowa konfiguracja została wprowadzona}
 	{Nie}{zmiany od razu nie są wprowadzone, zaraz po zmianie pliku}
 	{Nie}{plików konfiguracyjnych GRUBa nie wolno edytować (jest to robione automatycznie przez system)}
 	
@@ -30,7 +30,7 @@
 	\item \question{Wskaż, które z poniższych twierdzeń odnoszących się do pliku konfiguracyjnego "/etc/fstab" są poprawne.}
 	{Tak}{Definiując poszczególne systemy plików możemy posłużyć się zarówno unikalnym identyfikatorem dysku, jak i nazwą urządzenia.}
 	{Nie}{Edytując plik użytkownik może wskazać jako miejsce montowania nieistniejący katalog, w trakcie uruchomienia systemu, katalog taki zostanie utworzony.}
-	{Tak}{Plik ten zawiera informację na temat wszystkich systemtemów plików, które powinny być montowane w trakcie uruchamiania systemu.}
+	{Tak}{Plik ten zawiera informację na temat wszystkich systemów plików, które powinny być montowane w trakcie uruchamiania systemu.}
 	{Tak}{Do edycji pliku wymagane są uprawnienia administratora.}
 	
 	\item \question{Używając bootloader'a GRUB2:}
@@ -63,14 +63,14 @@
 	
 	\item \question{W jaki sposób dodajemy informacje o innych systemach opracyjnych do GRUB2}
 	{Tak}{Do pliku /etc/grub.d/40\_custom dodajemy wpis o systemie, następnie uruchamiamy polecenie sidu update-grub2}
-	{Nie}{Należy wykonanać polecenie grub2-add-new-os z prawami użytkownika}
+	{Nie}{Należy wykonać polecenie grub2-add-new-os z prawami użytkownika}
 	{Tak}{Można nadać prawa wykonywania skryptowi: /etc/grub.d/30\_od-prober. Grub2 podczas aktualizacji wyszuka dostępne systemy operacyjne na dyskach twardych}
 	{Nie}{GRUB2 sam wykryje wszystkie systemy operacyjne bez konfiguracji}
 	
 	\item \question{Plik /boot/grub.cfg dla Grand United Bootloader w wersji 2:}
 	{Tak}{posiada definicje wszystkich systemów uruchamianych przez niego}
 	{Tak}{w przypadku edycji za każdym razem musi być zaktualizowany za pomocą polecenia update-grub}
-	{Tak}{Tworzony jest automatycznie na podstawie skryptów znajdujących się w ktalogu /etc/grub.d/}
+	{Tak}{Tworzony jest automatycznie na podstawie skryptów znajdujących się w katalogu /etc/grub.d/}
 	{Nie}{Tworzony jest automatycznie na podstawie konfiguracji zdefiniowanej w pliku /etc/grub/default}
 	
 	\newpage
@@ -102,7 +102,7 @@
 	\item \question{Wskaż wszystkie poprawne odpowiedzi dotyczące bootmanagera GRUB2}
 	{Tak}{Skrypty konfiguracyjne znajdujące się w katalogu /etc/grub.d/ uruchamiane są w momencie wywołania grub-update}
 	{Nie}{Nie wymaga aktualizowania pliku /etc/boot/grub.cfg po wprowadzeniu zmian do pliku konfiguracyjnego /etc/default/grub - zawartość tego pliku odczytywana jest na bieżąco w momencie uruchamiania systemu.}
-	{Tak}{Jest domyślnym managerem bootowania systemu Linux Ubuntu od dystybucji 9.10}
+	{Tak}{Jest domyślnym managerem bootowania systemu Linux Ubuntu od dystrybucji 9.10}
 	{Tak}{Plik /boot/grub/grub.cfg jest jednym z najistotniejszych plików konfiguracyjnych managera GRUB2}
 	
 	\newpage
@@ -270,7 +270,7 @@
 	\item \question{Zaznacz poprawne odpowiedzi dotyczące pliku /etc/fstab}%
 	{Nie}{jest automatycznie modyfikowany podczas użycia polecenia mount}%
 	{Tak}{jest on odczytywany w trakcie uruchamiania systemu}%
-	{Tak}{zawiera informacje na temat znajdujacych się w systemie dysków twardych, ich partycji oraz punktów i parametrów montowania}%
+	{Tak}{zawiera informacje na temat znajdujących się w systemie dysków twardych, ich partycji oraz punktów i parametrów montowania}%
 	{Nie}{nie jest odczytywany w trakcie uruchamiania systemu}
 
 	\item \question{Mówiąc o wymianie danych między systemem Linux a system Windows prawdą jest, że:}%
