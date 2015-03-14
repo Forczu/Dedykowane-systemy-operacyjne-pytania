@@ -1,4 +1,4 @@
-
+% !TeX spellcheck = pl_PL
 \newpage
 \section{Linux Kernel}
 
@@ -28,15 +28,15 @@
 		question={Zaznacza wszystkie poprawne odpowiedzi:} %
 	}{%
 		isTrue1=Nie, %
-		answer1={Do sterowania paramterami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/var}}, %
+		answer1={Do sterowania parametrami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/var}}, %
 		isTrue2=Tak, %
 		answer2={Do sterowania pracą jądra Linuxa można wykorzystać polecenie \textbf{sysctl}}, %
 		isTrue3=Tak, %
-		answer3={Do jądra systemu operacyjnego Linux można, w czasie jego pracy, dołączać różnorodną funkjconalność (np. sterowniki urządzenia)}, %
+		answer3={Do jądra systemu operacyjnego Linux można, w czasie jego pracy, dołączać różnorodną funkcjonalność (np. sterowniki urządzenia)}, %
 		isTrue4=Nie, %
 		answer4={Do załadowania modułu w jądrze można wykorzystać polecenia rmmod oraz modprobe -r}, %
 		isTrue5=Tak, %
-		answer5={Do sterowania paramterami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/proc}}, %
+		answer5={Do sterowania parametrami pracy jądra można wykorzystać pliki znajdujące się w katalogu \textbf{/proc}}, %
 		isTrue6=Nie, %
 		answer6={Do sterowania pracą jądra Linuxa można wykorzystać polecenie \textbf{sysinfo}}, %
 		isTrue7=Nie, %
@@ -46,7 +46,7 @@
 		isTrue9=Tak, %
 		answer9={Do załadowania modułu w jądrze można wykorzystać polecenie modprobe oraz insmod}, %
 		isTrue10=Tak, %
-		answer10={Katalog \textbf{/proc} zawiera plki, pozwalające na zmianę sposobu przydzielania pamięci programom przez jądro Linux},%
+		answer10={Katalog \textbf{/proc} zawiera pliki, pozwalające na zmianę sposobu przydzielania pamięci programom przez jądro Linux},%
 		isTrue11=Nie, %
 		answer11={Katalog \textbf{/var} zawiera pliki, pozwalające na zmianę sposobu przydzielania pamięci programom przez jądro systemu Linux}, %
 		isTrue12=Tak, %
@@ -55,6 +55,15 @@
 		answer13={Katalogi /proc, /sys oraz polecenie sysctl pozwalają na kontrolę pracy systemu},
 		isTrue14=Tak,
 		answer14={Z jądra systemu operacyjnego Linux, w trakcie jego pracy, można usuwać różnorodną funkcjonalność (na przykład sterowniki urządzenia)}.
+		isTrue15=Tak, %
+		answer15={Do kontroli pracy systemu można wykorzystać polecenia sysctl oraz zawartość katalogu /proc}, %
+		isTrue16=Tak, %
+		answer16={Do sprawdzenia jakie moduły załadowane są do jądra można wykorzystać polecenie lsmod}, %
+		isTrue17=Tak, %
+		answer17={Do załadowania modułu w jądrze można wykorzystać polecenia modprobe oraz insmod}, %
+		isTrue18=Nie, %
+		answer18={Do kontroli pracy systemu można wykorzystać polecenia sysctl oraz zawartość katalogu /var}, %
+		
 	}
 	
 	
@@ -64,8 +73,8 @@
 	{Tak}{Szeregowanie I/O}
 	{Tak}{Obsługa systemu plików}
 	
-	\item \question{Jakie operację można wykonać za pomocą polecenia sysctl?}
-	{Tak}{Ustawić wartości dla paramterów jądra}
+	\item \question{Jakie operacje można wykonać za pomocą polecenia sysctl?}
+	{Tak}{Ustawić wartości dla parametrów jądra}
 	{Nie}{Ustawić wartości dla parametrów systemu plików}
 	{Tak}{Wypisać wszystkie parametry jądra w trakcie działania systemu}
 	{Nie}{Wypisać wszystkie parametry systemu plików}
@@ -94,7 +103,7 @@
 	}
 	
 	\item \question{Wskaż prawdziwe zdania:}
-	{Nie}{przy overcommit\_memory ustawionym na 2 system zawsze pzydzieli aplikacjom dokładnie 100\% pamięci RAM}
+	{Nie}{przy overcommit\_memory ustawionym na 2 system zawsze przydzieli aplikacjom dokładnie 100\% pamięci RAM}
 	{Tak}{przy overcommit\_memory ustawionym na 1 możliwe jest uzyskanie za pomocą malloc() ilości pamięci wirtualnej większej niż objętość pamięci fizycznej + swap}
 	{Tak}{przy overcommit\_memory ustawionym na 2 ilość pamięci przydzielonej aplikacjom zależy od ovecommit\_ratio}
 	{Nie}{kernel nigdy nie przydziela więcej pamięci niż jest dostępne fizycznie}
@@ -139,7 +148,7 @@
 	{Tak}{Informacje o procesach w systemie}
 	{Nie}{Informacje o użytkownikach}
 	{Tak}{Informacje o sieci}
-	{Tak}{Ogólne onformacje o systemie}
+	{Tak}{Ogólne informacje o systemie}
 	
 	\item \question{Program modprobe:}
 	{Nie}{wymaga restartu aby zmiany zostały wprowadzone}
@@ -158,5 +167,25 @@
 	{Nie}{klog}
 	{Nie}{kmllg}
 	{Nie}{kernelog}
+	
+	\item \question{Jądro systemu operacyjnego Linux:}%
+	{Tak}{pośredniczy pomiędzy aplikacjami użytkownika, a sprzętem}%
+	{Tak}{pośredniczy pomiędzy aplikacjami użytkownika, a pamięcią}%
+	{Nie}{służy wyłącznie do uruchomienia systemu i skonfigurowania urządzeń, potem kończy swoją pracę}%
+	{Nie}{NIE pozwala na ładowanie dodatkowych modułów}
+	
+	\item \question{Które ze zdań dotyczących sysctl jest poprawne?}%
+	{Tak}{Katalog /proc/sys dostarcza interfejs do parametrów sysctl}%
+	{Tak}{/proc/sys/vm/overcommit\_memory jest odpowiednikiem parametru vm.overcommit\_memory w sysctl.conf}%
+	{Nie}{jeżeli katalog /proc/sys jest tylko do odczytu to da się mimo to zmieniać parametry przez komendę sysctl}%
+	{Nie}{Wartości sysctl są wczytywane przy starcie systemu z /proc/sys/vm/sysctl.conf}
+	
+	\item \question{Zaznacz prawdziwe zdania dotyczące partycji wymiany (SWAP) w systemie Linux:}%
+	{Tak}{Domyślnie jest na niej zapisywany zrzut pamięci RAM przy hibernacji}%
+	{Tak}{Można go aktywować i dezaktywować podczas działania systemu}%
+	{Nie}{Jest zamontowana w katalogu /swap}%
+	{Nie}{Jest konieczna do działania systemu Linux}
+	
+	
 	
 \end{itemize}
