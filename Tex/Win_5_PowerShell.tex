@@ -12,7 +12,7 @@
 \newpage
 \section{Interpreter poleceń PowerShell}
 	\begin{enumerate}
-		\item \question{Polecenie$>$ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse | remove-item}%
+		\item \question{Polecenie$>$ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse $ \mid $ remove-item}%
 		{Tak}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test" i podfolderów.}%
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów.}%
 		{Nie}{Znajduje i wypisuje wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów.}%
@@ -38,7 +38,7 @@
 		{Nie}{Copy-item}%
 		{Nie}{Get-content}%
 		{Nie}{Get-process}
-		\item \question{Polecenie "PS$>$ get-process d* | stop-process"}%
+		\item \question{Polecenie "PS$>$ get-process d* $ \mid $ stop-process"}%
 		{Tak}{poszczególne polecenia należą do tzw. poleceń Cmdlet. (należy do poleceń Cmdlet - inna odpowiedź) }%
 		{Nie}{zatrzymuje wszystkie uruchomione procesy.}%
 		{Nie}{zatrzymuje wszystkie procesy działające na partycji D.}%
@@ -83,11 +83,11 @@
 		
 		\newpage
 		\item \question{Wskaż poprawne polecenia PowerShell usuwające z bieżącego katalogu pliki większe niż 2kB:}%
-		{Nie}{Get-Childitem | Where-Object ( \$\_.length $>$ 2kB ) | Remove-Item}%
-		{Nie}{Get-Childitem | Remove-Item | Where ( \$\_.length $>$ 2kB )}%
-		{Tak}{Get-Childitem | Where-Object ( \$\_.length -gt 2kB ) | Remove-Item}%
-		{Tak}{ls | where-object \{ \$\_.length -gt 2kB \} | rm}
-		\item \question{Polecenie\\ "PS$ > $ get-process | where-object { \$\_.WS -gt 300MB } | stop-process"\\ wydane w interpreterze Windows PowerShell:}%
+		{Nie}{Get-Childitem $ \mid $  Where-Object ( \$\_.length $>$ 2kB ) $ \mid $ Remove-Item}%
+		{Nie}{Get-Childitem $ \mid $ Remove-Item $ \mid $ Where ( \$\_.length $>$ 2kB )}%
+		{Tak}{Get-Childitem $ \mid $ Where-Object ( \$\_.length -gt 2kB ) $ \mid $ Remove-Item}%
+		{Tak}{ls $ \mid $ where-object \{ \$\_.length -gt 2kB \} $ \mid $ rm}
+		\item \question{Polecenie\\ "PS$ > $ get-process $ \mid $ where-object { \$\_.WS -gt 300MB } $ \mid $ stop-process"\\ wydane w interpreterze Windows PowerShell:}%
 		{Nie}{Listuje procesy, które zużywają więcej niż 300 MB.}%
 		{Nie}{Szuka procesu, który zużywa więcej niż 300 MB i wyświetla nazwę.}%
 		{Tak}{Szuka procesu, który zużywa więcej niż 300 MB i zatrzymuje go.}%
@@ -108,10 +108,10 @@
 		{Tak}{clear}%
 		{Tak}{cls}
 		\item \question{W celu zatrzymania procesów zużywających więcej niż 100MB pamięci RAM należy użyć polecenia:}%
-		{Nie}{PS$ > $ stop-process | where-object \{ \$\_.WS -gt 100MB \}}%
+		{Nie}{PS$ > $ stop-process $ \mid $ where-object \{ \$\_.WS -gt 100MB \}}%
 		{Nie}{PS$ > $ stop-process \$Memory -gt 100MB}%
-		{Nie}{PS$ > $ get-process | where-object \{ \$Memory -gt 100MB \} | stop-process}%
-		{Tak}{PS$ > $ get-process | where-object \{ \$\_.WS -gt 100MB \} | stop-process}
+		{Nie}{PS$ > $ get-process $ \mid $ where-object \{ \$Memory -gt 100MB \} $ \mid $ stop-process}%
+		{Tak}{PS$ > $ get-process $ \mid $ where-object \{ \$\_.WS -gt 100MB \} $ \mid $ stop-process}
 		
 		\newpage
 		\item \question{Zaznacz poprawne zdania dotyczące powłoski PowerShell:}%
@@ -119,17 +119,17 @@
 		{Tak}{Do zmiennych odwołuje się używając znaku \$.}%
 		{Nie}{Część zmiennych jest obiektami .NET.}%
 		{Nie}{Do zmiennych odwołuje się używając znaku \#.}
-		\item \question{Za pomocą polecenia:\\Get-Childitem C:\textbackslash Work\textbackslash  -Recurse -Force | Measure-Object -property length -sum\\(Komentarz: polecenie measure-object służy do generowania statystyk)}%
+		\item \question{Za pomocą polecenia:\\Get-Childitem C:\textbackslash Work\textbackslash  -Recurse -Force $ \mid $ Measure-Object -property length -sum\\(Komentarz: polecenie measure-object służy do generowania statystyk)}%
 		{Tak}{Znajdziemy liczbę plików i ich całkowity rozmiar w folderze C:\textbackslash Work oraz w podfolderach.}%
 		{Nie}{Wypiszemy zawartość folderu C:\textbackslash Work.}%
 		{Nie}{Wypiszemy największy plik z folderu C:\textbackslash Work.}%
 		{Nie}{Jest to niepoprawna składnia.}
 		\item \question{Aby usunąć wszystkie pliki z katalogu c:\textbackslash temp\textbackslash o rozszerzeniu .xls w Windows PowerShell należy użyć polecenia:}%
 		{Tak}{remove-item c:\textbackslash temp\textbackslash *.xls}%
-		{Tak}{get-childitem c:\textbackslash temp\textbackslash *.xls | foreach-object \{ remove=item \$\_.fullname \}}%
+		{Tak}{get-childitem c:\textbackslash temp\textbackslash *.xls $ \mid $ foreach-object \{ remove-item \$\_.fullname \}}%
 		{Nie}{remove-item c:\textbackslash temp\textbackslash * -exclude *.xls}%
 		{Nie}{remove-file c:\textbackslash temp\textbackslash * -extension xls}
-		\item \question{Polecenie:\\PS$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse | remove-item }%
+		\item \question{Polecenie:\\PS$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.txt -recurse $ \mid $ remove-item }%
 		{Tak}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test" i podfolderów}%
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
 		{Nie}{Znajduje i wypisuje wszystkie pliki z rozszerzeniem .txt z folderu "C:\textbackslash test", bez podfolderów}%
@@ -160,7 +160,7 @@
 		{Nie}{remove-item}%
 		{Tak}{test-path}%
 		{Nie}{path}%
-		{Nie}{mew-item}
+		{Nie}{new-item}
 		\item \question{Wskaż wszystkie prawdziwe zdania dotyczące interpretera Windows PowerShell:}%
 		{Tak}{Polecenie ls jest aliasem polecenia Get-Children.}%
 		{Nie}{PowerShell nie posiada modułów i przystawek pozwalających na rozszerzanie powłoki poprzez dodawanie nowych cmdletów.}%
@@ -192,7 +192,7 @@
 		{Tak}{PowerShell jest elementem pakietu Windows Management Framework.}
 		\item \question{W Windows PowerShell poprawnie stworzona pętla to:}%
 		{Tak}{ \$a = 1 do \{ \$a; \$a++ \} while (\$a -lt 10) }%
-		{Nie}{ \$a = 10 do \{ \$a; \$a-- \} while (\$a -lt 3) }%
+		{Nie}{ \$a = 10 do \{ \$a; \$a$ -- $ \} while (\$a -lt 3) }%
 		{Tak}{ for (\$a = 1; \$a -le 10; \$a++) \{ \$a \} }%
 		{Nie}{ foreach ( \$i in get-child c:\textbackslash scripts ) \{\$i.extended\} }
 		\item \question{Co należy wstawić w miejsce znaków zapytania, aby poniższy skrypt PowerShella wyświetlał nazwę procesu w danej chwili najbardziej obciążającego procesor?\\
@@ -213,7 +213,7 @@
 		{Tak}{Get-ChildItem *.* -include *.txt}%
 		{Nie}{Get-ChildItem -extension *.txt}%
 		{Nie}{Get-ChildItem -exclude *.txt}%
-		{Tak}{Get-ChildItem | Where-Object \{\$\_.Attributes -ne "Directory" -and \$\_.Extension -eq ".txt"\}}
+		{Tak}{Get-ChildItem $ \mid $ Where-Object \{\$\_.Attributes -ne "Directory" -and \$\_.Extension -eq ".txt"\}}
 		\item \question{Zaznacz prawidłowe komendy ustawiające aktualną lokalizację na „C:\textbackslash”:}%
 		{Tak}{Set-Location c:\textbackslash}%
 		{Tak}{chdir c:\textbackslash}%
@@ -241,7 +241,7 @@
 		{Nie}{wymagają określenia typu}%
 		{Tak}{mogą mieć różne typy}%
 		{Tak}{są obiektami .NET}
-		\item \question{Polecenie PoweShell:\\„PS$ > $ get-process a* | stop-process”}%
+		\item \question{Polecenie PoweShell:\\„PS$ > $ get-process a* $ \mid $ stop-process”}%
 		{Nie}{Dotyczy wszystkich procesów (a* = all)}%
 		{Nie}{Jest poleceniem błędnym – nie wykona się}%
 		{Tak}{Zatrzyma procesy, których lista jest pobierana za pomocą polecenia get-process a*}%
@@ -259,7 +259,7 @@
 		{Tak}{Dostarcza środowisko do wykonywania zadań administracyjnych wykonywanych poleceniami cmdlets}%
 		{Tak}{Wynikiem polecenia w interpreterze jest ciąg obiektów określonego typu}
 		\item \question{Zanzacz wszystkie prawidłowe sformułowania dotyczące powłoki PowerShell:}%
-		{Tak}{Dzięki operatorowi | (tzw. pipe) można przekierować wyjście jednego polecenia na wejście drugiego, np. get-process | stop-process}%
+		{Tak}{Dzięki operatorowi $ \mid $ (tzw. pipe) można przekierować wyjście jednego polecenia na wejście drugiego, np. get-process $ \mid $ stop-process}%
 		{Tak}{Wszystkie zmienne są obiektami .NET}%
 		{Nie}{Skrypty pisane dla linuksowego interpretera Bash mogą być uruchamiane w interpreterze PowerShell}%
 		{Nie}{Polecenia PowerShell mają ściśle określone nazwy, do których nie można tworzyć aliasów.}
@@ -296,15 +296,15 @@
 		
 		\newpage
 		\item \question{Które polecenia są poprawne i wyświetlają, posortowaną wg. pewnej kolumny, zawartośd bieżącego katalogu?}%
-		{Tak}{ls | Sort-Object Name}%
-		{Nie}{ls | Sort-Name}%
-		{Tak}{ls | Sort-Object Length}%
-		{Nie}{ls | Sort(Length)}
+		{Tak}{ls $ \mid $ Sort-Object Name}%
+		{Nie}{ls $ \mid $ Sort-Name}%
+		{Tak}{ls $ \mid $ Sort-Object Length}%
+		{Nie}{ls $ \mid $ Sort(Length)}
 		\item \question{Polecenie:\\"get-childitem C:\textbackslash* -include *.txt"\\wydane w Windows PowerShell:}%
 		{Tak}{wyświetli nazwy wszystkich plików o rozszerzeniu ".txt" znajdujących się w ścieżce C:\textbackslash}%
 		{Nie}{wyświetli nazwy wszystkich plików o rozszerzeniu ".txt" znajdujących się w ścieżce C:\textbackslash i jej podkatalogach}%
 		{Nie}{wyświetli tylko nazwy wszystkich plików o rozszerzeniu ".txt" znajdujących się w ścieżce C:\textbackslash}%
-		{Tak}{wyświetli czas ostatniego zapisu wszystkich plików o rozszerzeniu ".txt" znajdujących się w ścieżce C:\textbackslash}
+		{Tak}{wyświetli m.in. nazwę i czas ostatniego czas ostatniego zapisu wszystkich plików o rozszerzeniu ".txt" znajdujących się w ścieżce C:\textbackslash}
 		\item \question{Która z wersji systemu Windows obsługuje interpreter Windows PowerShell?}%
 		{Nie}{Windows 98}%
 		{Tak}{Windows XP}%
@@ -319,7 +319,7 @@
 			$ -a--- $  2012-06-02    16:12  0 c.xyz\\
 			$ -a--- $  2012-06-02    16:12  0 d.xyy\\
 			$ -a--- $  2012-06-02    16:12  0 e.xxy\\
-			PS E:\textbackslash test$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.xyz -recurse | remove-item\\
+			PS E:\textbackslash test$ > $ get-childitem C:\textbackslash test\textbackslash * -include *.xyz -recurse $ \mid $ remove-item\\
 			Zaznacz możliwe do otrzymania wyniki działania komendy ls z dowolnymi parametrami po wykonaniu powyższej komendy:\\
 			\textbf{(\emph{Zbieracz Forczu}: te kreski są przerywane, zwykłe myślniki)}}%
 		{Tak}{Directory: E:\textbackslash test\\
@@ -340,12 +340,12 @@
 		\item \question{Zdania prawdziwe, opisujące zmienne PowerShell, to:}%
 		{Nie}{Zmienne muszą mieć zdefiniowany typ}%
 		{Tak}{Wszystkie zmienne są obiektami .NET}%
-		{Nie}{--Brak odpowiedzi--}%
+		{Tak}{Nie muszą być deklarowane}%
 		{Nie}{Wszystkie zmienne są globalne}
 		\item \question{Które z podanych przykładów pętli są poprawne w PowerShell?}%
 		{Tak}{foreach (\$i in get-childitem c:\textbackslash scripts) \{\$i.extension\}}%
 		{Tak}{for(\$zm = 1; \$zm -le 10; \$zm++) \{\$zm\}}%
-		{Nie}{for(a = 1; i < 10; ++i) \{i\}}%
+		{Nie}{for(a = 1; i $ < $ 10; ++i) \{i\}}%
 		{Nie}{while(\$i -lt 10) \{\$i\}}
 		\item \question{Które z przytoczonych niżej cech odnoszą się do powłoki PowerShell?}%
 		{Nie}{Korzystanie z pętli for, while i until jest niedozwolone.}%
@@ -353,10 +353,10 @@
 		{Nie}{Zmienne nie mogą mieć zakresów widoczności}%
 		{Tak}{Wszystkie zmienne są obiektami .NET}
 		\item \question{Które polecenie powłoki PowerShell wyświetli listę uruchomionych usług?}%
-		{Tak}{Get-Service | Where-Object \{\$\_.name -eq "running"\}}%
-		{Nie}{Get-Service | Where-Object \{\$\_.name -eq "SysMain"\}}%
-		{Nie}{Get-Service | Where-Object \{\$\_.name -eq "stopped"\}}%
-		{Nie}{Get-Process | Where-Object \{\$\_.name -eq "running"\}}
+		{Tak}{Get-Service $ \mid $ Where-Object \{\$\_.name -eq "running"\}}%
+		{Nie}{Get-Service $ \mid $ Where-Object \{\$\_.name -eq "SysMain"\}}%
+		{Nie}{Get-Service $ \mid $ Where-Object \{\$\_.name -eq "stopped"\}}%
+		{Nie}{Get-Process $ \mid $ Where-Object \{\$\_.name -eq "running"\}}
 		\item \question{Aliasami polecenia Set-Location w Windows Powershell są:}%
 		{Tak}{sl}%
 		{Tak}{cd}%
@@ -394,9 +394,9 @@
 		\item \question{Windows PowerShell:}%
 		{Tak}{Jest zintegrowany z .NET Framework}%
 		{Nie}{Dostępny jest dla systemu Windows 2000}%
-		{Tak}{Jest interpreterem poleceo}%
+		{Tak}{Jest interpreterem poleceń}%
 		{Nie}{Zwraca w wyniku każdego polecenia zmienną typu string}
-		\item \question{Polecenie:\\"get-childitem C:\textbackslash Kolokwium\textbackslash Main\textbackslash * -include *.kol -recurse | remove-item"\\w Windows PowerShell:}%
+		\item \question{Polecenie:\\"get-childitem C:\textbackslash Kolokwium\textbackslash Main\textbackslash * -include *.kol -recurse $ \mid $ remove-item"\\w Windows PowerShell:}%
 		{Tak}{Znajduje i usuwa wszystkie pliki z rozszerzeniem "kol" z folderu "C:\textbackslash Kolokwium\textbackslash Main" i jego podfolderów}%
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem "kol" z folderu nadrzędnego do "C:\textbackslash Kolokwium\textbackslash Main", tzn. "C:\textbackslash Kolokwium"}%
 		{Nie}{Znajduje i usuwa wszystkie pliki z rozszerzeniem "kol" wyłącznie z folderu "C:\textbackslash Kolokwium\textbackslash Main"}%
@@ -405,18 +405,18 @@
 		\newpage
 		\item \question{Wskaż poprawne zdania dotyczące zmiennych w Windows PowerShell:}%
 		{Tak}{Wszystkie zmienne są obiektami .NET.}%
-		{Tak}{Zmienne muszą mieć nadany typ.}%
+		{Nie}{Zmienne muszą mieć nadany typ.}%
 		{Nie}{Wartość do zmiennej przypisuje operator „:=”}%
 		{Tak}{Zmienne mogą mieć zakres widoczności.}
 		\item \question{Które z poniższych skryptów PowerShella wydrukują listę nazw wszystkich plików o rozszerzeniu .txt w aktualnie wybranym katalogu?}%
-		{Tak}{get-childitem | where-object \{\$\_.extension -eq ".txt"\} | format-table Name}%
-		{Nie}{get-childitem | format-table Name | where-object \{\$\_.extension -eq ".txt"\}}%
+		{Tak}{get-childitem $ \mid $ where-object \{\$\_.extension -eq ".txt"\} $ \mid $ format-table Name}%
+		{Nie}{get-childitem $ \mid $ format-table Name $ \mid $ where-object \{\$\_.extension -eq ".txt"\}}%
 		{Tak}{foreach(\$a in get-childitem) \{\\
 				if(\$a.extension -eq ".txt") \{\\
 					\$a.Name\\
 				\}\\
 			\}}%
-		{Tak}{get-childitem | foreach \{if(\$\_.extension -eq ".txt")\{\$\_.Name\}\}}
+		{Tak}{get-childitem $ \mid $ foreach \{if(\$\_.extension -eq ".txt")\{\$\_.Name\}\}}
 		\item \question{Zamiennikiem poleceo dir i ls w PowerShell jest polecenie:}%
 		{Tak}{Get-ChildItem}%
 		{Nie}{Get-Content}%
@@ -433,10 +433,10 @@
 		{Nie}{Zmienne są obiektami}%
 		{Tak}{Do zmiennych odwołujemy się znakiem \%}
 		\item \question{Instrukcja w PowerShel która zatrzymuje (ang.kill) procesy zaczynające się na literę Y to:}%
-		{Tak}{get-process Y* | stop-process}%
-		{Nie}{get-process Y* | kill-proces}%
-		{Tak}{ps Y* | stop-process}%
-		{Tak}{ps Y* | kill-process}
+		{Tak}{get-process Y* $ \mid $ stop-process}%
+		{Nie}{get-process Y* $ \mid $ kill-proces}%
+		{Tak}{ps Y* $ \mid $ stop-process}%
+		{Tak}{ps Y* $ \mid $ kill-process}
 		
 		\newpage
 		\item \question{Użytkownik korzysta z Powershella w środowisku Windows i znajduje się w lokalizacji C:\textbackslash MyScripts$ > $ po wywołaniu komendy ls, okazało się, że w tym folderze znajduje się plik script.ps1. Użytkownik zamierzając go uruchomić, zmienił aktualna politykę wykonywania skryptów z Restricted na RemoteSigned. Które z poniższych komend uruchomią w/w skrypt?}%
@@ -444,16 +444,16 @@
 		{Nie}{script.ps1}%
 		{Tak}{C:\textbackslash MyScripts\textbackslash script.ps1}%
 		{Tak}{.\textbackslash script.ps1}
-		\item \question{Co się stanie po wywołaniu komendy:\\get-process pow* | stop-process}%
+		\item \question{Co się stanie po wywołaniu komendy:\\get-process pow* $ \mid $ stop-process}%
 		{Tak}{Zostaną zatrzymane wszystkie procesy, których nazwa zaczyna się od ciągu znaków "pow"}%
 		{Tak}{Powershell zostanie wyłączony}%
 		{Nie}{Zostaną zatrzymane wszystkie procesy, których nazwa zawiera ciąg znaków "pow"}%
 		{Nie}{Nic się nie stanie}
 		\item \question{Wskaż poprawne polecenia PowerShell usuwające z bieżącego katalogu pliki większe niż 2kB:}%
-		{Tak}{Get-Childitem | Where-Object \{ \$\_.length -gt 2kB \} | Remove-Item}%
-		{Nie}{Get-Childitem | Where-Object ( \$\_.length $ > $ 2kB ) | Remove-Item}%
-		{Nie}{Get-Childitem | Remove-Item | Where (\$length $ > $ 2kB)}%
-		{Tak}{ls | where-object \{ \$\_.length -gt 2kB \} | rm}
+		{Tak}{Get-Childitem $ \mid $ Where-Object \{ \$\_.length -gt 2kB \} $ \mid $ Remove-Item}%
+		{Nie}{Get-Childitem $ \mid $ Where-Object ( \$\_.length $ > $ 2kB ) $ \mid $ Remove-Item}%
+		{Nie}{Get-Childitem $ \mid $ Remove-Item $ \mid $ Where (\$length $ > $ 2kB)}%
+		{Tak}{ls $ \mid $ where-object \{ \$\_.length -gt 2kB \} $ \mid $ rm}
 		\item \question{Po wykonaniu w konsoli PowerShell polecenia Get-ExecutionPolicy otrzymano rezultat "Restricted". Oznacza to, że użytkownik:}%
 		{Tak}{Nie może uruchamiać żadnych skryptów, a jedynie osobne komendy}%
 		{Nie}{Może uruchamiać niepodpisane skrypty pochodzące z lokalnego komputera}%
@@ -471,19 +471,19 @@
 		{Nie}{Korzystanie jedynie z pojedynczych komend, bez możliwości uruchamiania skryptów.}
 		
 		\newpage
-		\item \question{Prawidłowa postad pętli for w PowerShell to:}%
+		\item \question{Prawidłowa postać pętli for w PowerShell to:}%
 		{Nie}{for (i = 1, i -le 10, i++) \{ \}}%
 		{Nie}{for (i = 1; i -le 10; i++) \{ \}}%
 		{Nie}{for (\$i = 1; \$i $ < $= 10; i++) \{ \}}%
 		{Tak}{for (\$i = 1; \$i -le 10; \$i++) \{ \}}
 		\item \question{Jaki jest rezultat polecenia interpretera PowerShell:\\
-			get-childitem C:\textbackslash Work\textbackslash -recurse | get-acl | where \{ \$\_.Owner -match "Maniek"\}}%
+			get-childitem C:\textbackslash Work\textbackslash -recurse $ \mid $ get-acl $ \mid $ where \{ \$\_.Owner -match "Maniek"\}}%
 		{Tak}{Wypisze wszystkie pliki, których właścicielem jest Maniek z folderu C:\textbackslash Work oraz podfolderów}%
 		{Nie}{Wypisze tylko pliki z folderu C:\textbackslash Work, których właścicielem jest Maniek.}%
 		{Nie}{Wypisze wszystkie pliki z dysku C:, których właścicielem jest Maniek.}%
 		{Nie}{Wypisze pliki, które nie należą do użytkownika Maniek, z folderu C:\textbackslash Work}
 		\item \question{Co otrzymamy po wykonaniu następującej komendy w interpreterze PowerShell:\\
-			PS C:\textbackslash $ > $ Get-ChildItem | where \{ \$\_.PslsContainer  \} | Select-Object Name}%
+			PS C:\textbackslash $ > $ Get-ChildItem $ \mid $ where \{ !\$\_.PslsContainer  \} $ \mid $ Select-Object Name}%
 		{Nie}{Tylko nazwy folderów jakie znajdują się w lokalizacji C:\textbackslash}%
 		{Nie}{Tylko nazwy folderów i podfolderów jakie znajdują się w lokalizacji C:\textbackslash}%
 		{Tak}{Tylko nazwy plików jakie znajdują się w lokalizacji C:\textbackslash}%
