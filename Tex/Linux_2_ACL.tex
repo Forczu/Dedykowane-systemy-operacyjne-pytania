@@ -4,17 +4,17 @@
 \begin{enumerate}
 	
 	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
-		-rw-r----- 1 me students 0 2010-02-20 23:10 file.txt \\ \\
+		-rw-r-{}-{}-{}-{}- 1 me students 0 2010-02-20 23:10 file.txt \\ \\
 		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl file.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: file.txt \\
 		$\sharp$owner: me \\
 		$\sharp$group: students \\
 		user::rw- \\
-		user:friend:r-- \\
-		group::r-- \\
+		user:friend:r-{}- \\
+		group::r-{}- \\
 		group: class:rw- \\
 		mask::rw- \\
-		other::--- \\
+		other::-{}-{}- \\
 		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
 	{Tak}{setfacl -m u:friend:4, g:class:6 file.txt}
 	{Tak}{setfacl -m u:friend:r, g:class:rw file.txt}
@@ -22,7 +22,7 @@
 	{Nie}{setfacl -x u:friend:4, g:class6 file.txt}
 	
 	\item \question{Efekt polecenia ls -l test jest następujący: \\
-		drw-r----- 1 so1 students 0 2011-06-10 23:10 test \\ \\
+		drw-r-{}-{}-{}-{}- 1 so1 students 0 2011-06-10 23:10 test \\ \\
 		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test uzyskując następujący wynik: \\ \\
 		$\sharp$file: test \\
 		$\sharp$owner: so1 \\
@@ -61,7 +61,7 @@
 	{Tak}{mask - group}
 	{Nie}{owning group - group}
 	
-	\item \question{Polecenie, w wyniku którego każdy nowoutworzony PLIK będzie miał uprawnienia -rwxr-x--- to:}
+	\item \question{Polecenie, w wyniku którego każdy nowoutworzony PLIK będzie miał uprawnienia -rwxr-x-{}-{}- to:}
 	{Nie}{umask 027}
 	{Nie}{umask 750}
 	{Nie}{umask 750}
@@ -71,15 +71,15 @@
 	{Nie}{Ustawi prawa do pliku "file.txt" wszystkich użytkowników jako rwx.}
 	{Nie}{Umożliwi użytkownikowi o nazwie "user1" wykonanie pliku "file.txt".}
 	{Tak}{Ustawi prawa do pliku "file.txt" użytkownika o nazwie "user1" jako rw-, a grupy o nazwie "group1" jako rwx.}
-	{Nie}{Ustawi prawa do pliku "file.txt" użytkownika o nazwie "user1" jako r--m a grupy o nazwie "group1" jako ---.}
+	{Nie}{Ustawi prawa do pliku "file.txt" użytkownika o nazwie "user1" jako r-{}-m a grupy o nazwie "group1" jako -{}-{}-.}
 	
 	\item \question{W systemie Linux Debian użytkownik wykonał sekwencję poleceń: \\
 		umask 075; touch test; ls -l |grep test; \\
 		Zaznacz poprawny wynik dla podanej sekwencji poleceń:}
-	{Nie}{---rwxr-x 1 labso labso 0 2010-06-11 16:30 test}
-	{Tak}{-rw----w- labso labso 0 2010-06-11 16:30 test}
-	{Nie}{-rwx----wx 1 labso labso 0 2010-06-11 16:30 test}
-	{Nie}{-rw-rw-r-- 1 labso labso 0 2010-06-11 16:30 test}
+	{Nie}{-{}-{}-rwxr-x 1 labso labso 0 2010-06-11 16:30 test}
+	{Tak}{-rw-{}-{}-{}-w- labso labso 0 2010-06-11 16:30 test}
+	{Nie}{-rwx-{}-{}-{}-wx 1 labso labso 0 2010-06-11 16:30 test}
+	{Nie}{-rw-rw-r-{}- 1 labso labso 0 2010-06-11 16:30 test}
 	
 	\newpage
 	
@@ -91,9 +91,9 @@
 	
 	\item \question{Uprawnienia dla nowo tworzonych plików przy masce 066 wyglądają następująco:}
 	{Nie}{-rwxrwxrwx}
-	{Nie}{-rw-rw-r--}
-	{Nie}{---rw-rw-}
-	{Tak}{-rw------}
+	{Nie}{-rw-rw-r-{}-}
+	{Nie}{-{}-{}-rw-rw-}
+	{Tak}{-rw-{}-{}-{}-{}-{}-}
 	
 	\item \question{W stosunku do chmod, lista ACL rozszerzyła możliwości przyznawania praw o:}
 	{Tak}{Określenie praw do pliku dla dowolnej grupy.}
@@ -106,11 +106,11 @@
 		 $\sharp$owner: jan \\
 		 $\sharp$group: homegroup \\
 		 user::rw- \\
-		 user:maria:r-- \\
-		 group::r-- \\
+		 user:maria:r-{}- \\
+		 group::r-{}- \\
 		 group:dzieci:rw- \\
 		 mask::rwx \\
-		 other::---
+		 other::-{}-{}-
 		\\ W tym przypadku: }
 	{Tak}{użytkownik z grupy dzieci może odczytywać plik mySong.bin}
 	{Tak}{użytkownik maria może odczytywać plik mySong.bin}
@@ -138,7 +138,7 @@
 	{Tak}{Zainstalować pakiet acl.}
 	
 	\item \question{Efekt polecenia ls -l test.txt jest następujący: \\
-		-rw-r----- 1 so1 students 0 2011-06-10 23:10 test \\ \\
+		-rw-r-{}-{}-{}-{}- 1 so1 students 0 2011-06-10 23:10 test \\ \\
 		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: test \\
 		$\sharp$owner: so1 \\
@@ -151,7 +151,7 @@
 		default:group:teachers:rwx \\
 		default:mask::rwx \\
 		default:other::r-x \\
-		default:other::---
+		default:other::-{}-{}-
 		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
 	{Nie}{brak poprawnej odpowiedzi}
 	{Nie}{setfacl -d -m g:teachers:rwx test}
@@ -173,17 +173,17 @@
 	{Nie}{umask 022}
 	
 	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
-		-rw-r----- 1 so1 students 0 2010-02-20 23:10 test.txt \\ \\
+		-rw-r-{}-{}-{}-{}- 1 so1 students 0 2010-02-20 23:10 test.txt \\ \\
 		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: test.txt \\
 		$\sharp$owner: so1 \\
 		$\sharp$group: students \\
 		user::rw- \\
 		user:so2:rw- \\
-		group::r-- \\
+		group::r-{}- \\
 		group: teachers:rwx \\
 		mask::rwx \\
-		other::--- \\
+		other::-{}-{}- \\
 		\\ Zaznacz poprawne polecenia, które mogłyby zostać wykonane w celu uzyskania powyższych uprawnieć ACL:}
 	{Tak}{setfacl -m u:so2:rw, g:teachers:rwx test.txt}
 	{Tak}{setfacl -m u:so2:6, g:teachers:7 test.txt}

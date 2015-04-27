@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  21 APR 2015 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.5)  27 APR 2015 16:32
 entering extended mode
 **DSO_main.tex
 (D:\Repozytoria\DSO_kueszczons\DSO_main.tex
@@ -1278,7 +1278,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
 Here is how much of TeX's memory you used:
  21231 strings out of 493921
  333729 string characters out of 3147285
- 385754 words of memory out of 3000000
+ 385650 words of memory out of 3000000
  22203 multiletter control sequences out of 15000+200000
  16792 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1299,7 +1299,7 @@ fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr9.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/pl/plsl10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/pl/plsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl
 /plti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on DSO_main.pdf (72 pages, 529389 bytes).
+Output written on DSO_main.pdf (72 pages, 529553 bytes).
 PDF statistics:
  2832 PDF objects out of 2984 (max. 8388607)
  2071 named destinations out of 2073 (max. 500000)
