@@ -5,7 +5,7 @@
 	
 	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
 		-rw-r-{}-{}-{}-{}- 1 me students 0 2010-02-20 23:10 file.txt \\ \\
-		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl file.txt uzyskując następujący wynik: \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia ACL, a następnie wykonano polecenie getfacl file.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: file.txt \\
 		$\sharp$owner: me \\
 		$\sharp$group: students \\
@@ -23,7 +23,7 @@
 	
 	\item \question{Efekt polecenia ls -l test jest następujący: \\
 		drw-r-{}-{}-{}-{}- 1 so1 students 0 2011-06-10 23:10 test \\ \\
-		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test uzyskując następujący wynik: \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia ACL, a następnie wykonano polecenie getfacl test uzyskując następujący wynik: \\ \\
 		$\sharp$file: test \\
 		$\sharp$owner: so1 \\
 		$\sharp$group: students \\
@@ -51,7 +51,7 @@
 	
 	\item \question{Polecenie getfacl:}
 	{Tak}{zwraca informacje na temat aktualnych uprawnień zdefiniowanych na liście ACL}
-	{Nie}{usuwa uprawnieniaa zdefiniowane na liście ACL}
+	{Nie}{usuwa uprawnienia zdefiniowane na liście ACL}
 	{Tak}{zwraca informację na temat właściciela pliku}
 	{Tak}{Pozwala wyświetlić informacje na temat uprawnień zdefiniowanych w ACL dla kilku plików na raz}
 	
@@ -87,7 +87,7 @@
 	{Nie}{ACL nie znajduje się oficjalnie w repozytorium. Należy pobrać źródła z internetu oraz samodzielnie przeprowadzić kompilację oraz konfigurację.}
 	{Nie}{Nie jest wymagana instalacja ACL. Systemy te zawierają preinstalowane paczki związane z ACL.}
 	{Nie}{Należy zainstalować acl komendą sudo apt-get install acl. Instalator automatycznie skonfiguruje system do pracy z ACL.}
-	{Tak}{Należy zainstalować acl komendą sudo apt-get install acl, a następnie manualn ie przeprowadzić konfigurację systemów plików w pliku /etc/fstav podłączając ACL.}
+	{Tak}{Należy zainstalować acl komendą sudo apt-get install acl, a następnie manualnie przeprowadzić konfigurację systemów plików w pliku /etc/fstav podłączając ACL.}
 	
 	\item \question{Uprawnienia dla nowo tworzonych plików przy masce 066 wyglądają następująco:}
 	{Nie}{-rwxrwxrwx}
@@ -119,7 +119,7 @@
 	
 	\newpage
 	
-	\item \question{Zaznacz poprawne odpowiedzi dotyczace maski oraz wyznaczania uprawnień dla wpisów ACL powiązancyh z klasą grupy:}
+	\item \question{Zaznacz poprawne odpowiedzi dotyczące maski oraz wyznaczania uprawnień dla wpisów ACL powiązanych z klasą grupy:}
 	{Tak}{Maska definiuje maksymalne efektywne uprawnienia dla wszystkich wpisów ACL powiązanych z klasą grupy}
 	{Nie}{Uprawnienia efektywne powstają przez zsumowanie uprawnień maski z uprawnieniami odpowiedniej klasy ACL}
 	{Nie}{Maska definiuje minimalne efektywne uprawnienia dla wszystkich wpisów ACL powiązanych z klasą grupy}
@@ -139,7 +139,7 @@
 	
 	\item \question{Efekt polecenia ls -l test.txt jest następujący: \\
 		-rw-r-{}-{}-{}-{}- 1 so1 students 0 2011-06-10 23:10 test \\ \\
-		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia ACL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: test \\
 		$\sharp$owner: so1 \\
 		$\sharp$group: students \\
@@ -174,7 +174,7 @@
 	
 	\item \question{Efekt polecenia ls -l file.txt jest następujący: \\
 		-rw-r-{}-{}-{}-{}- 1 so1 students 0 2010-02-20 23:10 test.txt \\ \\
-		W następnym kroku powyższemu plikowi nadano pewne uprawnienia SCL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
+		W następnym kroku powyższemu plikowi nadano pewne uprawnienia ACL, a następnie wykonano polecenie getfacl test.txt uzyskując następujący wynik: \\ \\
 		$\sharp$file: test.txt \\
 		$\sharp$owner: so1 \\
 		$\sharp$group: students \\
