@@ -1,0 +1,14 @@
+\contentsline {part}{I\hspace {1em}Windows}{3}{part.1}
+\contentsline {section}{\numberline {1}Us\IeC {\l }ugi katalogowe (Active Directory)}{3}{section.1.1}
+\contentsline {section}{\numberline {2}Obiekty Zasad Grup (GPO)}{9}{section.1.2}
+\contentsline {section}{\numberline {3}Windows Instalacja zdalna}{15}{section.1.3}
+\contentsline {section}{\numberline {4}Windows RAID}{18}{section.1.4}
+\contentsline {section}{\numberline {5}Interpreter polece\IeC {\'n} PowerShell}{23}{section.1.5}
+\contentsline {section}{\numberline {6}Windows API}{37}{section.1.6}
+\contentsline {part}{II\hspace {1em}Linux}{39}{part.2}
+\contentsline {section}{\numberline {1}Us\IeC {\l }ugi graficzne Xwindow}{39}{section.2.1}
+\contentsline {section}{\numberline {2}Linux ACL}{44}{section.2.2}
+\contentsline {section}{\numberline {3}Linux RAID}{49}{section.2.3}
+\contentsline {section}{\numberline {4}Linux LAMP}{56}{section.2.4}
+\contentsline {section}{\numberline {5}Wielosystemowo\IeC {\'s}\IeC {\'c}}{61}{section.2.5}
+\contentsline {section}{\numberline {6}Linux Kernel}{69}{section.2.6}
