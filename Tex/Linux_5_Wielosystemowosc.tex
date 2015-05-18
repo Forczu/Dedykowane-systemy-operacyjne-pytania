@@ -55,16 +55,16 @@
 	{Nie}{Zarządzanie dyskami i ich partycjonowanie}
 	{Tak}{Wybór systemu operacyjnego, który będzie uruchomiony.}
 
-	\item \question{Parametr w opcjach montowania pliku /etc/fstab oznacza, że:}
+	\item \question{Parametr ro w opcjach montowania pliku /etc/fstab oznacza, że:}
 	{Nie}{możliwy jest zapis i odczyt na danym systemie plików}
 	{Tak}{system plików jest zamontowany w trybie tylko do odczytu}
 	{Nie}{urządzenie może być montowane przez użytkownika}
 	{Nie}{system plików może być montowany przez każdego użytkownika}
 	
 	\item \question{W jaki sposób dodajemy informacje o innych systemach opracyjnych do GRUB2}
-	{Tak}{Do pliku /etc/grub.d/40\_custom dodajemy wpis o systemie, następnie uruchamiamy polecenie sidu update-grub2}
+	{Tak}{Do pliku /etc/grub.d/40\_custom dodajemy wpis o systemie, następnie uruchamiamy polecenie sudo update-grub2}
 	{Nie}{Należy wykonać polecenie grub2-add-new-os z prawami użytkownika}
-	{Tak}{Można nadać prawa wykonywania skryptowi: /etc/grub.d/30\_od-prober. Grub2 podczas aktualizacji wyszuka dostępne systemy operacyjne na dyskach twardych}
+	{Tak}{Można nadać prawa wykonywania skryptowi: /etc/grub.d/30\_os-prober. Grub2 podczas aktualizacji wyszuka dostępne systemy operacyjne na dyskach twardych}
 	{Nie}{GRUB2 sam wykryje wszystkie systemy operacyjne bez konfiguracji}
 	
 	\item \question{Plik /boot/grub.cfg dla Grand United Bootloader w wersji 2:}
@@ -87,11 +87,11 @@
 	{Nie}{grub-refresh}
 	{Tak}{update-grub}
 	
-	\item \question{Na jednym fizycznym komputerze, na osobnych partycjach są zainstalowane systemu buntu Linux i Windows 7. Przy obecnej konfiguracji użytkownik mam możliwość (przy użyciu bootmanagera GRUB 2) uruchomienia TYLKO systemu Ubuntu. W jaki sposób można zapeewić użytkownikowi możliwość wyboru systemu operacyjnego przy uruchamianu komputera?}
+	\item \question{Na jednym fizycznym komputerze, na osobnych partycjach są zainstalowane systemy Ubuntu Linux i Windows 7. Przy obecnej konfiguracji użytkownik mam możliwość (przy użyciu bootmanagera GRUB 2) uruchomienia TYLKO systemu Ubuntu. W jaki sposób można zapeewić użytkownikowi możliwość wyboru systemu operacyjnego przy uruchamianu komputera?}
 	{Tak}{Należy utworzyć własny plik z odpowiednim wpisem systemu oraz prawami uruchamiania w /etc/grub.d/, a następnie zaktualizować pliki konfiguracyjne GRUB'a}
 	{Tak}{Dodać odpowiedni wpis w pliku /boot/grub/grub.cfg}
 	{Nie}{Należy włożyć dysk instalacyjny Windowsa i z linii poleceń, za pomocą komendy bootrec /fixmbr zainstalować w MBR bootloader dla systemu Windows}
-	{Tak}{Ustawić prawa uruchamiania dla skrypty /etc/grub,d/30\_os-prober oraz uruchomić update-grub}
+	{Tak}{Ustawić prawa uruchamiania dla skryptu /etc/grub,d/30\_os-prober oraz uruchomić update-grub}
 
 	\item \question{Zaznacz, które z podanych plików w systemach z rodziny Linux zawierają informacje o systemach, które mają zostać automatycznie zamontowane przy uruchomieniu systemu operacyjnego.}
 	{Nie}{/boot/grub/grub.cfg}
@@ -113,7 +113,7 @@
 	{Nie}{Pozwala na obsługę tablicy partycji systemu linux}
 	{Nie}{Zmiany wprowadzone za pomocą tego programu automatycznie modyfikują zawartość plików /etx/fstab i /etc/mtab}
 
-	\item \question{Jeżeli nie chcemy, aby konfiguracja zdefiniowana w pewnym skrypcie konfiguracyjnym GRUBA znajdującym się w katalogu /etc/grub.d/ była uwzględniona po wykonaiu polecenia update-grub, należy:}
+	\item \question{Jeżeli nie chcemy, aby konfiguracja zdefiniowana w pewnym skrypcie konfiguracyjnym GRUBA znajdującym się w katalogu /etc/grub.d/ była uwzględniona po wykonaniu polecenia update-grub, należy:}
 	{Nie}{Zabrać temu skryptowi uprawnienia zapisu}
 	{Nie}{Wprowadzić odpowiednie zmiany w pliku /etc/default/grub}
 	{Nie}{Zabrać temu skryptowi uprawnienia odczytu}
@@ -154,10 +154,10 @@
 	\item \question{Wskaż wszystkie poprawne zdania odnoścnie pliku device.map}
 	{Tak}{Ręczna zmiana pliku device.map wymaga aktualizacji konfiguracji GRUBa}
 	{Tak}{Zawiera zmapowane nazwy urządzeń GRUBa na nazwy Linuxowe}
-	{Nie}{Po każdym restracie systemu zapisywana jest do niego aktualna struktura dysków.}
+	{Nie}{Po każdym restarcie systemu zapisywana jest do niego aktualna struktura dysków.}
 	{Nie}{W wersji bootloadera GRUB2 plik ten nie istnieje}
 	
-	\item \question{Parametr ro w opcjoach montowania pliku etc/fstab oznacza, że:}
+	\item \question{Parametr ro w opcjach montowania pliku etc/fstab oznacza, że:}
 	{Nie}{możliwy jest zapis i odczyt na danym systemie plików}
 	{Tak}{system plików jest zamontowany w trybie tylko do odczytu}
 	{Nie}{urządzenie może być montowane przez użytkownika}
@@ -178,7 +178,7 @@
 	\item \question{Plik /boot/grub/grub.cfg zawiera:}
 	{Tak}{tryb, w jakim ma się ładować system.}
 	{Tak}{liste systemów operacyjnych, które można uruchomić za pomocą GRUBa}
-	{Tak}{informację o tym, który sytem jest systemem domyślnym.}
+	{Tak}{informację o tym, który system jest systemem domyślnym.}
 	{Tak}{czas oczekiwania na wybór systemu przez użytkownika, po upływie którego uruchomi się domyślny system.}
 	
 	\item \question{Plik /boot/grub/grub.cfg:}
@@ -196,7 +196,7 @@
 	{Nie}{Wielkość partycji.}
 
 	\item \question{Zaznacz zdania poprawne dotyczące odwoływania się do systemów plików w systemie Linux.}
-	{Tak}{/dev/fd0 - oznacza dyskietkę/}
+	{Tak}{/dev/fd0 - oznacza dyskietkę}
 	{Tak}{/dev/hdd2 - oznacza drugą partycję znajdującą się na dysku "slave" podpiętego do drugiego kontrolera IDE.}
 	{Nie}{/dev/sda1 - oznacza pierwszą partycję pierwszego dysku SCSII lub drugą partycję na kontrolerze SATA1.}
 	{Nie}{/dev/ssd1 - oznacza pierwszą partycję dysku stworzonego w oparciu o technologię SSD}
@@ -210,7 +210,7 @@
 	\item \question{Na jednej maszynie zainstalowane są systemy Windows 7 oraz Ubuntu Linux:}%
 	{Tak}{W systemie Linux możemy zamontować partycję Windowsową jako katalog korzystając z polecenia mnt.}%
 	{Nie}{W systemie Windows dostęp do partycji Linuxowych konfigurowany jest automatycznie.}%
-	{Tak}{W pliku /etc/fstab znajduje się przyporządkowanie partycji ich punktom montowanie}%
+	{Tak}{W pliku /etc/fstab znajduje się przyporządkowanie partycji ich punktom montowania}%
 	{Tak}{Przy starcie systemu Linux partycje Windowsowe są montowane automatycznie, jeśli dodamy odpowiedni wpis do pliku /etc/fstab}
 	
 	\item \question{Plik o domyślnej nazwie „/etc/grub.d/40\_custom” służy do:}%
@@ -225,11 +225,13 @@
 	{Nie}{/mnt}%
 	{Tak}{/etc/fstab}
 	
+	\newpage
+	
 	\item \question{Aby zmienić ustawienia menu GRUB2 (np. zwiększyć czas oczekiwania na wybór systemu operacyjnego) POWINNO SIĘ:}%
 	{Nie}{w konsoli wpisać komendę: sudo update-grub z odpowiednim parametrem}%
 	{Nie}{wpisać odpowiednie polecenie w linii komend po uruchomieniu menu GRUB2}%
 	{Nie}{edytować plik konfiguracyjny /boot/grub/grub.cfg}%
-	{Tak}{dytować odpowiedni skrypt z /etc/grub.d/}
+	{Tak}{edytować odpowiedni skrypt z /etc/grub.d/}
 
 	\item \question{Zaznacz prawdziwe zdania dotyczące partycji wymiany (SWAP) w systemie Linux:}%
 	{Tak}{Domyślnie jest na niej zapisywany zrzut pamięci RAM przy hibernacji}%
@@ -261,6 +263,8 @@
 	{Nie}{Należy wykonać polecenie grub2-add-new-os z prawami użytkownika}%
 	{Tak}{Do pliku /etc/grub.d/40\_custom dodajemy wpis o systemie, następnie uruchamiamy polecenie sudo update-grub2}
 	
+	\newpage
+	
 	\item \question{Wskaż poprawne nazewnictwa partycji i dysków w GRUB z odpowiednim dla niego wyjaśnieniem:}%
 	{Nie}{(hd0,0) – pierwsza partycja na pierwszym dysku}%
 	{Tak}{(hd0,msdos5) oznacza pierwszą partycję rozszerzoną (extended)}%
@@ -291,7 +295,7 @@
 	{Tak}{Jest to trzecia partycja czwartego dysku SATA}%
 	{Nie}{Oznaczenie nie jest poprawne}
 
-	\item \question{Plikiem konfiguracyjnym manaegera bootowania GRUB2 jest :}%
+	\item \question{Plikiem konfiguracyjnym managera bootowania GRUB2 jest :}%
 	{Tak}{/boot/grub/grub.cfg}%
 	{Nie}{/boot/grub/grub.exe}%
 	{Nie}{/boot/grub/grub.txt}%
