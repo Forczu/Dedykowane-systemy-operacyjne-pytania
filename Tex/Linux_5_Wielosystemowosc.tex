@@ -39,9 +39,9 @@
 	{Tak}{setroot(hd0, 1) odwoła się do pierwszej partycji pierwszego dysku (dev/sda1)}
 	{Nie}{setroot(hd0, 1) odwoła się do drugiej partycji pierwszego dysku (dev/sda2)}
 	
-	\item \question{Co spowoduje dodanie następującego wpisu do pliku /etc/grub.d/4-\_custom \\
+	\item \question{Co spowoduje dodanie następującego wpisu do pliku /etc/grub.d/40\_custom \\
 		menuentry "Windows" \{ \\
-		ser root='(hd0,1)' \\
+		set root='(hd0,1)' \\
 		chainloader + 1 \\
 		\} }
 	{Nie}{Podczas startu bootloadera będziemy mogli wybrać system o nazwie "Windows" i będzie one pierwszy na liście dostępnych systemów.}
@@ -67,7 +67,7 @@
 	{Tak}{Można nadać prawa wykonywania skryptowi: /etc/grub.d/30\_os-prober. Grub2 podczas aktualizacji wyszuka dostępne systemy operacyjne na dyskach twardych}
 	{Nie}{GRUB2 sam wykryje wszystkie systemy operacyjne bez konfiguracji}
 	
-	\item \question{Plik /boot/grub.cfg dla Grand United Bootloader w wersji 2:}
+	\item \question{Plik /boot/grub.cfg dla GRand United Bootloader w wersji 2:}
 	{Tak}{posiada definicje wszystkich systemów uruchamianych przez niego}
 	{Tak}{w przypadku edycji za każdym razem musi być zaktualizowany za pomocą polecenia update-grub}
 	{Tak}{Tworzony jest automatycznie na podstawie skryptów znajdujących się w katalogu /etc/grub.d/}
@@ -87,11 +87,11 @@
 	{Nie}{grub-refresh}
 	{Tak}{update-grub}
 	
-	\item \question{Na jednym fizycznym komputerze, na osobnych partycjach są zainstalowane systemy Ubuntu Linux i Windows 7. Przy obecnej konfiguracji użytkownik mam możliwość (przy użyciu bootmanagera GRUB 2) uruchomienia TYLKO systemu Ubuntu. W jaki sposób można zapeewić użytkownikowi możliwość wyboru systemu operacyjnego przy uruchamianu komputera?}
+	\item \question{Na jednym fizycznym komputerze, na osobnych partycjach są zainstalowane systemy Ubuntu Linux i Windows 7. Przy obecnej konfiguracji użytkownik ma możliwość (przy użyciu bootmanagera GRUB 2) uruchomienia TYLKO systemu Ubuntu. W jaki sposób można zapeewić użytkownikowi możliwość wyboru systemu operacyjnego przy uruchamianu komputera?}
 	{Tak}{Należy utworzyć własny plik z odpowiednim wpisem systemu oraz prawami uruchamiania w /etc/grub.d/, a następnie zaktualizować pliki konfiguracyjne GRUB'a}
 	{Tak}{Dodać odpowiedni wpis w pliku /boot/grub/grub.cfg}
 	{Nie}{Należy włożyć dysk instalacyjny Windowsa i z linii poleceń, za pomocą komendy bootrec /fixmbr zainstalować w MBR bootloader dla systemu Windows}
-	{Tak}{Ustawić prawa uruchamiania dla skryptu /etc/grub,d/30\_os-prober oraz uruchomić update-grub}
+	{Tak}{Ustawić prawa uruchamiania dla skryptu /etc/grub.d/30\_os-prober oraz uruchomić update-grub}
 
 	\item \question{Zaznacz, które z podanych plików w systemach z rodziny Linux zawierają informacje o systemach, które mają zostać automatycznie zamontowane przy uruchomieniu systemu operacyjnego.}
 	{Nie}{/boot/grub/grub.cfg}
