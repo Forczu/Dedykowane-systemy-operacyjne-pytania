@@ -72,17 +72,18 @@
 	{Tak}{Szeregowanie I/O}
 	{Tak}{Obsługa systemu plików}
 	
+	\newpage
 	\item \question{Jakie operacje można wykonać za pomocą polecenia sysctl?}
 	{Tak}{Ustawić wartości dla parametrów jądra}
 	{Nie}{Ustawić wartości dla parametrów systemu plików}
 	{Tak}{Wypisać wszystkie parametry jądra w trakcie działania systemu}
 	{Nie}{Wypisać wszystkie parametry systemu plików}
 	
-	\newpage
+
 	
-		\item \questionVIII{%
-			question={Polecenie sysctl:} %
-		}{%
+	\item \questionVIII{%
+		question={Polecenie sysctl:} %
+	}{%
 		isTrue1=Nie, %
 		answer1={Służy do zmiany hasła użytkownika systemu}, %
 		isTrue2=Nie, %
@@ -104,7 +105,7 @@
 	\item \question{Wskaż prawdziwe zdania:}
 	{Nie}{przy overcommit\_memory ustawionym na 2 system zawsze przydzieli aplikacjom dokładnie 100\% pamięci RAM}
 	{Tak}{przy overcommit\_memory ustawionym na 1 możliwe jest uzyskanie za pomocą malloc() ilości pamięci wirtualnej większej niż objętość pamięci fizycznej + swap}
-	{Tak}{przy overcommit\_memory ustawionym na 2 ilość pamięci przydzielonej aplikacjom zależy od ovecommit\_ratio}
+	{Tak}{przy overcommit\_memory ustawionym na 2 ilość pamięci przydzielonej aplikacjom zależy od overcommit\_ratio}
 	{Nie}{kernel nigdy nie przydziela więcej pamięci niż jest dostępne fizycznie}
 	
 	\item \question{Sterowanie jądrem systemu Linux. Zaznacz poprawne odpowiedzi:}
@@ -167,6 +168,7 @@
 	{Nie}{kmllg}
 	{Nie}{kernelog}
 	
+	\newpage
 	\item \question{Jądro systemu operacyjnego Linux:}%
 	{Tak}{pośredniczy pomiędzy aplikacjami użytkownika, a sprzętem}%
 	{Tak}{pośredniczy pomiędzy aplikacjami użytkownika, a pamięcią}%
